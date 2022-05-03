@@ -1,0 +1,176 @@
+body {
+  background-color: rgba(165, 11, 32, 0.15);
+  margin: 0;
+  font-family: sans-serif;
+}
+
+a {
+  color: rgb(165, 11, 32);
+}
+#events a, #past-events a {
+  color: black;
+  text-decoration: none;
+}
+
+#past-events {
+  display: none;
+  margin-top: 1em;
+}
+
+#banner {
+  background-image: url("bida-contra-dancing.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 1em;
+}
+
+#logo-wrapper {
+  width: 75%;
+  max-width: 35em;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 0 auto;
+  padding: 1em;
+  border-radius: 0.25em;
+}
+
+#logo-wrapper img {
+  width: 100%;
+}
+
+#nav-wrapper {
+  text-align: center;
+  background-color: rgb(165, 11, 32);
+}
+
+#nav {
+  display: inline-block;
+}
+
+#nav a {
+  color: white;
+  display: inline-block;
+  margin-right: .25em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: .5em;
+  border-radius: 0.25em;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 85%;
+  text-decoration: none;
+}
+
+@media (min-width: 30em) {
+  #nav a {
+    font-size: 100%;
+  }
+}
+
+#nav a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+#content, #main-content {
+  background-color: white;
+  margin: auto;
+  padding: 1em;
+}
+
+#content {
+  max-width: 50em;
+}
+
+#main-content {
+  max-width: 35em;
+}
+
+.event {
+  background-color: rgba(165, 11, 32, .08);
+  border-radius: 0 0.5em;
+  margin-bottom: 1em;
+}
+
+.event .date {
+  padding: 0.5em;
+  color: white;
+  background-color: rgb(165, 11, 32);
+  border-radius: 0 0.5em;
+  display: inline-block;
+  text-align: right;
+  float: right;
+}
+
+.event .title {
+  padding-bottom: 1em;
+  font-weight: bold;
+}
+
+.event p {
+  margin: 0;
+  margin-top: 1em;
+}
+
+.event .details {
+  float: left;
+  margin: 1em;
+}
+
+.clear {
+  clear: both;
+}
+
+.event .details .link {
+  color: rgb(165, 11, 32);
+  text-decoration: underline;
+}
+
+#social-links {
+  margin-top: 2em;
+  text-align: center;
+}
+
+#social-links img {
+  margin-left: 1em;
+}
+
+.float-right {
+  float: right;
+}
+
+#back-bar {
+  text-align: center;
+  background-color: rgb(165, 11, 32);
+  width: 100%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  color: white;
+}
+
+#back-bar a {
+}
+
+.right {
+  text-align: right;
+}
+
+.note, .warning {
+  padding: 1em;
+  margin-left: 3em;
+  margin-right: 3em;
+  border-radius: 0.25em;
+  text-align: center;
+}
+
+.note {
+  background-color: rgba(0,0,255,0.05);
+  border: 1px solid rgba(0,0,255,0.5);
+}
+
+.warning {
+  background-color: rgba(255,0,0,0.2);
+  border: 1px solid rgba(255,0,0,0.5);
+}
+
+li {
+  margin-bottom: 1em;
+}
