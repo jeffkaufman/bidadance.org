@@ -463,6 +463,7 @@ e = [
   ],
   [[2022, 5, 15],
    "Contra Dance + Open Band, mask and booster required",
+   "https://www.facebook.com/events/763012658194979/",
   ],
   [[2022, 6, 5],
    "Contra Dance, mask and booster required",
