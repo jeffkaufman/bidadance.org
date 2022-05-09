@@ -57,7 +57,12 @@ href="accessibility">accessibility information</a>.
 <div id=past-events>
 </div>
 
-<script async src=dances.js></script>
+<script>
+var dancesScript = document.createElement("script");
+dancesScript.async = truel
+dancesScript.src = "dances.js?cb=" + Math.random();
+document.head.appendChild(dancesScript);
+</script>
 
 <p>
 
