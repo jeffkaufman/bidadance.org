@@ -473,6 +473,7 @@ e = [
   ],
   [[2022, 6, 19],
    "Contra Dance, mask and booster required",
+   "https://www.facebook.com/events/346447690933790/",
   ],
   [[2022, 7, 3],
    "Last Contra Dance of the Season, mask and booster required",
@@ -592,4 +593,3 @@ toggle_past.onclick = function() {
 };
 
 update_toggle_past();
-
