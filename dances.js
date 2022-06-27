@@ -477,6 +477,7 @@ e = [
   ],
   [[2022, 7, 3],
    "Last Contra Dance of the Season, mask and booster required",
+   "https://www.facebook.com/events/380264407501751",
   ],
 ];
 
