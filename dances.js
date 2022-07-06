@@ -479,6 +479,9 @@ e = [
    "Last Contra Dance of the Season, mask and booster required",
    "https://www.facebook.com/events/380264407501751",
   ],
+  [[2022, 9, 4],
+   "First Contra Dance of the Season",
+  ],
 ];
 
 events = document.getElementById("events");
