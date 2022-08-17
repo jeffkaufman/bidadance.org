@@ -481,6 +481,7 @@ e = [
   ],
   [[2022, 8, 27],
    "Spark in the Dark",
+   "https://www.facebook.com/events/362268546082712",
   ],
   [[2022, 9, 4],
    "First Contra Dance of the Season",
