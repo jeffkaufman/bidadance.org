@@ -484,7 +484,8 @@ e = [
    "https://www.facebook.com/events/362268546082712",
   ],
   [[2022, 9, 4],
-   "First Contra Dance of the Season, city permitting",
+   "First Contra Dance of the Season",
+   "https://www.facebook.com/events/396172329297421"
   ],
   [[2022, 9, 18],
    "Contra Dance",
