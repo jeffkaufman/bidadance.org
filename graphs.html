@@ -44,7 +44,7 @@ function fetch(url, callback) {
   xhr.send();
 }
 google.setOnLoadCallback(function () {
-  fetch("/attendance.log", function(response) {
+  fetch("attendance.log", function(response) {
     var parsed = JSON.parse(response);
 
     function averageAt(i) {
@@ -128,7 +128,7 @@ href="/attendance-financials-template">financials worksheet</a>.
 <script type="text/javascript">
 google.load("visualization", "1", {packages:["corechart"]});
 google.setOnLoadCallback(function () {
-  fetch("/financials.log", function(response) {
+  fetch("financials.log", function(response) {
     var parsed = JSON.parse(response);
     var income = [];
     var profit = [];
