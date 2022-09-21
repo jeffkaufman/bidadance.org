@@ -578,6 +578,8 @@ function gen_events() {
       link_span.className = "link";
       var link_domain = getHostname(event_link);
       link_span.textContent ="details on " + link_domain;
+    } else if (event_title.toLowerCase().startsWith("no dance")) {
+      link_span.textContent ="Dance cancelled.";
     } else {
       link_span.textContent ="details TBA";
     }
