@@ -492,7 +492,7 @@ e = [
    "https://www.facebook.com/events/617303813291957",
   ],
   [[2022, 10, 2],
-   "Possibly no dance, unless we find an alternative hall",
+   "No dance: hall unavailable",
   ],
   [[2022, 10, 16],
    "Contra Dance + Family Dance",
