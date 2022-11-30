@@ -514,7 +514,7 @@ e = [
    "https://www.facebook.com/events/514426030606590/",
   ],
   [[2022, 12, 18],
-   "Likely no dance, unless we find an alternative hall",
+   "No dance: hall unavailable",
   ],
   [[2023, 1, 1],
    "Contra Dance",
