@@ -521,6 +521,7 @@ e = [
   ],
   [[2023, 1, 15],
    "Contra Dance",
+   "https://www.facebook.com/events/544939470921683/",
   ],
   [[2023, 2, 5],
    "Contra Dance",
