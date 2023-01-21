@@ -527,6 +527,7 @@ e = [
     "date": [2023, 2, 5],
     "caller": "Hannah Chamberlain",
     "band": "Daybreak Trio (Anna Patton, Naomi Morse, Owen Morrison)",
+    "link": "https://www.facebook.com/events/2105142026349140",
   },
   {
     "date": [2023, 2, 19],
