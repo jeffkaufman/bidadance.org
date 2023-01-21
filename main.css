@@ -101,8 +101,12 @@ a {
 }
 
 .event .title {
-  padding-bottom: 1em;
+  padding: 1em;
   font-weight: bold;
+}
+
+.event .performers {
+  padding-bottom: 1em;  
 }
 
 .event p {

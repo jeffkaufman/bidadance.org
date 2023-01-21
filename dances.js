@@ -523,43 +523,35 @@ e = [
    "Contra Dance",
    "https://www.facebook.com/events/544939470921683/",
   ],
-  [[2023, 2, 5],
-   "Contra Dance",
-  ],
-  [[2023, 2, 19],
-   "Contra Dance",
-  ],
-  [[2023, 3, 5],
-   "Contra Dance",
-  ],
-  [[2023, 3, 10],
-   "Contra Dance Weekend: Beantown Stomp",
-   "https://www.facebook.com/events/688271116202167/",
-  ],
-  [[2023, 3, 19],
-   "Contra Dance",
-  ],
-  [[2023, 4, 2],
-   "Contra Dance + Open Band",
-  ],
-  [[2023, 4, 16],
-   "Contra Dance",
-  ],
-  [[2023, 5, 7],
-   "Contra Dance",
-  ],
-  [[2023, 5, 21],
-   "Contra Dance",
-  ],
-  [[2023, 6, 4],
-   "Contra Dance",
-  ],
-  [[2023, 6, 18],
-   "Contra Dance",
-  ],
-  [[2023, 7, 2],
-   "Last Contra Dance of the Season",
-  ],
+  {
+    "date": [2023, 2, 5],
+    "caller": "Hannah Chamberlain",
+    "band": "Daybreak Trio (Anna Patton, Naomi Morse, Owen Morrison)",
+  },
+  {
+    "date": [2023, 2, 19],
+    "band": "Carol, Steve, and Len Bittenson, Debby Knight, and Ben Rechel"
+  },
+  {
+    "date": [2023, 3, 5],
+    "band": "Confluence (Nadine Dyskant-Miller &amp; Barbara Dyskant)"
+  },
+  {
+    "date": [2023, 3, 10],
+    "title": "Contra Dance Weekend: Beantown Stomp",
+    "link": "https://www.beantownstomp.com",
+    "band": "Eloise &amp;Co. and River Road",
+    "caller": "Lisa Greenleaf and Luke Donforth",
+  },
+  {
+    "date": [2023, 3, 19],
+    "band": "Lillian Chase, Cecily Mills, and Jonah Spear",
+  },
+  {
+    "date": [2023, 4, 2],
+    "band": "an Open Band",
+    "caller": "Bob Isaacs",
+  },
 ];
 
 events = document.getElementById("events");
@@ -586,52 +578,77 @@ function gen_events() {
               "Friday", "Saturday"];
   for (var i = 0; i < e.length; i++) {
     var event = e[i];
-    var event_date_struct = event[0];
-    var event_title = event[1];
-    var event_link = null;
-    if (event.length > 2) {
-      event_link = event[2];
+
+    if (Array.isArray(event)) {
+      var raw_event = event;
+      event = {};
+      event.date = raw_event[0];
+      event.title = raw_event[1];
+      if (raw_event.length > 2) {
+        event.link = raw_event[2];
+      }
+      if (raw_event.length > 3) {
+        event.html = raw_event[3];
+      }
     }
-    var event_date = new Date(event_date_struct[0],
-                              event_date_struct[1] - 1,
-                              event_date_struct[2]);
-    if (event_link) {
+
+    event.date = new Date(
+      event.date[0],
+      event.date[1] - 1,
+      event.date[2],
+    )
+    if (event.link) {
       var event_a = document.createElement("a");
-      event_a.href = event_link;
+      event_a.href = event.link;
     }
     var event_div = document.createElement("div");
     event_div.className = "event";
     var date_div = document.createElement("div");
     date_div.className = "date";
-    var date_text = days[event_date.getDay()] + " " +
-                    (event_date.getMonth() + 1) + "/" +
-                    event_date.getDate();
-    if (event_date.getYear() != new Date().getYear()) {
-      date_text += "/" + (event_date.getYear() + 1900);
+    var date_text = days[event.date.getDay()] + " " +
+                    (event.date.getMonth() + 1) + "/" +
+                    event.date.getDate();
+    if (event.date.getYear() != new Date().getYear()) {
+      date_text += "/" + (event.date.getYear() + 1900);
     }
     date_div.textContent = date_text;
     event_div.appendChild(date_div);
     var details_div = document.createElement("div");
     details_div.className = "details";
+    event.title = event.title || "Contra Dance";
     var title_div = document.createElement("div");
     title_div.className = "title";
-    title_div.textContent = event_title;
-    details_div.appendChild(title_div);
-    if (event.length > 3) {
-      event_custom_html = event[3] + "<p>";
-      custom_html_div = document.createElement("div");
+    title_div.textContent = event.title;
+    event_div.appendChild(title_div);
+    if (event.html) {
+      var event_custom_html = event.html + "<p>";
+      var custom_html_div = document.createElement("div");
       custom_html_div.innerHTML = event_custom_html;
       details_div.appendChild(custom_html_div);
     }
+    if (event.caller || event.band) {
+      var performers_div = document.createElement("div");
+      performers_div.className = "performers";
+      if (!event.band) {
+        performers_div.innerHTML = event.caller + " calling."
+      } else if (!event.caller) {
+        performers_div.innerHTML = event.band + " playing."
+      } else {
+        performers_div.innerHTML = event.caller + " calling to " + event.band;
+      }
+      details_div.appendChild(performers_div);
+    }
     var link_span = document.createElement("span");
-    if (event_link) {
+    if (event.link) {
       link_span.className = "link";
-      var link_domain = getHostname(event_link);
+      var link_domain = getHostname(event.link);
       link_span.textContent ="details on " + link_domain;
-    } else if (event_title.toLowerCase().startsWith("no dance")) {
+    } else if (event.title.toLowerCase().startsWith("no dance")) {
       link_span.textContent ="Dance cancelled.";
-    } else {
+    } else if (!event.caller && !event.band && !event.html){
       link_span.textContent ="details TBA";
+    } else {
+      link_span.style.display = "none";
     }
     details_div.appendChild(link_span);
     event_div.appendChild(details_div);
@@ -639,12 +656,12 @@ function gen_events() {
     clear_div.className = "clear";
     event_div.appendChild(clear_div);
     var append_event = event_div;
-    if (event_link) {
+    if (event.link) {
       event_a.appendChild(event_div);
       append_event = event_a;
     }
 
-    if (event_date < yesterday) {
+    if (event.date < yesterday) {
       if (past_events.children.length == 0) {
         past_events.appendChild(append_event);
       } else {
