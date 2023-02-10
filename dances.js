@@ -531,7 +531,9 @@ e = [
   },
   {
     "date": [2023, 2, 19],
-    "band": "Carol, Steve, and Len Bittenson, Debby Knight, and Ben Rechel"
+    "band": "Carol, Steve, and Len Bittenson, Debby Knight, and Ben Rechel",
+    "caller": "Sue Rosen",
+    "link": "https://www.facebook.com/events/1152126988838194/",
   },
   {
     "date": [2023, 3, 5],
