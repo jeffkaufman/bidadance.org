@@ -18,7 +18,7 @@ a {
 }
 
 #banner {
-  background-image: url("bida-contra-dancing.jpg");
+  background-image: url("/media/bida-contra-dancing.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
