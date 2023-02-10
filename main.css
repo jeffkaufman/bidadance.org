@@ -7,6 +7,7 @@ body {
 a {
   color: rgb(165, 11, 32);
 }
+
 #events a, #past-events a {
   color: black;
   text-decoration: none;
@@ -123,7 +124,7 @@ a {
   clear: both;
 }
 
-.event .details .link {
+#events a.link {
   color: rgb(165, 11, 32);
   text-decoration: underline;
 }

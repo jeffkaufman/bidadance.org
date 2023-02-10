@@ -600,9 +600,10 @@ function gen_events() {
       event.date[1] - 1,
       event.date[2],
     )
+    const links = Array.isArray(event.link) ? event.link : [event.link]
     if (event.link) {
       var event_a = document.createElement("a");
-      event_a.href = event.link;
+      event_a.href = links[0];
     }
     var event_div = document.createElement("div");
     event_div.className = "event";
@@ -642,15 +643,19 @@ function gen_events() {
       details_div.appendChild(performers_div);
     }
     var links_div = document.createElement("div");
-    if (event.link) { 
-      const links = Array.isArray(event.link) ? event.link : [event.link]
+    if (event.link) {
+      links_div.appendChild(document.createTextNode(" details on "));
+      let is_first = true;
       links.forEach(link => {
-        const link_span = document.createElement("span");
-        link_span.className = "link";
-        const domain = getHostname(link);
-        link_span.textContent = "details on " + domain;
-        links_div.appendChild(link_span);
-        links_div.appendChild(document.createElement("br"))
+        if (!is_first) {
+          links_div.appendChild(document.createTextNode(", "));
+        }
+        const link_a = document.createElement("a");
+        link_a.textContent = getHostname(link);
+        link_a.href = link;
+        link_a.className = "link";
+        links_div.appendChild(link_a);
+        is_first = false;
       })
     } else if (event.title.toLowerCase().startsWith("no dance")) {
       links_div.textContent ="Dance cancelled.";
