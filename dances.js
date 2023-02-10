@@ -533,7 +533,7 @@ e = [
     "date": [2023, 2, 19],
     "band": "Carol, Steve, and Len Bittenson, Debby Knight, and Ben Rechel",
     "caller": "Sue Rosen",
-    "link": "https://www.facebook.com/events/1152126988838194/",
+    "link": ["https://www.facebook.com/events/1152126988838194/", "https://www.meetup.com/bida-contra-dance/events/291536606/"],
   },
   {
     "date": [2023, 3, 5],
@@ -641,19 +641,25 @@ function gen_events() {
       }
       details_div.appendChild(performers_div);
     }
-    var link_span = document.createElement("span");
-    if (event.link) {
-      link_span.className = "link";
-      var link_domain = getHostname(event.link);
-      link_span.textContent ="details on " + link_domain;
+    var links_div = document.createElement("div");
+    if (event.link) { 
+      const links = Array.isArray(event.link) ? event.link : [event.link]
+      links.forEach(link => {
+        const link_span = document.createElement("span");
+        link_span.className = "link";
+        const domain = getHostname(link);
+        link_span.textContent = "details on " + domain;
+        links_div.appendChild(link_span);
+        links_div.appendChild(document.createElement("br"))
+      })
     } else if (event.title.toLowerCase().startsWith("no dance")) {
-      link_span.textContent ="Dance cancelled.";
+      links_div.textContent ="Dance cancelled.";
     } else if (!event.caller && !event.band && !event.html){
-      link_span.textContent ="details TBA";
+      links_div.textContent ="details TBA";
     } else {
-      link_span.style.display = "none";
+      links_div.style.display = "none";
     }
-    details_div.appendChild(link_span);
+    details_div.appendChild(links_div);
     event_div.appendChild(details_div);
     clear_div = document.createElement("div");
     clear_div.className = "clear";
