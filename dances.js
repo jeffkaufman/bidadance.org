@@ -537,7 +537,9 @@ e = [
   },
   {
     "date": [2023, 3, 5],
-    "band": "Confluence (Nadine Dyskant-Miller &amp; Barbara Dyskant)"
+    "band": "Confluence (Nadine Dyskant-Miller &amp; Barbara Dyskant)",
+    "caller": "Hannah Johlas",
+    "link": ["https://www.facebook.com/events/2501663259971407/", "https://www.meetup.com/bida-contra-dance/events/291909567/"],
   },
   {
     "date": [2023, 3, 10],
