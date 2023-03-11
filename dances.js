@@ -550,7 +550,9 @@ e = [
   },
   {
     "date": [2023, 3, 19],
-    "band": "Lillian Chase, Cecily Mills, and Jonah Spear",
+    "band": "Truffle Creek: Lillian Chase, Cecily Mills, and Jonah Spear",
+    "caller": "Dereck Kalish",
+    "link": ["https://www.facebook.com/events/225262179908499/", "https://www.meetup.com/bida-contra-dance/events/292170917/"]
   },
   {
     "date": [2023, 3, 26],
