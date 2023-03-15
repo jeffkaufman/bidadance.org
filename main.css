@@ -124,7 +124,7 @@ a {
   clear: both;
 }
 
-#events a.link {
+#events a.link, #past-events a.link{
   color: rgb(165, 11, 32);
   text-decoration: underline;
 }
