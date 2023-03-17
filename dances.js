@@ -691,6 +691,7 @@ e = [
   },
   {
     "date": [2023, 4, 2],
+    "title": "Contra Dance + Open Band",
     "band": "an Open Band",
     "caller": "Bob Isaacs",
   },
