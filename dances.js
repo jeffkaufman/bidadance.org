@@ -685,6 +685,11 @@ e = [
     "link": ["https://www.facebook.com/events/1284836469047062/", "https://www.meetup.com/bida-contra-dance/events/291685974/"]
   },
   {
+    "date": [2023, 3, 30],
+    "title": "Introductory Sound Workshop",
+    "link": "https://www.facebook.com/events/5959580194136381/"
+  },
+  {
     "date": [2023, 4, 2],
     "band": "an Open Band",
     "caller": "Bob Isaacs",
