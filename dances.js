@@ -699,6 +699,7 @@ e = [
     "title": "Contra Dance + Open Band",
     "band": "Debby Knight leading an Open Band",
     "caller": "Bob Isaacs",
+    "link": ["https://www.facebook.com/events/670004571794355/", "https://www.meetup.com/bida-contra-dance/events/292390815/"]
   },
 ];
 
