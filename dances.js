@@ -701,6 +701,31 @@ e = [
     "caller": "Bob Isaacs",
     "link": ["https://www.facebook.com/events/670004571794355/", "https://www.meetup.com/bida-contra-dance/events/292390815/"]
   },
+  {
+    "date": [2023, 4, 16],
+    "title": "Contra Dance + Family Dance + Annual Meeting",
+    "band": "SpringTide: Willy Clemetson, Elsie Gawker, Ethan Fischer",
+    "caller": "Don Veino",
+  },
+  {
+    "date": [2023, 5, 7],
+    "caller": "Andrew Stout",
+  },
+  {
+    "date": [2023, 5, 21],
+  },
+  {
+    "date": [2023, 6, 4],
+    "band": "Rose Jackson & Friends",
+  },
+  {
+    "date": [2023, 6, 18],
+    "band": "Cojiro: Jess Newman, Mark Price",
+  },
+  {
+    "date": [2023, 7, 2],
+    "title": "So Long For Now Contra Dance - last dance of the 2022-2023 season",
+  },
 ];
 
 events = document.getElementById("events");
