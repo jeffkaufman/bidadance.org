@@ -704,7 +704,7 @@ e = [
   {
     "date": [2023, 4, 16],
     "title": "Contra Dance + Family Dance + Annual Meeting",
-    "band": "SpringTide: Willy Clemetson, Elsie Gawker, Ethan Fischer",
+    "band": "SpringTide: Willy Clemetson, Elsie Gawler, Ethan Tischler",
     "caller": "Don Veino",
   },
   {
