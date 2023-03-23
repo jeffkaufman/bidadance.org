@@ -697,7 +697,7 @@ e = [
   {
     "date": [2023, 4, 2],
     "title": "Contra Dance + Open Band",
-    "band": "Debby Knight leading an Open Band",
+    "band": "Alex Cumming leading an Open Band",
     "caller": "Bob Isaacs",
     "link": ["https://www.facebook.com/events/670004571794355/", "https://www.meetup.com/bida-contra-dance/events/292390815/"]
   },
