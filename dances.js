@@ -706,6 +706,7 @@ e = [
     "title": "Contra Dance + Family Dance + Annual Meeting",
     "band": "SpringTide: Willy Clemetson, Elsie Gawler, Ethan Tischler",
     "caller": "Don Veino",
+    "link": ["https://www.facebook.com/events/751389736363162", "https://www.meetup.com/bida-contra-dance/events/292711685/"]
   },
   {
     "date": [2023, 5, 7],
