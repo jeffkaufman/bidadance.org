@@ -711,6 +711,8 @@ e = [
   {
     "date": [2023, 5, 7],
     "caller": "Andrew Stout",
+    "band": "Ben Wetherbee, Ruth Rappaport + friends",
+    "link":["https://www.facebook.com/events/1225258111711016", "https://www.meetup.com/bida-contra-dance/events/293006729/"]
   },
   {
     "date": [2023, 5, 21],
