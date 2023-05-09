@@ -716,10 +716,15 @@ e = [
   },
   {
     "date": [2023, 5, 21],
+    "title": "Double Dance! Afternoon Advanced Dance, Potluck, & All-levels Evening Dance",
+    "band": "Calluna: Eileen O’Grady, Gus Cantieni, & Jesse Ball",
+    "caller": "Steve Zakon-Anderson",
+    "link": ["https://www.facebook.com/events/787404699486706/", "https://www.meetup.com/bida-contra-dance/events/293428934/"]
   },
   {
     "date": [2023, 6, 4],
-    "band": "Rose Jackson & Friends",
+    "band": "Rose Jackson, Rebecca Weiss, & Ann Percival",
+    "caller": "Chloe Levine"
   },
   {
     "date": [2023, 6, 18],
