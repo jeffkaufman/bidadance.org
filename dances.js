@@ -717,9 +717,18 @@ e = [
   {
     "date": [2023, 5, 21],
     "title": "Double Dance! Afternoon Advanced Dance, Potluck, & All-levels Evening Dance",
-    "band": "Calluna: Eileen O’Grady, Gus Cantieni, & Jesse Ball",
+    "band": "Calluna: Eileen O'Grady, Gus Cantieni, & Jesse Ball",
     "caller": "Steve Zakon-Anderson",
-    "link": ["https://www.facebook.com/events/787404699486706/", "https://www.meetup.com/bida-contra-dance/events/293428934/"]
+    "link": ["https://www.facebook.com/events/787404699486706/", "https://www.meetup.com/bida-contra-dance/events/293428934/"],
+    "html": "<table><tr><td>4:00-6:30<td>Advanced dance" +
+      "             <tr><td>6:30-7:30<td>Potluck" +
+      "             <tr><td>7:00-7:30<td>Beginner's Lesson" +
+      "             <tr><td>7:30-10:30<td>Evening dance" +
+      "      </table>" +
+      "<p><dl><dt><i>What do you mean, advanced? Should I come??</i>" +
+      "<dd><p>For the afternoon advanced session, Steve is going to be calling" +
+      " some trickier material and teaching less than usual. If you are" + 
+      " comfortable doing a no-walkthrough, you should be good!</dl>"
   },
   {
     "date": [2023, 6, 4],
