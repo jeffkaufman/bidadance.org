@@ -760,6 +760,8 @@ function getHostname(url) {
     return "facebook";
   } else if (hostname == "meetup.com") {
     return "meetup";
+  } else if (hostname == "instagram.com") {
+    return "instagram";
   } else {
     return hostname;
   }
