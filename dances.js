@@ -734,7 +734,7 @@ e = [
     "date": [2023, 6, 4],
     "title": "Contra Dance + Family Dance",
     "band": "Rose Jackson, Rebecca Weiss, & Amy Englesberg",
-    "caller": "Chloe Levine",
+    "caller": "Chloe Levine and Marcie Van Cleave",
     "link": ["https://www.meetup.com/bida-contra-dance/events/293723280/", "https://www.facebook.com/events/1388514941881652", "https://www.instagram.com/p/CsmfFUarFm_/"]
   },
   {
