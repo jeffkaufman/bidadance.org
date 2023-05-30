@@ -727,15 +727,20 @@ e = [
       "      </table>" +
       "<p><dl><dt><i>What do you mean, advanced? Should I come??</i>" +
       "<dd><p>For the afternoon advanced session, Steve is going to be calling" +
-      " some trickier material and teaching less than usual. If you are" + 
+      " some trickier material and teaching less than usual. If you are" +
       " comfortable doing a no-walkthrough, you should be good!</dl>"
   },
   {
     "date": [2023, 6, 4],
     "title": "Contra Dance + Family Dance",
-    "band": "Rose Jackson, Rebecca Weiss, & Amy Englesberg",
-    "caller": "Chloe Levine and Marcie Van Cleave",
-    "link": ["https://www.meetup.com/bida-contra-dance/events/293723280/", "https://www.facebook.com/events/1388514941881652", "https://www.instagram.com/p/CsmfFUarFm_/"]
+    "link": ["https://www.meetup.com/bida-contra-dance/events/293723280/", "https://www.facebook.com/events/1388514941881652", "https://www.instagram.com/p/CsmfFUarFm_/"],
+    "html": "<table><tr><td>5:30-6:30<td>Family dance" +
+      "             <tr><td>6:30-7:30<td>Potluck" +
+      "             <tr><td>7:00-7:30<td>Beginner's Lesson" +
+      "             <tr><td>7:30-10:30<td>Evening dance" +
+      "      </table>" +
+      "<p>Marcie Van Cleave will lead the family dance, to the music of Jonah Sidman and an open band." +
+      "<p>Chloe Levine will call the evening dance, to the music of Rose Jackson, Rebecca Weiss, & Amy Englesberg."
   },
   {
     "date": [2023, 6, 18],
