@@ -744,11 +744,15 @@ e = [
   },
   {
     "date": [2023, 6, 18],
+    "caller": "Hannah Chamberlain",
     "band": "Cojiro: Jess Newman, Mark Price",
+    "html": "This dance is <a href=/accessibility><strong>mask-required</strong></a>"
   },
   {
     "date": [2023, 7, 2],
     "title": "So Long For Now Contra Dance - last dance of the 2022-2023 season",
+    "band": "Helen Kuhar and Kat Wallace",
+    "html": "This dance is <a href=/accessibility><strong>mask-optional</strong></a>"
   },
 ];
 
