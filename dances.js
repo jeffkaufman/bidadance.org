@@ -746,7 +746,7 @@ e = [
     "date": [2023, 6, 18],
     "caller": "Hannah Chamberlain",
     "band": "Cojiro: Jess Newman, Mark Price",
-    "html": "This dance is <a href=/accessibility><strong>mask-required</strong></a> and <a href=/accessibility><strong>vaccination-required</strong></a> (at least one booster)."
+    "html": "This dance is <a href=/accessibility><strong>mask-required</strong></a>"
   },
   {
     "date": [2023, 7, 2],
