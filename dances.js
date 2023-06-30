@@ -752,6 +752,8 @@ e = [
     "date": [2023, 7, 2],
     "title": "So Long For Now Contra Dance - last dance of the 2022-2023 season",
     "band": "Helen Kuhar and Kat Wallace",
+    "caller": "Liz Nelson",
+    "link": ["https://www.facebook.com/events/626626559423239", "https://www.meetup.com/bida-contra-dance/events/294364557/", "https://www.instagram.com/p/CuGOnUrr_c6/"],
     "html": "This dance is <a href=/accessibility><strong>mask-optional</strong></a>"
   },
 ];
