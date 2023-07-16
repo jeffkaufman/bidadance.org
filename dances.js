@@ -756,6 +756,16 @@ e = [
     "link": ["https://www.facebook.com/events/626626559423239", "https://www.meetup.com/bida-contra-dance/events/294364557/", "https://www.instagram.com/p/CuGOnUrr_c6/"],
     "html": "This dance is <a href=/accessibility><strong>mask-optional</strong></a>"
   },
+  {
+    "title": "First Dance Back From Summer!",
+    "date": [2023, 9, 3],
+    "caller": "Qwill Duvall",
+    "html": "This dance is <a href=/accessibility><strong>mask-optional</strong></a>"
+  },
+  {
+    "date": [2023, 9, 17],
+    "html": "This dance is <a href=/accessibility><strong>mask-required</strong></a>"
+  },
 ];
 
 events = document.getElementById("events");
