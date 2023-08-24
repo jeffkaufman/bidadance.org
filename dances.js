@@ -760,6 +760,8 @@ e = [
     "title": "First Dance Back From Summer!",
     "date": [2023, 9, 3],
     "caller": "Qwill Duvall",
+    "band": "Jonah Spear, Sammy Wetstein, & Hilary Menegaz Weitzner",
+    "link": ["https://www.facebook.com/events/7078633855497924/", "https://www.meetup.com/bida-contra-dance/events/295664014/", "https://www.instagram.com/p/CwWDoQ1LLFN/"],
     "html": "This dance is <a href=/accessibility><strong>mask-optional</strong></a>"
   },
   {
