@@ -771,6 +771,40 @@ e = [
     "band": "Joy Factor: Gianna Marzilli Ericson, Henry Yoshimura, Rebecca Weiss",
     "link": ["https://www.facebook.com/events/196236726678536/", "https://www.meetup.com/bida-contra-dance/events/295996908/", "https://www.instagram.com/p/Cw-M5evr4iP/"]
   },
+  {
+    "date": [2023, 10, 1],
+    "html": "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    "caller": "Sonya Kaufman",
+    "band": "Rohan Weedan, Adam Hendey",
+  },
+  {
+    "date": [2023, 10, 15],
+    "html": "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    "caller": "Chloe Levine",
+    "band": "Casey Murray, Molly Tucker, Sam Zakon-Anderson",
+  },
+  {
+    "date": [2023, 11, 5],
+    "html": "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    "caller": "Will Mentor",
+    "band": "Max Newman and friends",
+  },
+  {
+    "date": [2023, 11, 19],
+    "html": "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    "band": "Calico: Eric, Casey, Jesse",
+  },
+  {
+    "date": [2023, 12, 3],
+    "html": "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    "band": "Open Band",
+  },
+  {
+    "date": [2023, 12, 17],
+    "html": "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    "caller": "Maia McCormick",
+    "band": "Larry Unger, Eric Boodman, Emily Troll",
+  }
 ];
 
 events = document.getElementById("events");
