@@ -766,7 +766,10 @@ e = [
   },
   {
     "date": [2023, 9, 17],
-    "html": "This dance is <a href=/accessibility><strong>mask-required</strong></a>"
+    "html": "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    "caller": "Don Stratton",
+    "band": "Joy Factor: Gianna Marzilli Ericson, Henry Yoshimura, Rebecca Weiss",
+    "link": ["https://www.facebook.com/events/196236726678536/", "https://www.meetup.com/bida-contra-dance/events/295996908/", "https://www.instagram.com/p/Cw-M5evr4iP/"]
   },
 ];
 
