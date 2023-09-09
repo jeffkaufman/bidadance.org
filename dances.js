@@ -775,7 +775,7 @@ e = [
     "date": [2023, 10, 1],
     "html": "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     "caller": "Sonya Kaufman",
-    "band": "Rohan Weedan, Adam Hendey",
+    "band": "Rohan Weeden, Adam Hendey",
   },
   {
     "date": [2023, 10, 15],
@@ -792,7 +792,7 @@ e = [
   {
     "date": [2023, 11, 19],
     "html": "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
-    "band": "Calico: Eric, Casey, Jesse",
+    "band": "Calico: Eric Boodman, Casey Murray, Jesse Ball",
   },
   {
     "date": [2023, 12, 3],
