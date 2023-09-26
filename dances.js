@@ -775,7 +775,7 @@ e = [
     "date": [2023, 10, 1],
     "html": "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     "caller": "Sonya Kaufman",
-    "band": "Rohan Weeden, Adam Hendey",
+    "band": "Rohan Weeden & Helen Kuhar",
   },
   {
     "date": [2023, 10, 15],
