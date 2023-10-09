@@ -98,11 +98,16 @@ if we did that.
 
 <p>
 
+<input id=deflate type=checkbox>
+<label for=deflate>Use current dollars (adjust for inflation).</deflate>
+
+<p>
+
 <div id="income_div" style="width: 100%; height: 400px;"></div>
 
 <h3 id=profit>BIDA Profit / Loss</h3>
 
-This is the effect of running the dance on BIDA's bank account.  How
+This is the effect of running the dance on our bank account.  How
 much money is left after paying the hall, musicians, caller, sound,
 etc?
 
@@ -128,74 +133,98 @@ href="/attendance-financials-template">financials worksheet</a>.
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script type="text/javascript">
 google.load("visualization", "1", {packages:["corechart"]});
+
+
+var raw_income = [];
+var raw_profit = [];
+var deflated_income = [];
+var deflated_profit = [];
+
 google.setOnLoadCallback(function () {
   fetch("financials.log", function(response) {
     var parsed = JSON.parse(response);
-    var income = [];
-    var profit = [];
     for (var i = 0; i < parsed.length; i++) {
       var s = parsed[i][0];
       var d  = new Date(0);
       d.setUTCSeconds(s);
 
       if (parsed[i][1] !== null) {
-        income.push([d, parsed[i][1]]);
+        raw_income.push([d, parsed[i][1]]);
+        deflated_income.push([d, parsed[i][3]]);
       }
       if (parsed[i][2] !== null) {
-        profit.push([d, parsed[i][2]]);
+        raw_profit.push([d, parsed[i][2]]);
+        deflated_profit.push([d, parsed[i][4]]);
       }
     }
 
-    console.log(profit)
-    console.log(income)
+    income_chart = new google.visualization.ScatterChart(document.getElementById('income_div'));
+    profit_chart = new google.visualization.ScatterChart(document.getElementById('profit_div'));
 
-    function averageAt(i, source) {
-      var width = 7;
-      var n = 0;
-      var s = 0;
-      for (var j = Math.max(0, i - width);
-               j < Math.min(source.length, i + width);
-               j++) {
-        var weight = width - Math.abs(j - i);
-        if (spansCovidBreak(source[i][0], source[j][0])) {
-          weight = 0;
-        }
-        n += weight;
-        s += weight*source[j][1];
-      }
-      return s/n;
-    }
-
-    for (var i = 0 ; i < income.length ; i++) {
-      income[i].push(averageAt(i, income));
-    }
-    for (var i = 0 ; i < profit.length ; i++) {
-      profit[i].push(averageAt(i, profit));
-    }
-
-    var income_data = new google.visualization.DataTable();
-    var profit_data = new google.visualization.DataTable();
-
-    income_data.addColumn({ type: 'date', id: 'Date' });
-    profit_data.addColumn({ type: 'date', id: 'Date' });
-
-    income_data.addColumn({ type: 'number', label: 'Income' });
-    profit_data.addColumn({ type: 'number', label: 'Profit/Loss' });
-
-    income_data.addColumn({ type: 'number', label: 'Moving Average' });
-    profit_data.addColumn({ type: 'number', label: 'Moving Average' });
-
-    income_data.addRows(income);
-    profit_data.addRows(profit);
-
-    var income_chart = new google.visualization.ScatterChart(document.getElementById('income_div'));
-    var profit_chart = new google.visualization.ScatterChart(document.getElementById('profit_div'));
-    
-    income_chart.draw(income_data, {legend: 'top', chartArea: {'width': '80%', height: '81%'}});
-    profit_chart.draw(profit_data, {legend: 'top', chartArea: {'width': '80%', height: '81%'}});
+    draw_financials_chart();
   });
 });
-</script>
+
+var income_chart;
+var profit_chart;
+
+function draw_financials_chart() {
+  var income = deflate.checked ? deflated_income : raw_income;
+  var profit = deflate.checked ? deflated_profit : raw_profit;
+
+  function averageAt(i, source) {
+    var width = 7;
+    var n = 0;
+    var s = 0;
+    for (var j = Math.max(0, i - width);
+         j < Math.min(source.length, i + width);
+         j++) {
+      var weight = width - Math.abs(j - i);
+      if (spansCovidBreak(source[i][0], source[j][0])) {
+        weight = 0;
+      }
+      n += weight;
+      s += weight*source[j][1];
+    }
+    return s/n;
+  }
+
+  for (var i = 0 ; i < income.length ; i++) {
+    if (income[i].length == 2) {
+      income[i].push(averageAt(i, income));
+    }
+  }
+  for (var i = 0 ; i < profit.length ; i++) {
+    if (profit[i].length == 2) {
+      profit[i].push(averageAt(i, profit));
+    }
+  }
+
+  var income_data = new google.visualization.DataTable();
+  var profit_data = new google.visualization.DataTable();
+
+  income_data.addColumn({ type: 'date', id: 'Date' });
+  profit_data.addColumn({ type: 'date', id: 'Date' });
+
+  income_data.addColumn({ type: 'number', label: 'Income' });
+  profit_data.addColumn({ type: 'number', label: 'Profit/Loss' });
+
+  income_data.addColumn({ type: 'number', label: 'Moving Average' });
+  profit_data.addColumn({ type: 'number', label: 'Moving Average' });
+
+  income_data.addRows(income);
+  profit_data.addRows(profit);
+
+  income_chart.clearChart();
+  profit_chart.clearChart();
+
+  income_chart.draw(income_data, {legend: 'top', chartArea: {'width': '80%', height: '81%'}});
+  profit_chart.draw(profit_data, {legend: 'top', chartArea: {'width': '80%', height: '81%'}});
+}
+
+deflate.onchange = draw_financials_chart;
+
+  </script>
 
 </div>
 <a href="/"><div id=back-bar>&larr; main page</div></a>

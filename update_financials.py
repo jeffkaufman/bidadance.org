@@ -1,5 +1,32 @@
 #!/usr/bin/env python3
+import csv
 import time
+import datetime
+
+cpi = {} # year, month -> index
+with open("CPIAUCSL.csv") as inf:
+  for date, cpiaucsl in csv.reader(inf):
+    if date == "DATE":
+      continue
+    y, m, d = date.split("-")
+    cpi[int(y), int(m)] = float(cpiaucsl)
+
+def current_dollars(year, month, amount):
+  if amount is None:
+    return amount
+
+  now_y_m = max(cpi)
+  if (year, month) > now_y_m:
+    return amount
+
+  now_index = cpi[now_y_m]
+  then_index = cpi[year, month]
+  return round(amount * now_index / then_index)
+
+if max(cpi)[0] < datetime.date.today().year:
+  print("Inflation numbers are a bit old; no data since %s-%s" % (max(cpi)))
+  print("Download new CSV from https://fred.stlouisfed.org/series/CPIAUCSL")
+  exit(1)
 
 print("Visit https://docs.google.com/spreadsheets/d/1PvCEAlAluF5Cf0J2s_C0AaAQ4HpgjF4WT1XVpV5DcuQ/edit#gid=1315149313")
 print("and make sure it's up to date.  Then paste contents here.")
@@ -16,7 +43,7 @@ def parse_money(s):
   s = s.replace('$', '').replace(',', '').strip()
   if not s:
     return None
-  
+
   return round(float(s))
 
 def to_epoch(year, month, day):
@@ -37,7 +64,11 @@ for line in lines:
 
   year, month, day = date_s.split('-')
   ts = to_epoch(year, month, day)
-  vals.append((ts, parse_money(income_s), parse_money(profit_s)))
+  income = parse_money(income_s)
+  profit = parse_money(profit_s)
+  vals.append((ts, income, profit,
+               current_dollars(int(year), int(month), income),
+               current_dollars(int(year), int(month), profit)))
 
 import json
 with open('/home/jefftk/bd/financials.log', 'w') as outf:
