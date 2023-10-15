@@ -784,15 +784,20 @@ e = [
     "band": "Casey Murray, Molly Tucker, Sam Zakon-Anderson",
   },
   {
+    "title": "Double Dance! Challenging Contras, Triplets, and Squares with Will Mentor",
     "date": [2023, 11, 5],
     "html": "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     "caller": "Will Mentor",
-    "band": "Max Newman and friends",
+    "band": "Eric Boodman, Emily Troll, and Max Newman w/ special guest Yann Falquet",
+    "link": ["https://www.facebook.com/events/705041921681152"],
   },
   {
+    "title": "Double Dance! Challenging Contras with Lisa Greenleaf",
     "date": [2023, 11, 19],
     "html": "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
-    "band": "Calico: Eric Boodman, Casey Murray, Jesse Ball",
+    "band": "Calico: Eric Boodman, Casey Murray, & Jesse Ball",
+    "caller": "Lisa Greenleaf",
+    "link": ["https://www.facebook.com/events/1044477036745178/"],
   },
   {
     "date": [2023, 12, 3],
