@@ -796,7 +796,7 @@ e = [
     "date": [2023, 11, 19],
     "html": "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
     "band": "Calico: Eric Boodman, Casey Murray, & Jesse Ball",
-    "caller": "Lisa Greenleaf",
+    "caller": "Liz Nelson",
     "link": ["https://www.facebook.com/events/1044477036745178/"],
   },
   {
