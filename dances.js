@@ -801,14 +801,25 @@ e = [
   },
   {
     "date": [2023, 12, 3],
-    "html": "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    "title": "Contra Dance & Family Dance with Open Band",
+    "html": "We will be having a family dance before the evening dance - the perfect opportunity for all ages fun. \
+     Our family dances focus on dancing that is accessible and fun for children to join, but are open to everyone - \
+     even if you don't have children, come and have fun in a lighthearted atmosphere. \n \
+      We'll have a potluck after the family dance, followed by our regular all levels evening contra dance. \
+       Both the family and evening dances will be accompanied by an open band, so if you play an instrument come join in! \
+       <table>      <tr><td>5:30-6:30:<td>family dance + open band      <tr><td>6:30-7:30:<td>potluck dinner      <tr><td>7:30-10:30:&nbsp;&nbsp;<td>contra dance + open band   </table> \
+     This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     "band": "Open Band",
+    "caller": "Sue Rosen",
+    "link": ["https://www.facebook.com/events/892181802348103","https://www.meetup.com/bida-contra-dance/events/297530550"],
   },
   {
     "date": [2023, 12, 17],
-    "html": "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    "html": "This dance is at a different location! Join us at the Armory in Somerville. 191 Highland Ave, Somerville MA. This dance is <a href=/accessibility><strong>mask-required</strong></a>.",
     "caller": "Maia McCormick",
     "band": "Larry Unger, Eric Boodman, Emily Troll",
+    "link": ["https://www.facebook.com/events/846943760560273"],
+    "title": "Contra Dance at the Armory",
   }
 ];
 
