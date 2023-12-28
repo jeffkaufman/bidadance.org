@@ -820,7 +820,70 @@ e = [
     "band": "Larry Unger, Eric Boodman, Emily Troll",
     "link": ["https://www.facebook.com/events/846943760560273"],
     "title": "Contra Dance at the Armory",
-  }
+  },
+  {
+    date: [2024, 1, 7],
+    html: "This will be a special dance featuring a mix of Scottish and Contra dancing! This dance is <a href=/accessibility><strong>mask-optional</strong></a>.",
+    caller: "Kat Dutton (Scottish) & Harris Lapiroff (Contra)",
+    band: "Torrent: Nadia Gaya, Ross Parker, Sarah Stefanski",
+    title: "Contra & Scottish Combo Dance",
+  },
+  {
+    date: [2024, 1, 14],
+    caller: "Mary Wesley",
+    band: "Noah VanNorstand, Yann Falquet, Kelsey Wells",
+  },
+  {
+    date: [2024, 1, 21],
+    band: "Helen Kuhar, Elias Cardoso, Rohan Weeden",
+  },
+  {
+    date: [2024, 2, 4],
+    band: "BIDA musician megaband",
+    title: "BIDA's 15th Anniversary Dance!!!",
+    html: "Join us in celebrating 15 years of BIDA! Any musician who has ever been booked for BIDA is invited to return to our stage for a spectacular megaband extravaganza. This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+  },
+  {
+    date: [2024, 2, 18],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+  },
+  {
+    date: [2024, 3, 3],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+  },
+  {
+    date: [2024, 3, 17],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    caller: "Will Mentor",
+  },
+  {
+    date: [2024, 4, 7],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+  },
+  {
+    date: [2024, 4, 21],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+  },
+  {
+    date: [2024, 5, 5],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+  },
+  {
+    date: [2024, 5, 19],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+  },
+  {
+    date: [2024, 6, 2],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+  },
+  {
+    date: [2024, 6, 16],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+  },
+  {
+    date: [2024, 7, 7],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+  },
 ];
 
 events = document.getElementById("events");
