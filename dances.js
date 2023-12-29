@@ -827,15 +827,19 @@ e = [
     caller: "Kat Dutton (Scottish) & Harris Lapiroff (Contra)",
     band: "Torrent: Nadia Gaya, Ross Parker, Sarah Stefanski",
     title: "Contra & Scottish Combo Dance",
+    link: ["https://www.facebook.com/events/2372928639559968", "https://www.meetup.com/bida-contra-dance/events/298206891/"],
   },
   {
     date: [2024, 1, 14],
     caller: "Mary Wesley",
-    band: "Noah VanNorstand, Yann Falquet, Kelsey Wells",
+    band: "Noah VanNorstand, Yann Falquet, & Kelsey Wells",
+    link: ["https://www.facebook.com/events/1049987729656439", "https://www.meetup.com/bida-contra-dance/events/298206913/"],
+    title: "Bonus Contra Dance",
+    html: "Join us for a bonus dance with a special out-of-town lineup! This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
   },
   {
     date: [2024, 1, 21],
-    band: "Helen Kuhar, Elias Cardoso, Rohan Weeden",
+    band: "Helen Kuhar, Elias Cardoso, & Rohan Weeden",
   },
   {
     date: [2024, 2, 4],
