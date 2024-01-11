@@ -72,6 +72,6 @@ for line in lines:
 
 import json
 with open('/home/jefftk/bd/financials.log', 'w') as outf:
-  outf.write(json.dumps(vals))
+  outf.write(json.dumps(vals, indent=2))
 
 print('\nWrote %s data points.' % len(vals))
