@@ -23,7 +23,7 @@ def current_dollars(year, month, amount):
   then_index = cpi[year, month]
   return round(amount * now_index / then_index)
 
-if max(cpi)[0] < datetime.date.today().year:
+if max(cpi)[0] < (datetime.date.today() - datetime.timedelta(days=60)).year:
   print("Inflation numbers are a bit old; no data since %s-%s" % (max(cpi)))
   print("Download new CSV from https://fred.stlouisfed.org/series/CPIAUCSL")
   exit(1)
