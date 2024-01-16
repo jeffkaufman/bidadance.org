@@ -840,6 +840,8 @@ e = [
   {
     date: [2024, 1, 21],
     band: "Helen Kuhar, Elias Cardoso, & Rohan Weeden",
+    caller: "Annie Kidwell",
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
   },
   {
     date: [2024, 2, 4],
@@ -849,7 +851,9 @@ e = [
   },
   {
     date: [2024, 2, 18],
-    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    title: "Family Dance & Evening Contra",
+    html: "Join us for an afternoon family dance - all ages fun! Everyone is welcome to join and dance or play music. Jeff Kaufman will lead the family dance open band. This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    caller: "Luke Donforth",
   },
   {
     date: [2024, 3, 3],
@@ -866,14 +870,17 @@ e = [
     date: [2024, 3, 17],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
     caller: "Will Mentor",
+    band: "Mean Lids",
   },
   {
     date: [2024, 4, 7],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    band: "Crossover: Len Bittenson, Alex Cumming, and Carol Bittenson",
   },
   {
     date: [2024, 4, 21],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    band: "Whirlwing: Amy Englesberg & Cedar Stanistreet",
   },
   {
     date: [2024, 5, 5],
