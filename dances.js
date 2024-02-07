@@ -854,6 +854,8 @@ e = [
     title: "Family Dance & Evening Contra",
     html: "Join us for an afternoon family dance - all ages fun! Everyone is welcome to join and dance or play music. Jeff Kaufman will lead the family dance open band. This dance is <a href=/accessibility><strong>mask-required</strong></a>",
     caller: "Luke Donforth",
+    band: "BIDA Open Band! Family dance band led by Jeff Kaufman and evening dance led by Amy Englesberg",
+    link: ["https://www.facebook.com/events/361894960028828/"]
   },
   {
     date: [2024, 3, 3],
