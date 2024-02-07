@@ -862,11 +862,11 @@ e = [
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
   },
   {
-    "date": [2024, 3, 15],
-    "title": "Contra Dance Weekend: Beantown Stomp",
-    "link": "https://www.beantownstomp.com",
-    "band": "The Mean Lids and The Figments",
-    "caller": "Maia McCormick and Will Mentor",
+    date: [2024, 3, 15],
+    title: "Contra Dance Weekend: Beantown Stomp",
+    link: "https://www.beantownstomp.com",
+    band: "The Mean Lids and The Figments",
+    caller: "Maia McCormick and Will Mentor",
   },
   {
     date: [2024, 3, 17],
