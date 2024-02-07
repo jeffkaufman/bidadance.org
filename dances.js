@@ -847,7 +847,7 @@ e = [
     date: [2024, 2, 4],
     band: "BIDA musician megaband",
     title: "BIDA's 15th Anniversary Dance!!!",
-    html: "Join us in celebrating 15 years of BIDA! Any musician who has ever been booked for BIDA is invited to return to our stage for a spectacular megaband extravaganza. This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    html: "Join us in celebrating 15 years of BIDA! Any musician who has ever been booked for BIDA is invited to return to our stage for a spectacular megaband extravaganza (RSVP to jeff@jefftk.com). This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
   },
   {
     date: [2024, 2, 18],
