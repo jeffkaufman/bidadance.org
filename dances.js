@@ -887,22 +887,27 @@ e = [
   {
     date: [2024, 5, 5],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    band: "Hadley Stockwell & Abi Sandy",
   },
   {
     date: [2024, 5, 19],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    band: "Chimney Swift",
   },
   {
     date: [2024, 6, 2],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    band: "Good Company",
   },
   {
     date: [2024, 6, 16],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    band: "Open Band",
   },
   {
     date: [2024, 7, 7],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    band: "Gus LaCasse",
   },
 ];
 
