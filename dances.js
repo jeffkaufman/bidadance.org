@@ -860,6 +860,8 @@ e = [
   {
     date: [2024, 3, 3],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    caller: "Liz Nelson",
+    band: "The Red Case Band: Stuart Kenney, Matt Kenney, Clara Stickney, and Max Newman"
   },
   {
     date: [2024, 3, 15],
