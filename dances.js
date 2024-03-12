@@ -875,6 +875,7 @@ e = [
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
     caller: "Will Mentor",
     band: "Mean Lids",
+    link: "https://www.facebook.com/events/776331817338699/",
   },
   {
     date: [2024, 4, 7],
