@@ -878,6 +878,16 @@ e = [
     link: "https://www.facebook.com/events/776331817338699/",
   },
   {
+    "date": [2024, 3, 28],
+    "title": "Introductory Sound Workshop",
+    "link": "https://www.facebook.com/events/3605899359665045/"
+  },
+  {
+    "date": [2024, 4, 3],
+    "title": "Advanced/Refresher Sound Workshop",
+    "link": "https://www.facebook.com/events/368094309536202/"
+  },
+  {
     date: [2024, 4, 7],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     band: "Crossover: Len Bittenson, Alex Cumming, and Carol Bittenson",
