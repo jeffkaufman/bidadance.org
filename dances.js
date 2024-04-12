@@ -895,7 +895,8 @@ e = [
   {
     date: [2024, 4, 21],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
-    band: "Whirlwing: Amy Englesberg & Cedar Stanistreet",
+    band: "Thunderwing: Amy Englesberg & Cedar Stanistreet",
+    caller: "Ben Sachs-Hamilton"
   },
   {
     date: [2024, 5, 5],
@@ -903,14 +904,23 @@ e = [
     band: "Hadley Stockwell & Abi Sandy",
   },
   {
+    date: [2024, 5, 12],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    band: "Nova",
+    caller: "Steve Zakon-Anderson",
+    title: "Bonus Dance with Nova!",
+  },
+  {
     date: [2024, 5, 19],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
     band: "Chimney Swift",
+    caller: "Chloe Levine"
   },
   {
     date: [2024, 6, 2],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     band: "Good Company",
+    caller: "Andrew Stout",
   },
   {
     date: [2024, 6, 16],
