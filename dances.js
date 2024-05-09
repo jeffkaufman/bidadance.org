@@ -908,7 +908,13 @@ e = [
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     band: "Nova",
     caller: "Steve Zakon-Anderson",
-    title: "Bonus Dance with Nova!",
+    title: "Bonus Contra & Family Dance with Nova!",
+    html: "<table><tr><td>5:30-6:30<td>Family dance" +
+      "             <tr><td>6:30-7:30<td>Potluck" +
+      "             <tr><td>7:00-7:30<td>Beginner's Lesson" +
+      "             <tr><td>7:30-10:30<td>Evening dance" +
+      "      </table>" +
+      "<p>Jeff Kaufman will lead an open band for the family dance."
   },
   {
     date: [2024, 5, 19],
