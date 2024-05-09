@@ -905,11 +905,11 @@ e = [
   },
   {
     date: [2024, 5, 12],
-    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     band: "Nova",
     caller: "Steve Zakon-Anderson",
     title: "Bonus Contra & Family Dance with Nova!",
-    html: "<table><tr><td>5:30-6:30<td>Family dance" +
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a><br /><br />" +
+      "<table><tr><td>5:30-6:30<td>Family dance" +
       "             <tr><td>6:30-7:30<td>Potluck" +
       "             <tr><td>7:00-7:30<td>Beginner's Lesson" +
       "             <tr><td>7:30-10:30<td>Evening dance" +
