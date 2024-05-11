@@ -908,6 +908,7 @@ e = [
     band: "Nova",
     caller: "Steve Zakon-Anderson",
     title: "Bonus Contra & Family Dance with Nova!",
+    link: "https://www.facebook.com/events/808954817811612",
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a><br /><br />" +
       "<table><tr><td>5:30-6:30<td>Family dance" +
       "             <tr><td>6:30-7:30<td>Potluck" +
