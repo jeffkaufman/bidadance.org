@@ -934,6 +934,7 @@ e = [
     title: "Open Band Night & Family Dance",
     band: "Open Band led by Casey Murray and Molly Tucker",
     caller: "Sue Rosen",
+    link: "https://www.facebook.com/events/443304658639233",
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a> — the family dance and potluck are <strong>mask-optional</strong><br /><br />" +
       "<table><tr><td>5:30-6:30<td>Family dance (mask-optional)" +
       "             <tr><td>6:30-7:30<td>Potluck (mask-optional)" +
