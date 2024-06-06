@@ -931,8 +931,16 @@ e = [
   },
   {
     date: [2024, 6, 16],
-    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
-    band: "Open Band",
+    title: "Open Band Night & Family Dance",
+    band: "Open Band led by Casey Murray and Molly Tucker",
+    caller: "Sue Rosen",
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a> — the family dance and potluck are <strong>mask-optional</strong><br /><br />" +
+      "<table><tr><td>5:30-6:30<td>Family dance (mask-optional)" +
+      "             <tr><td>6:30-7:30<td>Potluck (mask-optional)" +
+      "             <tr><td>7:00-7:30<td>Beginner's Lesson (mask-required)" +
+      "             <tr><td>7:30-10:30<td>Evening dance (mask-required)" +
+      "      </table>" +
+      "<p>Jeff Kaufman will call the family dance with Rick Kaufman leading an open band."
   },
   {
     date: [2024, 7, 7],
