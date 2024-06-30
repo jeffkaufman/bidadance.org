@@ -945,9 +945,11 @@ e = [
   },
   {
     date: [2024, 7, 7],
-    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
-    band: "Gus LaCasse",
+    html: "Picnic! Singing! Our last dance before summer break!<table><tbody><tr><td>4pm</td><td>Picnic at Raymond Park</td></tr><tr><td>~6pm</td><td>Social Singing at the hall (1950 Mass Ave)</td></tr><tr><td>7pm</td><td>Lesson</td></tr><tr><td>7:30 - 10:30pm</td><td>Contra Dance!</td></tr></tbody></table><p>This dance is <a href=/accessibility><strong>mask-optional</strong></a></p>",
+    band: "Gus LaCasse & Pepin Mittelhauser",
     caller: "Angela DeCarlis",
+    title: "End of the Season Contra Dance",
+    link: "https://www.facebook.com/events/836447091287298"
   },
 ];
 
