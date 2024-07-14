@@ -939,6 +939,17 @@ e = [
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     band: "Gus LaCasse",
   },
+  {
+    "date": [2024, 8, 16],
+    "title": "Spark in the Dark",
+    "html": "Dance to the electronic music of Kingfisher and several <a ref='https://blog.bidadance.org/2024/07/guest-spots-at-our-august-16th-spark-in.html'>guests</a>." + 
+"<p>" + 
+"This dance is at a different location: The Somerville Armory, " +
+"191 Highland Ave." + 
+"<p>" +
+"Lighting at this dance will be darker than usual, and some dancers can" +
+"find it confusing or overwhelming.",
+  },
 ];
 
 events = document.getElementById("events");
