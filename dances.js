@@ -960,10 +960,9 @@ e = [
 "This dance is at a different location: The Somerville Armory, " +
 "191 Highland Ave." + 
 "<p>" +
-"Accessibility info:" +
-"<p>" +
+"Accessibility info: " +
 "Lighting at this dance will be darker than usual, and will include black lights. Some dancers can " +
-"find it confusing or overwhelming. The Armory's Accessibility info is available <a ref='https://artsatthearmory.org/frequently-asked-questions/#access-faq'>on their website</a>.",
+"find it confusing or overwhelming. The Armory's is wheelchair accessible, with more information <a class=marklink href='https://artsatthearmory.org/frequently-asked-questions/#access-faq'>on their website</a>.",
   },
 ];
 
