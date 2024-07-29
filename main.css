@@ -13,6 +13,11 @@ a {
   text-decoration: none;
 }
 
+#events a.marklink, #past-events a.marklink {
+  color: rgb(165, 11, 32);
+  text-decoration: underline;
+}
+
 #past-events {
   display: none;
   margin-top: 1em;
