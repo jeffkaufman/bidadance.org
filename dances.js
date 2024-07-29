@@ -952,15 +952,18 @@ e = [
     link: "https://www.facebook.com/events/836447091287298"
   },
   {
-    "date": [2024, 8, 16],
-    "title": "Spark in the Dark",
-    "html": "Dance to the electronic music of Kingfisher and several <a ref='https://blog.bidadance.org/2024/07/guest-spots-at-our-august-16th-spark-in.html'>guests</a>." + 
+    date: [2024, 8, 16],
+    title: "Spark in the Dark",
+    link: "https://www.facebook.com/events/1456055841716367/",
+    html: "Dance with Lisa Greenleaf calling to the electronic music of Kingfisher and several <a ref='https://blog.bidadance.org/2024/07/guest-spots-at-our-august-16th-spark-in.html'>guests</a>." + 
 "<p>" + 
 "This dance is at a different location: The Somerville Armory, " +
 "191 Highland Ave." + 
 "<p>" +
-"Lighting at this dance will be darker than usual, and some dancers can" +
-"find it confusing or overwhelming.",
+"Accessibility info:" +
+"<p>" +
+"Lighting at this dance will be darker than usual, and will include black lights. Some dancers can " +
+"find it confusing or overwhelming. The Armory's Accessibility info is available <a ref='https://artsatthearmory.org/frequently-asked-questions/#access-faq'>on their website</a>.",
   },
 ];
 
