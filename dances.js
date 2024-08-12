@@ -955,14 +955,21 @@ e = [
     date: [2024, 8, 16],
     title: "Spark in the Dark",
     link: "https://www.facebook.com/events/1456055841716367/",
-    html: "Dance with Lisa Greenleaf calling to the electronic music of Kingfisher and several <a class=marklink href='https://blog.bidadance.org/2024/07/guest-spots-at-our-august-16th-spark-in.html'>guests</a>." + 
+    html: "Dance with Lisa Greenleaf calling to the electronic music of Kingfisher and <a class=marklink href='https://blog.bidadance.org/2024/07/guest-spots-at-our-august-16th-spark-in.html'>guests</a>." + 
 "<p>" + 
 "This dance is at a different location: The Somerville Armory, " +
 "191 Highland Ave." + 
 "<p>" +
 "Accessibility info: " +
 "Lighting at this dance will be darker than usual, and will include black lights. Some dancers can " +
-"find it confusing or overwhelming. The Armory's is wheelchair accessible, with more information <a class=marklink href='https://artsatthearmory.org/frequently-asked-questions/#access-faq'>on their website</a>.",
+"find it confusing or overwhelming. The Armory's is wheelchair accessible, with more information <a class=marklink href='https://artsatthearmory.org/frequently-asked-questions/#access-faq'>on their website</a>." +
+"<p><table>" +
+"<tr><td>6:40<td>Lesson" + 
+"<tr><td>7:00<td>Kingfisher" + 
+"<tr><td>8:30<td>Moondial, then Kingfisher" + 
+"<tr><td>10:30<td>Yaron, then Kingfisher" +
+"<tr><td>12:00<td>End" + 
+"</table>",
   },
 ];
 
