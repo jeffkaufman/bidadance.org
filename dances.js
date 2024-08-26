@@ -971,6 +971,60 @@ e = [
 "<tr><td>12:00<td>End" + 
 "</table>",
   },
+  {
+    date: [2024, 9, 1],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    band: "Calico (Jesse Ball, Casey Murray, & Eric Boodman)",
+    caller: "Annie Kidwell",
+  },
+  {
+    date: [2024, 9, 15],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    band: "Stove Dragon (Rose Jackson, Oliver Scanlon, Sam Zakon-Anderson, & Max Newman)",
+    caller: "Dereck Kalish"
+  },
+  {
+    date: [2024, 9, 22],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    band: "Gaslight Tinkers",
+    // caller: "",
+  },
+  {
+    date: [2024, 10, 6],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    band: "Casey Murray, Molly Tucker, & Sam Zakon-Anderson",
+    // caller: ""
+  },
+  {
+    date: [2024, 10, 20],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    band: "Open Band",
+    caller: "Jeremy Korr",
+  },
+  {
+    date: [2024, 10, 27],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    band: "Anna and the Alphabet",
+    caller: "Alyssa Adkins"
+  },
+  {
+    date: [2024, 11, 3],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    band: "River Road",
+    caller: "Adina Gordon",
+  },
+  {
+    date: [2024, 11, 17],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    band: "Einstein's Little Homunculus",
+    // caller: ""
+  },
+  {
+    date: [2024, 12, 1],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    band: "Ice Cream Truckers",
+    // caller: "",
+  },
 ];
 
 events = document.getElementById("events");
