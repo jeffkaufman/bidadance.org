@@ -973,21 +973,27 @@ e = [
   },
   {
     date: [2024, 9, 1],
-    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>. Join us beforehand for a picnic at Raymond Park at 4pm!",
     band: "Calico (Jesse Ball, Casey Murray, & Eric Boodman)",
     caller: "Annie Kidwell",
   },
   {
     date: [2024, 9, 15],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
-    band: "Stove Dragon (Rose Jackson, Oliver Scanlon, Sam Zakon-Anderson, & Max Newman)",
+    band: "Rose Jackson, Oliver Scanlon, & Max Newman)",
     caller: "Dereck Kalish"
   },
   {
     date: [2024, 9, 22],
-    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a><br /><br />" +
+      "<table><tr><td>5:30-6:30<td>Family dance" +
+      "             <tr><td>6:30-7:30<td>Potluck" +
+      "             <tr><td>7:00-7:30<td>Beginner's Lesson" +
+      "             <tr><td>7:30-10:30<td>Evening dance" +
+      "      </table>" +
+      "<p>Andy Taylor-Blenis will call the family dance with Emma Azelborn leading an open band.",
     band: "Gaslight Tinkers",
-    // caller: "",
+    caller: "Liz Nelson",
   },
   {
     date: [2024, 10, 6],
@@ -1023,7 +1029,7 @@ e = [
     date: [2024, 12, 1],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     band: "Ice Cream Truckers",
-    // caller: "",
+    caller: "Lisa Greenleaf",
   },
 ];
 
