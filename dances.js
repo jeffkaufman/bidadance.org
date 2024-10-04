@@ -999,7 +999,7 @@ e = [
     date: [2024, 10, 6],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     band: "Casey Murray, Molly Tucker, & Sam Zakon-Anderson",
-    // caller: ""
+    caller: "Harris Lapiroff",
   },
   {
     date: [2024, 10, 20],
@@ -1023,7 +1023,7 @@ e = [
     date: [2024, 11, 17],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
     band: "Einstein's Little Homunculus",
-    // caller: ""
+    caller: "Hannah Johlas",
   },
   {
     date: [2024, 12, 1],
