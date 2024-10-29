@@ -1017,7 +1017,7 @@ e = [
     date: [2024, 11, 3],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     band: "River Road",
-    caller: "Adina Gordon",
+    caller: "Hannah Chamberlain",
   },
   {
     date: [2024, 11, 17],
