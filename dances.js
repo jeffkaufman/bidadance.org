@@ -1027,9 +1027,13 @@ e = [
   },
   {
     date: [2024, 12, 1],
-    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
-    band: "Ice Cream Truckers",
-    caller: "Lisa Greenleaf",
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a><br /><br />" +
+      "<table><tr><td>5:30-6:30<td>Family dance" +
+      "             <tr><td>6:30-7:30<td>Potluck" +
+      "             <tr><td>7:00-7:30<td>Beginner's Lesson" +
+      "             <tr><td>7:30-10:30<td>Evening dance" +
+      "      </table>" +
+      "<p>Jeff Kaufman will lead an open band for the family dance, and the Ice Cream Truckers will play the evening dance. Lisa Greenleaf will call the whole evening.",
   },
 ];
 
