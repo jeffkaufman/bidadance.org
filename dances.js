@@ -1035,6 +1035,10 @@ e = [
       "      </table>" +
       "<p>Jeff Kaufman will lead an open band for the family dance, and the Ice Cream Truckers will play the evening dance. Lisa Greenleaf will call the whole evening.",
   },
+  {
+    date: [2024, 12, 15],
+    title: "No Dance",
+  },
 ];
 
 events = document.getElementById("events");
