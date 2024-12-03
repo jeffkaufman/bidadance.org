@@ -1039,6 +1039,94 @@ e = [
     date: [2024, 12, 15],
     title: "No Dance",
   },
+
+
+
+  {
+    date: [2025, 1, 5],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+  },
+  {
+    date: [2025, 1, 19],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+  },
+  {
+    date: [2025, 1, 26],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+  },
+  {
+    date: [2025, 2, 2],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+  },
+  {
+    date: [2025, 2, 16],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+  },
+  {
+    date: [2025, 2, 23],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+  },
+  {
+    date: [2025, 3, 2],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+  },
+
+  {
+    date: [2025, 3, 14],
+    title: "Contra Dance Weekend: Beantown Stomp",
+    link: "https://www.beantownstomp.com",
+    // band: "The Mean Lids and The Figments",
+    // caller: "Maia McCormick and Will Mentor",
+  },
+  {
+    date: [2025, 3, 16],
+    // html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+  },
+
+  {
+    date: [2025, 3, 23],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+  },
+  {
+    date: [2025, 4, 6],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+  },
+  {
+    date: [2025, 4, 20],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+  },
+  {
+    date: [2025, 4, 27],
+    title: "No Dance",  
+  },
+  {
+    date: [2025, 5, 4],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+  },
+  {
+    date: [2025, 5, 18],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+  },
+  {
+    date: [2025, 5, 25],
+    title: "No Dance",  
+  },
+  {
+    date: [2025, 6, 1],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+  },
+  {
+    date: [2025, 6, 15],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+  },
+  {
+    date: [2025, 6, 22],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+  },
+  {
+    date: [2025, 7, 6],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+  },
 ];
 
 events = document.getElementById("events");
