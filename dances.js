@@ -1075,12 +1075,10 @@ e = [
     date: [2025, 3, 14],
     title: "Contra Dance Weekend: Beantown Stomp",
     link: "https://www.beantownstomp.com",
-    // band: "The Mean Lids and The Figments",
-    // caller: "Maia McCormick and Will Mentor",
+    time: " ",
   },
   {
     date: [2025, 3, 16],
-    // html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
   },
 
   {
@@ -1184,7 +1182,35 @@ function gen_events() {
       date_text += "/" + (event.date.getYear() + 1900);
     }
     date_div.textContent = date_text;
+
+    var time_text = "";
+    var lesson_text = "";
+
+    if (event.time) {
+      time_text = event.time;
+
+    } else {
+      if (event.date.getDate() >= 22) {
+        lesson_text = "lesson: 4pm";
+        time_text = "dance: 4:30pm - 7:30pm";
+      } else {
+        lesson_text = "lesson: 7pm";
+        time_text = "dance: 7:30pm - 10:30pm";
+      }
+    }
+    
+    var lesson_div = document.createElement("div");
+    lesson_div.className = "lesson";
+    lesson_div.textContent = lesson_text;
+    date_div.appendChild(lesson_div);
+
+    var time_div = document.createElement("div");
+    time_div.className = "time";
+    time_div.textContent = time_text;
+    lesson_div.appendChild(time_div);
+
     event_div.appendChild(date_div);
+
     var details_div = document.createElement("div");
     details_div.className = "details";
     event.title = event.title || "Contra Dance";
