@@ -5,7 +5,8 @@ e = [
     "date": [2016, 10, 16],
     "title": "Contra + Family Dance",
     "link": "https://www.facebook.com/events/1798408000395535/",
-    "html": "<table><tr><td>5:30-6:30:<td>family dance + open band<tr><td>6:30-7:30:<td>potluck dinner<tr><td>7:30-10:30:&nbsp;&nbsp;<td>contra dance</table>"
+    "html": "<table><tr><td>5:30-6:30:<td>family dance + open band<tr><td>6:30-7:30:<td>potluck dinner<tr><td>7:30-10:30:&nbsp;&nbsp;<td>contra dance</table>",
+    html_includes_timing: true,
   },
   {
     "date": [2016, 11, 4],
@@ -36,7 +37,8 @@ e = [
     "date": [2016, 12, 18],
     "title": "Contra + Family Dance",
     "link": "https://www.facebook.com/events/1740016379583446/",
-    "html": "<table><tr><td>5:30-6:30:<td>family dance + open band<tr><td>6:30-7:30:<td>potluck dinner<tr><td>7:30-10:30:&nbsp;&nbsp;<td>contra dance</table>"
+    "html": "<table><tr><td>5:30-6:30:<td>family dance + open band<tr><td>6:30-7:30:<td>potluck dinner<tr><td>7:30-10:30:&nbsp;&nbsp;<td>contra dance</table>",
+    html_includes_timing: true,
   },
   {
     "date": [2017, 1, 1],
@@ -53,7 +55,8 @@ e = [
     "date": [2017, 1, 15],
     "title": "Contra + Family Dance",
     "link": "https://www.facebook.com/events/148208402326176/",
-    "html": "<table><tr><td>5:30-6:30:<td>family dance + open band<tr><td>6:30-7:30:<td>potluck dinner<tr><td>7:30-10:30:&nbsp;&nbsp;<td>contra dance    </table>"
+    "html": "<table><tr><td>5:30-6:30:<td>family dance + open band<tr><td>6:30-7:30:<td>potluck dinner<tr><td>7:30-10:30:&nbsp;&nbsp;<td>contra dance    </table>",
+    html_includes_timing: true,
   },
   {
     "date": [2017, 2, 5],
@@ -210,7 +213,8 @@ e = [
     "date": [2018, 1, 21],
     "title": "Contra + Family Dance",
     "link": "https://www.facebook.com/events/181576835764899/",
-    "html": "<table>      <tr><td>5:30-6:30:<td>family dance + open band      <tr><td>6:30-7:30:<td>potluck dinner      <tr><td>7:30-10:30:&nbsp;&nbsp;<td>contra dance    </table>"
+    "html": "<table>      <tr><td>5:30-6:30:<td>family dance + open band      <tr><td>6:30-7:30:<td>potluck dinner      <tr><td>7:30-10:30:&nbsp;&nbsp;<td>contra dance    </table>",
+    html_includes_timing: true,
   },
   {
     "date": [2018, 2, 4],
@@ -728,7 +732,8 @@ e = [
       "<p><dl><dt><i>What do you mean, advanced? Should I come??</i>" +
       "<dd><p>For the afternoon advanced session, Steve is going to be calling" +
       " some trickier material and teaching less than usual. If you are" +
-      " comfortable doing a no-walkthrough, you should be good!</dl>"
+      " comfortable doing a no-walkthrough, you should be good!</dl>",
+    html_includes_timing: true,
   },
   {
     "date": [2023, 6, 4],
@@ -740,7 +745,8 @@ e = [
       "             <tr><td>7:30-10:30<td>Evening dance" +
       "      </table>" +
       "<p>Marcie Van Cleave will lead the family dance, to the music of Jonah Sidman and an open band." +
-      "<p>Chloe Levine will call the evening dance, to the music of Rose Jackson, Rebecca Weiss, & Amy Englesberg."
+      "<p>Chloe Levine will call the evening dance, to the music of Rose Jackson, Rebecca Weiss, & Amy Englesberg.",
+    html_includes_timing: true,
   },
   {
     "date": [2023, 6, 18],
@@ -812,6 +818,7 @@ e = [
     "band": "Open Band",
     "caller": "Sue Rosen",
     "link": ["https://www.facebook.com/events/892181802348103","https://www.meetup.com/bida-contra-dance/events/297530550"],
+    html_includes_timing: true,
   },
   {
     "date": [2023, 12, 17],
@@ -915,7 +922,8 @@ e = [
       "             <tr><td>7:00-7:30<td>Beginner's Lesson" +
       "             <tr><td>7:30-10:30<td>Evening dance" +
       "      </table>" +
-      "<p>Jeff Kaufman will lead an open band for the family dance."
+      "<p>Jeff Kaufman will lead an open band for the family dance.",
+    html_includes_timing: true,
   },
   {
     date: [2024, 5, 19],
@@ -941,7 +949,8 @@ e = [
       "             <tr><td>7:00-7:30<td>Beginner's Lesson (mask-required)" +
       "             <tr><td>7:30-10:30<td>Evening dance (mask-required)" +
       "      </table>" +
-      "<p>Jeff Kaufman will call the family dance with Rick Kaufman leading an open band."
+      "<p>Jeff Kaufman will call the family dance with Rick Kaufman leading an open band.",
+    html_includes_timing: true,
   },
   {
     date: [2024, 7, 7],
@@ -949,7 +958,8 @@ e = [
     band: "Gus LaCasse & Pepin Mittelhauser",
     caller: "Angela DeCarlis",
     title: "End of the Season Contra Dance",
-    link: "https://www.facebook.com/events/836447091287298"
+    link: "https://www.facebook.com/events/836447091287298",
+    html_includes_timing: true,
   },
   {
     date: [2024, 8, 16],
@@ -994,6 +1004,7 @@ e = [
       "<p>Andy Taylor-Blenis will call the family dance with Emma Azelborn leading an open band.",
     band: "Gaslight Tinkers",
     caller: "Liz Nelson",
+    html_includes_timing: true,
   },
   {
     date: [2024, 10, 6],
@@ -1034,6 +1045,7 @@ e = [
       "             <tr><td>7:30-10:30<td>Evening dance" +
       "      </table>" +
       "<p>Jeff Kaufman will lead an open band for the family dance, and the Ice Cream Truckers will play the evening dance. Lisa Greenleaf will call the whole evening.",
+    html_includes_timing: true,
   },
   {
     date: [2024, 12, 15],
@@ -1053,6 +1065,7 @@ e = [
   {
     date: [2025, 1, 26],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    lesson_start: [4, 0, "pm"],
   },
   {
     date: [2025, 2, 2],
@@ -1065,6 +1078,7 @@ e = [
   {
     date: [2025, 2, 23],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    lesson_start: [4, 0, "pm"],
   },
   {
     date: [2025, 3, 2],
@@ -1084,6 +1098,7 @@ e = [
   {
     date: [2025, 3, 23],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    lesson_start: [4, 0, "pm"],
   },
   {
     date: [2025, 4, 6],
@@ -1096,6 +1111,7 @@ e = [
   {
     date: [2025, 4, 27],
     title: "No Dance",  
+    lesson_start: [4, 0, "pm"],
   },
   {
     date: [2025, 5, 4],
@@ -1108,6 +1124,7 @@ e = [
   {
     date: [2025, 5, 25],
     title: "No Dance",  
+    lesson_start: [4, 0, "pm"],
   },
   {
     date: [2025, 6, 1],
@@ -1120,6 +1137,7 @@ e = [
   {
     date: [2025, 6, 22],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    lesson_start: [4, 0, "pm"],
   },
   {
     date: [2025, 7, 6],
@@ -1145,6 +1163,29 @@ function getHostname(url) {
   } else {
     return hostname;
   }
+}
+
+function format_time(t) {
+  const [hour, minute, amPm] = t;
+  console.log("format_time", hour, minute, amPm, (hour.toString() + (minute ? (":" + minute) : "") + amPm));
+  return hour.toString() + (minute ? (":" + minute) : "") + amPm;
+}
+
+function add_time(t, delta_hour, delta_minute) {
+  [old_hour, old_minute, old_amPm] = t;
+  let new_amPm = old_amPm;
+  let new_minute = old_minute + delta_minute;
+  let extra_hour = 0;
+  if (new_minute > 60) {
+    extra_hour = 1;
+    new_minute -= 60;
+  }
+  let new_hour = old_hour + delta_hour + extra_hour;
+  if (new_hour > 12) {
+    new_hour -= 12;
+    new_amPm = (old_amPm == "am" ? "pm" : "am");
+  }
+  return [new_hour, new_minute, new_amPm];
 }
 
 function gen_events() {
@@ -1190,13 +1231,16 @@ function gen_events() {
       time_text = event.time;
 
     } else {
-      if (event.date.getDate() >= 22) {
-        lesson_text = "lesson: 4pm";
-        time_text = "dance: 4:30pm - 7:30pm";
-      } else {
-        lesson_text = "lesson: 7pm";
-        time_text = "dance: 7:30pm - 10:30pm";
+      const lesson_start = event.lesson_start || [7, 0, "pm"];
+
+      if (lesson_start[0] <= 6) {
+        date_div.classList.add("afternoon");
       }
+      
+      lesson_text = "Lesson: " + format_time(lesson_start);
+      const dance_start = event.dance_start || add_time(lesson_start, 0, 30);
+      const dance_end = event.dance_end || add_time(dance_start, 3, 0);
+      time_text = "Dance: " + format_time(dance_start) + "-" + format_time(dance_end);
     }
     
     var lesson_div = document.createElement("div");
@@ -1214,18 +1258,23 @@ function gen_events() {
       danceIsHappening = false;
     }
 
-    if (danceIsHappening) {
-      date_div.appendChild(lesson_div);
-      lesson_div.appendChild(time_div);
-    }
-
     var details_div = document.createElement("div");
+
+
+
+
     details_div.className = "details";
     event.title = event.title || "Contra Dance";
     var title_div = document.createElement("div");
     title_div.className = "title";
     title_div.textContent = event.title;
     event_div.appendChild(title_div);
+
+    if (danceIsHappening && !event.html_includes_timing) {
+      event_div.appendChild(lesson_div);
+      event_div.appendChild(time_div);
+    }
+
     if (event.html) {
       var event_custom_html = event.html + "<p>";
       var custom_html_div = document.createElement("div");

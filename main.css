@@ -106,9 +106,17 @@ a {
   float: right;
 }
 
+.event .afternoon {
+  background-color: rgb(165, 95, 11);
+}
+
 .event .title {
   padding: 1em;
   font-weight: bold;
+}
+
+.event .lesson, .event .time {
+  padding-left: 1em;
 }
 
 .event .performers {
