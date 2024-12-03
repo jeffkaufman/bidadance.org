@@ -1202,14 +1202,22 @@ function gen_events() {
     var lesson_div = document.createElement("div");
     lesson_div.className = "lesson";
     lesson_div.textContent = lesson_text;
-    date_div.appendChild(lesson_div);
-
+    
     var time_div = document.createElement("div");
     time_div.className = "time";
     time_div.textContent = time_text;
-    lesson_div.appendChild(time_div);
 
     event_div.appendChild(date_div);
+
+    var danceIsHappening = true;
+    if (event.title && event.title.toLowerCase().startsWith("no dance")) {
+      danceIsHappening = false;
+    }
+
+    if (danceIsHappening) {
+      date_div.appendChild(lesson_div);
+      lesson_div.appendChild(time_div);
+    }
 
     var details_div = document.createElement("div");
     details_div.className = "details";
