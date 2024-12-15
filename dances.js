@@ -1057,10 +1057,14 @@ e = [
   {
     date: [2025, 1, 5],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    caller: "Tommy Linden",
+    band: "Anadama (Emily Troll, Bethany Waikman, and Amelia Mason)",
   },
   {
     date: [2025, 1, 19],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    caller: "Julian Blechner",
+    band: "Cojiro (Mark Price, Jess Newman)",
   },
   {
     date: [2025, 1, 26],
@@ -1070,6 +1074,7 @@ e = [
   {
     date: [2025, 2, 2],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    caller: "Qwill Duvall",
   },
   {
     date: [2025, 2, 16],
@@ -1078,11 +1083,14 @@ e = [
   {
     date: [2025, 2, 23],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    caller: "Evan DeSmitt",
     lesson_start: [4, 0, "pm"],
   },
   {
     date: [2025, 3, 2],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    caller: "Annie Kidwell",
+    band: "Hayden Stern, Helen Kuhar, and Casey Murray",
   },
 
   {
