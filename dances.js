@@ -1070,21 +1070,26 @@ e = [
     date: [2025, 1, 26],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
     lesson_start: [4, 0, "pm"],
+    caller: "Hannah Chamberlain",
+    band: "Here on the Hill: Rosemary Powell, Victoria Horner, and Annie McDougall",
   },
   {
     date: [2025, 2, 2],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     caller: "Qwill Duvall",
+    band: "Jesse Ball, Sam Zakon-Anderson, Sarah-Hadley Yakir"
   },
   {
     date: [2025, 2, 16],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    band: "Julie Metcalf, Milo Stanley, Dan Africk, and Mike Siegel",
   },
   {
     date: [2025, 2, 23],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     caller: "Evan DeSmitt",
     lesson_start: [4, 0, "pm"],
+    band: "Open Band led by Helen Kuhar with Elias Cardoso"
   },
   {
     date: [2025, 3, 2],
@@ -1101,16 +1106,21 @@ e = [
   },
   {
     date: [2025, 3, 16],
+    caller: "Alex Deis-Lauby",
+    band: "Max Newman, Larry Ungar, & Julie Metcalf",
   },
 
   {
     date: [2025, 3, 23],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
     lesson_start: [4, 0, "pm"],
+    band: "Sycamore: Cedar Stanistreet, Samuel Foucher, and Michael Sokolovsky"
   },
   {
     date: [2025, 4, 6],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    caller: "Andrew Stout",
+    band: "Eileen O'Grady, Donal Sheets, and Guillaume Sparrow-Pepin"
   },
   {
     date: [2025, 4, 20],
@@ -1124,10 +1134,13 @@ e = [
   {
     date: [2025, 5, 4],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    band: "Countercurrent: Alex Sturbaum and Brian Lindsay"
   },
   {
     date: [2025, 5, 18],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    caller: "Nils Fredland",
+    band: "Elixir: Anna Patton, Ethan Hazard-Watkins, Owen Morrison, Jesse Readlynn",
   },
   {
     date: [2025, 5, 25],
@@ -1150,6 +1163,8 @@ e = [
   {
     date: [2025, 7, 6],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    caller: "Jeremy Korr",
+    band: "Birch Trio: Daphne Pickens, Molly Tucker, Casey Murray",
   },
 ];
 
