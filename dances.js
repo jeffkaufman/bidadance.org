@@ -1125,6 +1125,7 @@ e = [
   {
     date: [2025, 4, 20],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    band: "The Star Charters: Cecilia Vacanti, Jess Newman, Mark Price"
   },
   {
     date: [2025, 4, 27],
@@ -1134,7 +1135,8 @@ e = [
   {
     date: [2025, 5, 4],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
-    band: "Countercurrent: Alex Sturbaum and Brian Lindsay"
+    band: "Countercurrent: Alex Sturbaum and Brian Lindsay",
+    caller: "Harris Lapiroff"
   },
   {
     date: [2025, 5, 18],
@@ -1150,15 +1152,19 @@ e = [
   {
     date: [2025, 6, 1],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    band: "Crossover"
   },
   {
     date: [2025, 6, 15],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    band: "BIDA Open Band"
   },
   {
     date: [2025, 6, 22],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     lesson_start: [4, 0, "pm"],
+    caller: "Liz Nelson",
+    band: "Windfish"
   },
   {
     date: [2025, 7, 6],
