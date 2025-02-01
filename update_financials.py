@@ -6,9 +6,13 @@ import datetime
 cpi = {} # year, month -> index
 with open("CPIAUCSL.csv") as inf:
   for date, cpiaucsl in csv.reader(inf):
-    if date == "DATE":
+    if date in ["DATE", "observation_date"]:
       continue
-    y, m, d = date.split("-")
+    try:
+      y, m, d = date.split("-")
+    except Exception:
+      print(date)
+      raise
     cpi[int(y), int(m)] = float(cpiaucsl)
 
 def current_dollars(year, month, amount):
