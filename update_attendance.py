@@ -23,7 +23,11 @@ vals = []
 for line in lines:
   if not line.strip():
     continue
-  date_s, total_s = line.split('\t')
+  try:
+    date_s, total_s = line.split()
+  except Exception:
+    print(line)
+    raise
   if date_s == 'date':
     continue
 
