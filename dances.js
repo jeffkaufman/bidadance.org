@@ -1100,6 +1100,7 @@ e = [
 
   {
     date: [2025, 3, 14],
+    end_date: [2025, 3, 16],
     title: "Contra Dance Weekend: Beantown Stomp",
     link: "https://www.beantownstomp.com",
     time: " ",
