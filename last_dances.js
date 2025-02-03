@@ -388,6 +388,7 @@ e = [
   },
   {
     "date": [2019, 3, 22],
+    "end_date": [2019, 3, 24],
     "title": "Contra Dance Weekend: Beantown Stomp",
     "link": "https://www.facebook.com/events/2170366253251724/"
   },
