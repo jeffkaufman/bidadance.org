@@ -1,12 +1,21 @@
 #!/usr/bin/env python3
 
+import os
 import re
 import ast
 import json
 import pytz
 import uuid
+import shutil
+import filecmp
 from datetime import datetime, timedelta
 from icalendar import Calendar, Event
+
+dances_fname = "dances.js"
+last_dances_fname = "last_dances.js"
+if os.path.exists(last_dances_fname):
+  if filecmp.cmp(last_dances_fname, dances_fname):
+    exit(0) # no changes since last run
 
 dances_json = []
 with open("dances.js") as inf:
@@ -98,3 +107,5 @@ def to_ical(events):
 ical = to_ical(parse_js_like_object("\n".join(dances_json)))
 with open("events.ics", "wb") as outf:
   outf.write(ical)
+
+shutil.copyfile(dances_fname, last_dances_fname)
