@@ -872,6 +872,7 @@ e = [
   },
   {
     date: [2024, 3, 15],
+    end_date: [2024, 3, 17],
     title: "Contra Dance Weekend: Beantown Stomp",
     link: "https://www.beantownstomp.com",
     band: "The Mean Lids and The Figments",
