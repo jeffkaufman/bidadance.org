@@ -88,7 +88,7 @@ def to_ical(events):
     eastern = pytz.timezone('America/New_York')
 
     for event in events:
-        title = event.get("title", "Contra Dance")
+        title = "BIDA " + event.get("title", "Contra Dance")
         e = Event()
 
         if "end_date" not in event:
