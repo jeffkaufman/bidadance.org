@@ -61,13 +61,32 @@ def parse_time(time_array):
 
 dances = parse_js_like_object("\n".join(dances_json))
 
+def get_description(event):
+    """Generate description from event details"""
+    parts = []
+
+    # Include HTML with paragraph tag if present
+    if 'html' in event:
+        parts.append(re.sub(r'<[^>]+>', '', event['html']))
+
+    # Add performers info matching JS logic
+    if event.get('caller') or event.get('band'):
+        if not event.get('band'):
+            parts.append(f"{event['caller']} calling.")
+        elif not event.get('caller'):
+            parts.append(f"{event['band']} playing.")
+        else:
+            parts.append(f"{event['caller']} calling to {event['band']}.")
+
+    return '. '.join(parts)
+
 def to_ical(events):
     # Create calendar
     cal = Calendar()
     cal.add('prodid', '-//BIDA Events//bidadance.org//')
     cal.add('version', '2.0')
     eastern = pytz.timezone('America/New_York')
-    
+
     for event in events:
         title = event.get("title", "Contra Dance")
         e = Event()
@@ -78,7 +97,7 @@ def to_ical(events):
             start_hour, start_minute = parse_time(event['lesson_start'])
           else:
             start_hour, start_minute = 19, 0  # 7pm
-            
+
           # Create datetime objects
           start_dt = eastern.localize(
             datetime(*event["date"], start_hour, start_minute))
@@ -92,16 +111,19 @@ def to_ical(events):
         e.add('dtstart', start_dt)
         e.add('dtend', end_dt)
         e.add('dtstamp', datetime.now())
-        
+        description = get_description(event)
+        if description:
+            e.add('description', description)
+
         unique_string = f"{title}-{'-'.join(str(x) for x in event['date'])}"
         e.add('uid', str(uuid.uuid5(uuid.NAMESPACE_DNS, unique_string)))
-        
+
         if 'link' in event:
             e.add('url', event['link'])
-            
+
         # Add event to calendar
         cal.add_component(e)
-    
+
     return cal.to_ical()
 
 ical = to_ical(parse_js_like_object("\n".join(dances_json)))
