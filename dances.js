@@ -1084,6 +1084,7 @@ e = [
   {
     date: [2025, 2, 16],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    caller: "Don Veino",
     band: "Julie Metcalf, Milo Stanley, Dan Africk, and Mike Siegel",
   },
   {
@@ -1128,6 +1129,7 @@ e = [
   {
     date: [2025, 4, 20],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    caller: "Julian Blechner",
     band: "The Star Charters: Cecilia Vacanti, Jess Newman, Mark Price"
   },
   {
