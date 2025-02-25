@@ -1132,6 +1132,7 @@ e = [
     date: [2025, 3, 23],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
     lesson_start: [4, 0, "pm"],
+    caller: "Luke Donforth",
     band: "Sycamore: Cedar Stanistreet, Samuel Foucher, and Michael Sokolovsky"
   },
   {
@@ -1171,7 +1172,8 @@ e = [
   {
     date: [2025, 6, 1],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
-    band: "Crossover"
+    band: "Crossover",
+    caller: "Maia McCormick",
   },
   {
     date: [2025, 6, 15],
