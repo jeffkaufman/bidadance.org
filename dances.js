@@ -1095,12 +1095,25 @@ e = [
     band: "Open Band led by Helen Kuhar with Elias Cardoso"
   },
   {
+    date: [2025, 2, 26],
+    title: "Introductory Sound Workshop",
+    html: "RSVP to jeff@jefftk.com for address.  Doors open 6:10pm, nominal start time is 6:30, arrive by 6:35 if you don't want to miss anything.",
+    "link": "https://groups.google.com/g/bida-musician-announcements/c/Ac5WyofFJP8",
+    html_includes_timing: true,
+  },
+  {
     date: [2025, 3, 2],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     caller: "Annie Kidwell",
     band: "Hayden Stern, Helen Kuhar, and Casey Murray",
   },
-
+  {
+    date: [2025, 3, 6],
+    title: "Introductory Sound Workshop",
+    html: "RSVP to jeff@jefftk.com for address.  Doors open 6:10pm, nominal start time is 6:30, arrive by 6:35 if you don't want to miss anything.",
+    "link": "https://groups.google.com/g/bida-musician-announcements/c/Ac5WyofFJP8",
+    html_includes_timing: true,
+  },
   {
     date: [2025, 3, 14],
     end_date: [2025, 3, 16],
