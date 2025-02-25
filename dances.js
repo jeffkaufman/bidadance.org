@@ -1119,7 +1119,8 @@ e = [
     end_date: [2025, 3, 16],
     title: "Contra Dance Weekend: Beantown Stomp",
     link: "https://www.beantownstomp.com",
-    time: " ",
+    html: "<i>sold out</i>",
+    html_includes_timing: true,
   },
   {
     date: [2025, 3, 16],
