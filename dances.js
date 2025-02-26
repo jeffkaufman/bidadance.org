@@ -1124,6 +1124,7 @@ e = [
   },
   {
     date: [2025, 3, 16],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
     caller: "Alex Deis-Lauby",
     band: "Max Newman, Larry Ungar, & Julie Metcalf",
   },
