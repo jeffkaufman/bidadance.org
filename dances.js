@@ -1115,6 +1115,13 @@ e = [
     html_includes_timing: true,
   },
   {
+    date: [2025, 3, 12],
+    title: "Introductory Sound Workshop",
+    html: "RSVP to jeff@jefftk.com for address.  Doors open 6:10pm, nominal start time is 6:30, arrive by 6:35 if you don't want to miss anything.",
+    "link": "https://groups.google.com/g/bida-musician-announcements/c/Ac5WyofFJP8",
+    html_includes_timing: true,
+  },
+  {
     date: [2025, 3, 14],
     end_date: [2025, 3, 16],
     title: "Contra Dance Weekend: Beantown Stomp",
