@@ -1169,7 +1169,7 @@ e = [
   },
   {
     date: [2025, 5, 18],
-    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>.<p>Because this is Elixir's final dance before retirement we think it is likely we will hit capacity.  We are planning to sell tickets, but are still sorting out details.",
     caller: "Nils Fredland",
     band: "Elixir: Anna Patton, Ethan Hazard-Watkins, Owen Morrison, Jesse Readlynn, Nils Fredland",
   },
