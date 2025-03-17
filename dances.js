@@ -1148,6 +1148,7 @@ e = [
       "<p>Jeff Kaufman will lead an open band for the family dance, and Sycamore (Cedar Stanistreet, Samuel Foucher, and Michael Sokolovsky) will play the main dance. Luke Donforth will call the whole time.",
     html_includes_timing: true,
     lesson_start: [4, 0, "pm"],
+    link: "https://www.facebook.com/events/497923263369411/",
   },
   {
     date: [2025, 4, 6],
