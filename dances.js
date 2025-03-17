@@ -1139,10 +1139,15 @@ e = [
 
   {
     date: [2025, 3, 23],
-    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a><br /><br />" +
+      "<table><tr><td>2:30-3:30<td>Family dance (mask-optional)" +
+      "             <tr><td>3:30-4:30<td>Potluck (mask-optonal)" +
+      "             <tr><td>4:00-4:30<td>Beginner's Lesson (mask-required)" +
+      "             <tr><td>4:30-7:30<td>Evening dance (mask-required)" +
+      "      </table>" +
+      "<p>Jeff Kaufman will lead an open band for the family dance, and Sycamore (Cedar Stanistreet, Samuel Foucher, and Michael Sokolovsky) will play the main dance. Luke Donforth will call the whole time.",
+    html_includes_timing: true,
     lesson_start: [4, 0, "pm"],
-    caller: "Luke Donforth",
-    band: "Sycamore: Cedar Stanistreet, Samuel Foucher, and Michael Sokolovsky"
   },
   {
     date: [2025, 4, 6],
