@@ -1145,7 +1145,7 @@ e = [
       "             <tr><td>4:00-4:30<td>Beginner's Lesson (mask-required)" +
       "             <tr><td>4:30-7:30<td>Evening dance (mask-required)" +
       "      </table>" +
-      "<p>Jeff Kaufman will lead an open band for the family dance, and Sycamore (Cedar Stanistreet, Samuel Foucher, and Michael Sokolovsky) will play the main dance. Luke Donforth will call the whole time.",
+      "<p>Alex Cumming will lead an open band for the family dance, and Sycamore (Cedar Stanistreet, Samuel Foucher, and Michael Sokolovsky) will play the main dance. Luke Donforth will call the whole time.",
     html_includes_timing: true,
     lesson_start: [4, 0, "pm"],
     link: "https://www.facebook.com/events/497923263369411/",
