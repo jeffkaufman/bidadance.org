@@ -1151,6 +1151,13 @@ e = [
     link: "https://www.facebook.com/events/497923263369411/",
   },
   {
+    date: [2025, 4, 2],
+    title: "Introductory Sound Workshop",
+    html: "RSVP to jeff@jefftk.com for address.  Doors open 6:10pm, nominal start time is 6:30, arrive by 6:35 if you don't want to miss anything.",
+    "link": "https://groups.google.com/g/bida-musician-announcements/c/Ac5WyofFJP8",
+    html_includes_timing: true,
+  },
+  {
     date: [2025, 4, 6],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     caller: "Andrew Stout",
