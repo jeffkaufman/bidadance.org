@@ -1155,7 +1155,8 @@ e = [
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     caller: "Andrew Stout",
     html: "This dance will include elections for our board, which runs these events; let us know by 2025-03-20 if you'd like to be on the ballot!",
-    band: "Eileen O'Grady, Donal Sheets, and Guillaume Sparrow-Pepin"
+    band: "Eileen O'Grady, Donal Sheets, and Guillaume Sparrow-Pepin",
+    link: "https://www.facebook.com/events/684317314117952/"
   },
   {
     date: [2025, 4, 20],
