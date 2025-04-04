@@ -1161,7 +1161,7 @@ e = [
     date: [2025, 4, 6],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     caller: "Andrew Stout",
-    html: "This dance will include elections for our board, which runs these events.  See <u style='color: rgb(165, 11, 32)'><a style='color: rgb(165, 11, 32)' href='https://docs.google.com/document/d/1dofQ6jjcxeh72epbZFRN3ZNCntyLtk-dSOz9MhD6Sig/edit'>this doc</a></u> for the list of candidates and their bios.",
+    html: "This dance is at a <b>different location</b>: Cambridge Friends School, 5 Cadbury Rd.<p>This dance will include elections for our board, which runs these events.  See <u style='color: rgb(165, 11, 32)'><a style='color: rgb(165, 11, 32)' href='https://docs.google.com/document/d/1dofQ6jjcxeh72epbZFRN3ZNCntyLtk-dSOz9MhD6Sig/edit'>this doc</a></u> for the list of candidates and their bios.",
     band: "Eileen O'Grady, Donal Sheets, and Guillaume Sparrow-Pepin",
     link: "https://www.facebook.com/events/684317314117952/"
   },
