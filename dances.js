@@ -1169,7 +1169,8 @@ e = [
     date: [2025, 4, 20],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
     caller: "Julian Blechner",
-    band: "The Star Charters: Cecilia Vacanti, Jess Newman, Mark Price"
+    band: "The Star Charters: Cecilia Vacanti, Jess Newman, Mark Price",
+    link: "https://www.facebook.com/events/1220449559656831/"
   },
   {
     date: [2025, 4, 27],
