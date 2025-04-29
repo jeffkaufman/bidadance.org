@@ -1181,7 +1181,8 @@ e = [
     date: [2025, 5, 4],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     band: "Countercurrent: Alex Sturbaum and Brian Lindsay",
-    caller: "Harris Lapiroff"
+    caller: "Harris Lapiroff",
+    link: "https://www.facebook.com/events/1741027040127148"
   },
   {
     date: [2025, 5, 18],
