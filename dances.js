@@ -1185,6 +1185,16 @@ e = [
     link: "https://www.facebook.com/events/1741027040127148"
   },
   {
+    date: [2025, 5, 10],
+    title: "Outdoor contra on Morrison Ave during Porchfest",
+    html: "We'll be dancing in the street 2-4pm on Morrison Ave in Somerville "
+        + "between Rogers Ave and Highland Road.  Rain date is 5/11.",
+    band: "Rohan Weeden, Charlie Steiner, Jeff Kaufman",
+    caller: "Harris Lapiroff",
+    link: "https://www.facebook.com/events/564145876279344/",
+    html_includes_timing: true,
+  },
+  {
     date: [2025, 5, 18],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>.<p>Because this is Elixir's final dance before retirement we think it is likely we will hit capacity, and we're selling <u style='color: rgb(165, 11, 32)'><a style='color: rgb(165, 11, 32)' href='https://www.brownpapertickets.com/event/6630893'>tickets in advance</a></u>.",
     caller: "Nils Fredland",
