@@ -9,6 +9,7 @@ hamburger_container.innerHTML =
   '<dt>About BIDA' +
   '<dd>' +
   '<a href="https://www.bidadance.org/about">About</a>' +
+  '<a href="https://www.bidadance.org/board">Board</a>' +
   '<a href="https://www.bidadance.org/board-roles">Board Roles</a>' +
   '<a href="https://www.bidadance.org/bylaws">Bylaws</a>' +
   '<a href="https://www.bidadance.org/graphs">Charts and Graphs</a>' +
