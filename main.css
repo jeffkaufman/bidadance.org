@@ -269,8 +269,8 @@ li {
 /* Desktop layout - two columns */
 @media screen and (min-width: 1024px) {
   .content-wrapper {
-    grid-template-columns: minmax(0, 40em) 25em;
-    max-width: 65em;
+    grid-template-columns: minmax(0, 43em) 25em;
+    max-width: 68em;
     margin: 0 auto;
   }
 
