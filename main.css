@@ -234,4 +234,69 @@ li {
 #nav-wrapper {
   position: relative;
   background-color: rgb(165, 11, 32);
+  z-index: 2;
 }
+
+/* Container for main content and sidebar */
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+  max-width: 100%;
+}
+
+/* The Follow BIDA sidebar */
+#follow-sidebar {
+  background-color: white;
+  padding: 1.5em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  align-self: start;
+}
+
+#follow-sidebar h1 {
+  font-size: 1.4em;
+  margin-top: 0;
+ }
+
+#follow-sidebar ul {
+  padding-left: 1.2em;
+}
+
+#follow-sidebar li {
+  margin-bottom: 0.8em;
+}
+
+/* Desktop layout - two columns */
+@media screen and (min-width: 1024px) {
+  .content-wrapper {
+    grid-template-columns: minmax(0, 40em) 25em;
+    max-width: 65em;
+    margin: 0 auto;
+  }
+
+  #main-content {
+    max-width: none; /* Override the existing max-width */
+  }
+}
+
+/* Medium screens - adjust proportions */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .content-wrapper {
+    grid-template-columns: 2fr 1fr;
+    max-width: 48em;
+    margin: 0 auto;
+  }
+}
+
+/* when not collapsed */
+@media screen and (min-width: 768px) {
+  #follow-sidebar {
+    position: sticky;
+    top: 2em;
+    border-radius: 0.25em;
+    /* round all the corners, but move it up slightly so we don't
+       initially see the rounded top corners */
+    margin-top: -.25em;
+  }
+}
+  
