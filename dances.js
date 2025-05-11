@@ -1196,10 +1196,14 @@ e = [
   },
   {
     date: [2025, 5, 18],
-    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>.<p>Because this is Elixir's final dance before retirement we think it is likely we will hit capacity, and we're selling <u style='color: rgb(165, 11, 32)'><a style='color: rgb(165, 11, 32)' href='https://www.brownpapertickets.com/event/6630893'>tickets in advance</a></u>.",
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>.<p>Because this is Elixir's final dance before retirement we think it is likely we will hit capacity, and we're selling <u style='color: rgb(165, 11, 32)'><a style='color: rgb(165, 11, 32)' href='https://www.brownpapertickets.com/event/6630893'>tickets in advance</a></u>.<p>" +
+      "6:00-7:00: couples dancing<br>" + 
+      "7:00-7:30: beginner's lesson<br>" +
+      "7:30-10:30: dance",
     caller: "Nils Fredland",
     band: "Elixir: Anna Patton, Ethan Hazard-Watkins, Owen Morrison, Jesse Readlynn, Nils Fredland",
-    link: "https://www.brownpapertickets.com/event/6630893"
+    link: "https://www.brownpapertickets.com/event/6630893",
+    html_includes_timing: true,
   },
   {
     date: [2025, 5, 25],
