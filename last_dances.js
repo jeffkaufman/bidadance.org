@@ -1084,6 +1084,7 @@ e = [
   {
     date: [2025, 2, 16],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    caller: "Don Veino",
     band: "Julie Metcalf, Milo Stanley, Dan Africk, and Mike Siegel",
   },
   {
@@ -1094,41 +1095,82 @@ e = [
     band: "Open Band led by Helen Kuhar with Elias Cardoso"
   },
   {
+    date: [2025, 2, 26],
+    title: "Introductory Sound Workshop",
+    html: "RSVP to jeff@jefftk.com for address.  Doors open 6:10pm, nominal start time is 6:30, arrive by 6:35 if you don't want to miss anything.",
+    "link": "https://groups.google.com/g/bida-musician-announcements/c/Ac5WyofFJP8",
+    html_includes_timing: true,
+  },
+  {
     date: [2025, 3, 2],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     caller: "Annie Kidwell",
     band: "Hayden Stern, Helen Kuhar, and Casey Murray",
   },
-
+  {
+    date: [2025, 3, 6],
+    title: "Introductory Sound Workshop",
+    html: "RSVP to jeff@jefftk.com for address.  Doors open 6:10pm, nominal start time is 6:30, arrive by 6:35 if you don't want to miss anything.",
+    "link": "https://groups.google.com/g/bida-musician-announcements/c/Ac5WyofFJP8",
+    html_includes_timing: true,
+  },
+  {
+    date: [2025, 3, 12],
+    title: "Introductory Sound Workshop",
+    html: "RSVP to jeff@jefftk.com for address.  Doors open 6:10pm, nominal start time is 6:30, arrive by 6:35 if you don't want to miss anything.",
+    "link": "https://groups.google.com/g/bida-musician-announcements/c/Ac5WyofFJP8",
+    html_includes_timing: true,
+  },
   {
     date: [2025, 3, 14],
     end_date: [2025, 3, 16],
     title: "Contra Dance Weekend: Beantown Stomp",
     link: "https://www.beantownstomp.com",
-    time: " ",
+    html: "<i>sold out</i>",
+    html_includes_timing: true,
   },
   {
     date: [2025, 3, 16],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
     caller: "Alex Deis-Lauby",
     band: "Max Newman, Larry Ungar, & Julie Metcalf",
+    link: "https://www.facebook.com/events/670201915407915/"
   },
 
   {
     date: [2025, 3, 23],
-    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a><br /><br />" +
+      "<table><tr><td>2:30-3:30<td>Family dance (mask-optional)" +
+      "             <tr><td>3:30-4:30<td>Potluck (mask-optonal)" +
+      "             <tr><td>4:00-4:30<td>Beginner's Lesson (mask-required)" +
+      "             <tr><td>4:30-7:30<td>Evening dance (mask-required)" +
+      "      </table>" +
+      "<p>Alex Cumming will lead an open band for the family dance, and Sycamore (Cedar Stanistreet, Samuel Foucher, and Michael Sokolovsky) will play the main dance. Luke Donforth will call the whole time.",
+    html_includes_timing: true,
     lesson_start: [4, 0, "pm"],
-    band: "Sycamore: Cedar Stanistreet, Samuel Foucher, and Michael Sokolovsky"
+    link: "https://www.facebook.com/events/497923263369411/",
+  },
+  {
+    date: [2025, 4, 2],
+    title: "Introductory Sound Workshop",
+    html: "RSVP to jeff@jefftk.com for address.  Doors open 6:10pm, nominal start time is 6:30, arrive by 6:35 if you don't want to miss anything.",
+    "link": "https://groups.google.com/g/bida-musician-announcements/c/Ac5WyofFJP8",
+    html_includes_timing: true,
   },
   {
     date: [2025, 4, 6],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     caller: "Andrew Stout",
-    band: "Eileen O'Grady, Donal Sheets, and Guillaume Sparrow-Pepin"
+    html: "This dance is at a <b>different location</b>: Cambridge Friends School, 5 Cadbury Rd.<p>This dance will include elections for our board, which runs these events.  See <u style='color: rgb(165, 11, 32)'><a style='color: rgb(165, 11, 32)' href='https://docs.google.com/document/d/1dofQ6jjcxeh72epbZFRN3ZNCntyLtk-dSOz9MhD6Sig/edit'>this doc</a></u> for the list of candidates and their bios.",
+    band: "Eileen O'Grady, Donal Sheets, and Guillaume Sparrow-Pepin",
+    link: "https://www.facebook.com/events/684317314117952/"
   },
   {
     date: [2025, 4, 20],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
-    band: "The Star Charters: Cecilia Vacanti, Jess Newman, Mark Price"
+    caller: "Julian Blechner",
+    band: "The Star Charters: Cecilia Vacanti, Jess Newman, Mark Price",
+    link: "https://www.facebook.com/events/1220449559656831/"
   },
   {
     date: [2025, 4, 27],
@@ -1139,13 +1181,29 @@ e = [
     date: [2025, 5, 4],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     band: "Countercurrent: Alex Sturbaum and Brian Lindsay",
-    caller: "Harris Lapiroff"
+    caller: "Harris Lapiroff",
+    link: "https://www.facebook.com/events/1741027040127148"
+  },
+  {
+    date: [2025, 5, 10],
+    title: "Outdoor contra on Morrison Ave during Porchfest",
+    html: "We'll be dancing in the street 2-4pm on Morrison Ave in Somerville "
+        + "between Rogers Ave and Highland Road.  Rain date is 5/11.",
+    band: "Rohan Weeden, Charlie Steiner, Jeff Kaufman",
+    caller: "Harris Lapiroff",
+    link: "https://www.facebook.com/events/564145876279344/",
+    html_includes_timing: true,
   },
   {
     date: [2025, 5, 18],
-    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>.<p>Because this is Elixir's final dance before retirement we think it is likely we will hit capacity, and we're selling <u style='color: rgb(165, 11, 32)'><a style='color: rgb(165, 11, 32)' href='https://www.brownpapertickets.com/event/6630893'>tickets in advance</a></u>.<p>" +
+      "6:00-7:00: couples dancing<br>" + 
+      "7:00-7:30: beginner's lesson<br>" +
+      "7:30-10:30: dance",
     caller: "Nils Fredland",
     band: "Elixir: Anna Patton, Ethan Hazard-Watkins, Owen Morrison, Jesse Readlynn, Nils Fredland",
+    link: "https://www.brownpapertickets.com/event/6630893",
+    html_includes_timing: true,
   },
   {
     date: [2025, 5, 25],
@@ -1155,7 +1213,8 @@ e = [
   {
     date: [2025, 6, 1],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
-    band: "Crossover"
+    band: "Crossover",
+    caller: "Maia McCormick",
   },
   {
     date: [2025, 6, 15],
