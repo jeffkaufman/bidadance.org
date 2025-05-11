@@ -67,7 +67,8 @@ def get_description(event):
 
     # Include HTML with paragraph tag if present
     if 'html' in event:
-        parts.append(re.sub(r'<[^>]+>', '', event['html']))
+        parts.append(re.sub(r'<[^>]+>', '', event['html'].replace(
+          "<p>", " ").replace("<br>", " ")))
 
     # Add performers info matching JS logic
     if event.get('caller') or event.get('band'):
