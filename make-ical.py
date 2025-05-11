@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
 
+# Run by cron via:
+#
+#   # m h  dom mon dow   command
+#   13 * * * * /home/jefftk/code/bidadance.org/refresh-ical.sh
+
+
 import os
 import re
 import ast
