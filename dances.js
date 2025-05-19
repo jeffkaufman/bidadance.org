@@ -1235,6 +1235,55 @@ e = [
     caller: "Jeremy Korr",
     band: "Birch Trio: Daphne Pickens, Molly Tucker, Casey Murray",
   },
+  {
+    date: [2025, 9, 7],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    band: "Stomp Rocket",
+  },
+  {
+    date: [2025, 9, 21],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    band: "Pegasus Collective"
+  },
+  {
+    date: [2025, 9, 28],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    lesson_start: [4, 0, "pm"],
+    band: "BIDA Open Band: led by the community, coordinated by Jeff Kaufman"
+  },
+  {
+    date: [2025, 10, 5],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    band: "Bubblegum Society",
+  },
+  {
+    date: [2025, 10, 19],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    band: "Eloise & Co.",
+    caller: "Isaac Banner"
+  },
+  {
+    date: [2025, 10, 26],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    lesson_start: [4, 0, "pm"],
+    band: "Northwoods: Molly Tucker, Casey Murray and Sam Zakon-Anderson"
+  },
+  {
+    date: [2025, 11, 2],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    band: "Daybreak Trio: Anna Patton, Owen Morrison, and Naomi Morse"
+  },
+  {
+    date: [2025, 11, 16],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    band: "Good Company: Rohan Wheeden, Helen Kuhar, and Cecily Mills"
+  },
+  {
+    date: [2025, 11, 24],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    lesson_start: [4, 0, "pm"],
+    band: "Raven & Goose: Corwin Zekley and Grace Fellows"
+  },
 ];
 
 events = document.getElementById("events");
