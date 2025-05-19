@@ -1227,7 +1227,7 @@ e = [
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     lesson_start: [4, 0, "pm"],
     caller: "Liz Nelson",
-    band: "Windfish"
+    band: "Windfish: Garrett Cameron, Perin Ellsworth Osanya, & Ben Hemmendinger"
   },
   {
     date: [2025, 7, 6],
