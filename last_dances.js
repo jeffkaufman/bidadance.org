@@ -1220,6 +1220,7 @@ e = [
   {
     date: [2025, 6, 15],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    caller: "Will Mentor",
     band: "BIDA Open Band"
   },
   {
