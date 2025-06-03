@@ -1280,7 +1280,7 @@ e = [
     band: "Good Company: Rohan Wheeden, Helen Kuhar, and Cecily Mills"
   },
   {
-    date: [2025, 11, 24],
+    date: [2025, 11, 23],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     lesson_start: [4, 0, "pm"],
     band: "Raven & Goose: Corwin Zekley and Grace Fellows"
