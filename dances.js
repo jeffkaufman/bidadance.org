@@ -1477,10 +1477,10 @@ function gen_events() {
       }
     } else {
       if (next_event.children.length == 0) {
-        next_event.appendChild(event_to_append)
-      } else {
-        events.appendChild(event_to_append);
+        next_event.appendChild(
+            event_to_append.cloneNode(/*deep=*/true));
       }
+      events.appendChild(event_to_append);
     }
   }
   
