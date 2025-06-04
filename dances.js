@@ -1287,6 +1287,7 @@ e = [
   },
 ];
 
+next_event = document.getElementById("next-event");
 events = document.getElementById("events");
 past_events = document.getElementById("past-events");
 
@@ -1460,23 +1461,29 @@ function gen_events() {
     clear_div = document.createElement("div");
     clear_div.className = "clear";
     event_div.appendChild(clear_div);
-    var append_event = event_div;
+
+    var event_to_append = event_div;
     if (links) {
       event_a.appendChild(event_div);
-      append_event = event_a;
+      event_to_append = event_a;
     }
 
     if (event.date < yesterday) {
       if (past_events.children.length == 0) {
-        past_events.appendChild(append_event);
+        past_events.appendChild(event_to_append);
       } else {
         past_events.insertBefore(
-          append_event, past_events.firstChild);
+          event_to_append, past_events.firstChild);
       }
     } else {
-      events.appendChild(append_event);
+      if (next_event.children.length == 0) {
+        next_event.appendChild(event_to_append)
+      } else {
+        events.appendChild(event_to_append);
+      }
     }
   }
+  
 }
 gen_events();
 
