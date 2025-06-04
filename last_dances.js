@@ -1369,6 +1369,7 @@ function gen_events() {
     var time_text = "";
     var lesson_text = "";
 
+    var default_title = "Contra Dance";
     if (event.time) {
       time_text = event.time;
 
@@ -1377,6 +1378,7 @@ function gen_events() {
 
       if (lesson_start[0] <= 6) {
         date_div.classList.add("afternoon");
+        default_title = "Afternoon Contra Dance";
       }
       
       lesson_text = "Lesson: " + format_time(lesson_start);
@@ -1401,12 +1403,8 @@ function gen_events() {
     }
 
     var details_div = document.createElement("div");
-
-
-
-
     details_div.className = "details";
-    event.title = event.title || "Contra Dance";
+    event.title = event.title || default_title;
     var title_div = document.createElement("div");
     title_div.className = "title";
     title_div.textContent = event.title;
