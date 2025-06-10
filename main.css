@@ -23,6 +23,12 @@ a {
   margin-top: 1em;
 }
 
+#next-event-wrapper {
+  background-color: rgba(165, 11, 32, .08);
+  padding: 10px;
+  border-radius: 0.5em;
+}
+
 #banner {
   background-image: url("media/bida-contra-dancing.jpg");
   background-repeat: no-repeat;
