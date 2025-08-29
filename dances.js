@@ -1262,9 +1262,21 @@ e = [
   },
   {
     date: [2025, 10, 19],
-    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
-    caller: "Isaac Banner",
-    band: "Eloise & Co.",
+    html: "<p>This dance has <a href=/accessibility><strong>mask-optional</strong></a> and <strong>mask-required</strong> portions<br /><br />" +
+      "<table><tr><td>3:00-6:00<td>English Country Dance<td><strong>mask-optional</strong>" +
+      "             <tr><td>6:00-7:00<td>Potluck<td><strong>mask-optional</strong>" +
+      "             <tr><td>7:00-7:30<td>Contra Lesson<td><a href=/accessibility><strong>mask-required</strong></a>" +
+      "             <tr><td>7:30-10:30<td>Contra Dance<td><a href=/accessibility><strong>mask-required</strong></a>" +
+      "      </table>" +
+      "<p>In honor of Jane Austen's 250th Birthday later this year, BIDA and CDS-Boston Centre are hosting a joint English Country Dance and Contra Dance event.</p>" +
+      "<p><strong>Jane Austen Birthday English Country Dance</strong><br />" +
+      "Sliding scale: $10-20<br />" +
+      "Tom Roby calling, footwork lesson by Corinne Holroyd<br/>" +
+      "Music by Emily O’Brien, Catherine Miller, and Jean Monroe</p>" +
+      "<p><strong>Contra Dance</strong><br />" +
+      "Sliding scale: $5-20<br />" +
+      "Isaac Banner calling to Eloise & Co.</p>",
+    title: "Afternoon Jane Austen Country Dance and Evening Contra Dance"
   },
   {
     date: [2025, 10, 26],
