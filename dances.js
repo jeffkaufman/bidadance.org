@@ -1239,44 +1239,50 @@ e = [
   {
     date: [2025, 9, 7],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    caller: "Alyssa Adkins",
     band: "Stomp Rocket",
   },
   {
     date: [2025, 9, 21],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    caller: "Tommy Linden",
     band: "Pegasus Collective"
   },
   {
     date: [2025, 9, 28],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     lesson_start: [4, 0, "pm"],
-    band: "BIDA Open Band: led by the community, coordinated by Jeff Kaufman"
+    band: "BIDA Open Band"
   },
   {
     date: [2025, 10, 5],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    caller: "Andrew Stout",
     band: "Bubblegum Society",
   },
   {
     date: [2025, 10, 19],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    caller: "Isaac Banner",
     band: "Eloise & Co.",
-    caller: "Isaac Banner"
   },
   {
     date: [2025, 10, 26],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
     lesson_start: [4, 0, "pm"],
+    caller: "Ben Sachs-Hamilton",
     band: "Northwoods: Molly Tucker, Casey Murray and Sam Zakon-Anderson"
   },
   {
     date: [2025, 11, 2],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    caller: "Qwill Duvall",
     band: "Daybreak Trio: Anna Patton, Owen Morrison, and Naomi Morse"
   },
   {
     date: [2025, 11, 16],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    caller: "Annie Kidwell",
     band: "Good Company: Rohan Wheeden, Helen Kuhar, and Cecily Mills"
   },
   {
@@ -1284,6 +1290,30 @@ e = [
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     lesson_start: [4, 0, "pm"],
     band: "Raven & Goose: Corwin Zekley and Grace Fellows"
+  },
+  {
+    date: [2025, 11, 30],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    caller: "Will Mentor",
+    band: "Noah VanNorstrand and Amy Englesberg",
+    title: "Bonus 5th Sunday Contra Dance"
+  },
+  {
+    date: [2025, 12, 7],
+    html: "There may not be a dance this Sunday. Stay tuned!",
+    title: "Contra Dance?"
+  },
+  {
+    date: [2025, 12, 21],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    caller: "Steve Zakon-Anderson",
+  },
+  {
+    date: [2025, 12, 28],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    lesson_start: [4, 0, "pm"],
+    caller: "Hannah Chamberlain",
+    band: "Sophie Wellington, Benjamin Foss"
   },
 ];
 
