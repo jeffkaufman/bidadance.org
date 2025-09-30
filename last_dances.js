@@ -1258,7 +1258,7 @@ e = [
     date: [2025, 10, 5],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     caller: "Andrew Stout",
-    band: "Bubblegum Society",
+    band: "Bubblegum Society: Cecily Mills, Molly Tucker, Sam Zakon-Anderson, Abe Joyner-Meyers, Silas Hamilton, Noah VanNorstrand, & Steven Bluestein",
   },
   {
     date: [2025, 10, 19],
