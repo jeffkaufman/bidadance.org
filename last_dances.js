@@ -1276,6 +1276,7 @@ e = [
       "<p><strong>Contra Dance</strong><br />" +
       "Sliding scale: $5-20<br />" +
       "Isaac Banner calling to Eloise & Co.</p>",
+    html_includes_timing: true,
     title: "Afternoon Jane Austen Country Dance and Evening Contra Dance"
   },
   {
@@ -1293,9 +1294,33 @@ e = [
   },
   {
     date: [2025, 11, 16],
-    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
-    caller: "Annie Kidwell",
-    band: "Good Company: Rohan Wheeden, Helen Kuhar, and Cecily Mills"
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>" +
+      "<p><table><tr><td>3:30-6:30<td>Ogres, Onions, and Flourishes" +
+      "       <tr><td>7:00-7:30<td>Contra Lesson" +
+      "       <tr><td>7:30-10:30<td>Contra Dance" + 
+      "      </table>" +
+      "<p>Before our regularly scheduled contra dance, with Annie Kidwell " +
+      "calling to Good Company (Rohan Wheeden, Helen Kuhar, and Cecily Mills), " +
+      "Bret Casey will lead a workshop:" +
+      "<blockquote>" +
+      "Join us as we explore a versatile technique for flourishes from " +
+      "foundational elements to a wide array of variations. Instructor " +
+      "Bret Casey brings 16 years of contra dance experience and 15 " +
+      "years of partner dance experience together to offer a unique " +
+      "perspective on the ways that we can layer improvisational " +
+      "moments on top of the contra choreography.<p>" +
+
+      "The workshop will be split into three blocks of roughly 50 minutes " +
+      "each, with two short breaks. Each section of the workshop will " +
+      "build on the techniques learned previously, so we encourage you " +
+      "to arrive on time. Familiarity with typical contra dance figures " +
+      "will be helpful. Admission will be on a sliding scale from $5 - " +
+      "$20.<p>" +
+
+      "We will have musical accompaniment by Helen Kuhar on guitar and " +
+      "Rohan Weeden on fiddle.</blockquote>",
+    html_includes_timing: true,
+    title: "Afternoon Workshop and Evening Contra Dance"
   },
   {
     date: [2025, 11, 23],
