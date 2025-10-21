@@ -1326,14 +1326,21 @@ e = [
     date: [2025, 11, 23],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     lesson_start: [4, 0, "pm"],
+    caller: "Hannah Johlas",
     band: "Raven & Goose: Corwin Zekley and Grace Fellows"
   },
   {
     date: [2025, 11, 30],
-    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a><br /><br />" +
+      "<table><tr><td>4:00-6:30<td>Square dance" +
+      "             <tr><td>6:30-7:30<td>Potluck" +
+      "             <tr><td>7:00-7:30<td>Beginner's Lesson" +
+      "             <tr><td>7:30-10:30<td>Evening contra dance" +
+      "      </table>",
+    html_includes_timing: true,
     caller: "Will Mentor",
     band: "Noah VanNorstrand and Amy Englesberg",
-    title: "Bonus 5th Sunday Contra Dance"
+    title: "Bonus 5th Sunday Double Dance with Squares"
   },
   {
     date: [2025, 12, 7],
