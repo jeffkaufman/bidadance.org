@@ -1344,8 +1344,7 @@ e = [
   },
   {
     date: [2025, 12, 7],
-    html: "There may not be a dance this Sunday. Stay tuned!",
-    title: "Contra Dance?"
+    title: "No Dance"
   },
   {
     date: [2025, 12, 21],
