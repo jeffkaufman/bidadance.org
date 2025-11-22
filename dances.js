@@ -1349,6 +1349,7 @@ e = [
   {
     date: [2025, 12, 21],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    band: "BIDA Open Band led by Rosemary Powell",
     caller: "Steve Zakon-Anderson",
   },
   {
