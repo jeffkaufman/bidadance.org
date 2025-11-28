@@ -1358,7 +1358,8 @@ e = [
       "             <tr><td>7:30-10:30<td>Evening dance (<a href=/accessibility><strong>mask-required</strong></a>)" +
       "      </table>" +
       "<p>Jeff Kaufman will lead an open band for the family dance.",
-    title: "Contra + Family Dance"
+    title: "Contra + Family Dance",
+    html_includes_timing: true,
   },
   {
     date: [2025, 12, 28],
