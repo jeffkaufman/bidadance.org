@@ -1351,6 +1351,15 @@ e = [
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
     band: "BIDA Open Band led by Rosemary Powell",
     caller: "Steve Zakon-Anderson",
+    html:
+      "<table><tr><td>5:30-6:30<td>Family dance (<strong>mask-optional</strong>)" +
+      "             <tr><td>6:30-7:30<td>Potluck (<strong>mask-optional</strong>)" +
+      "             <tr><td>7:00-7:30<td>Beginner's Lesson (<a href=/accessibility><strong>mask-required</strong></a>)" +
+      "             <tr><td>7:30-10:30<td>Evening dance (<a href=/accessibility><strong>mask-required</strong></a>)" +
+      "      </table>" +
+      "<p>Jeff Kaufman will lead an open band for the family dance.",
+    title: "Contra + Family Dance",
+    html_includes_timing: true,
   },
   {
     date: [2025, 12, 28],
