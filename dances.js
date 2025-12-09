@@ -1366,7 +1366,61 @@ e = [
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
     lesson_start: [4, 0, "pm"],
     caller: "Hannah Chamberlain",
-    band: "Sophie Wellington, Benjamin Foss"
+    html:
+      "<table><tr><td>2:30-3:30<td>Open Tunes Jam with Sophie and Ben!" +
+      "             <tr><td>4:00-4:30<td>Lesson" +
+      "             <tr><td>4:30-7:30<td>Afternoon dance" +
+      "      </table>",
+    band: "Sophie Wellington & Benjamin Foss"
+  },
+  {
+    date: [2026, 1, 4],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    caller: "Maia McCormick",
+    band: "Red Case Band"
+  },
+  {
+    date: [2026, 1, 18],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    band: "Joy Factor"
+  },
+  {
+    date: [2026, 1, 25],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    lesson_start: [4, 0, "pm"],
+    band: "Springtide"
+  },
+  {
+    date: [2026, 2, 1],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    band: "Whirlwind"
+  },
+  {
+    date: [2026, 2, 15],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    band: "BIDA Open Band"
+  },
+  {
+    date: [2026, 2, 22],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    lesson_start: [4, 0, "pm"],
+    band: "Gaslight Tinkers"
+  },
+  {
+    date: [2026, 3, 1],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    band: "Nobody's Business"
+  },
+  {
+    date: [2026, 3, 15],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    band: "Beantown Stomp Talent Megaband"
+  },
+  {
+    date: [2026, 3, 22],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    lesson_start: [4, 0, "pm"],
+    band: "Cojiro & Grace Hendrickson‑Jones"
   },
 ];
 
