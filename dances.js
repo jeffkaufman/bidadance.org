@@ -1371,7 +1371,8 @@ e = [
       "             <tr><td>4:00-4:30<td>Lesson" +
       "             <tr><td>4:30-7:30<td>Afternoon dance" +
       "      </table>",
-    band: "Sophie Wellington & Benjamin Foss"
+    band: "Sophie Wellington & Benjamin Foss",
+    html_includes_timing: true
   },
   {
     date: [2026, 1, 4],
