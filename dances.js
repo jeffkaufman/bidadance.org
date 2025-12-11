@@ -967,20 +967,20 @@ e = [
     date: [2024, 8, 16],
     title: "Spark in the Dark",
     link: "https://www.facebook.com/events/1456055841716367/",
-    html: "Dance with Lisa Greenleaf calling to the electronic music of Kingfisher and <a class=marklink href='https://blog.bidadance.org/2024/07/guest-spots-at-our-august-16th-spark-in.html'>guests</a>." + 
-"<p>" + 
+    html: "Dance with Lisa Greenleaf calling to the electronic music of Kingfisher and <a class=marklink href='https://blog.bidadance.org/2024/07/guest-spots-at-our-august-16th-spark-in.html'>guests</a>." +
+"<p>" +
 "This dance is at a different location: The Somerville Armory, " +
-"191 Highland Ave." + 
+"191 Highland Ave." +
 "<p>" +
 "Accessibility info: " +
 "Lighting at this dance will be darker than usual, and will include black lights. Some dancers can " +
 "find it confusing or overwhelming. The Armory's is wheelchair accessible, with more information <a class=marklink href='https://artsatthearmory.org/frequently-asked-questions/#access-faq'>on their website</a>." +
 "<p><table>" +
-"<tr><td>6:40<td>Lesson" + 
-"<tr><td>7:00<td>Kingfisher" + 
-"<tr><td>8:30<td>Moondial, then Kingfisher" + 
+"<tr><td>6:40<td>Lesson" +
+"<tr><td>7:00<td>Kingfisher" +
+"<tr><td>8:30<td>Moondial, then Kingfisher" +
 "<tr><td>10:30<td>Yaron, then Kingfisher" +
-"<tr><td>12:00<td>End" + 
+"<tr><td>12:00<td>End" +
 "</table>",
   },
   {
@@ -1174,7 +1174,7 @@ e = [
   },
   {
     date: [2025, 4, 27],
-    title: "No Dance",  
+    title: "No Dance",
     lesson_start: [4, 0, "pm"],
   },
   {
@@ -1197,7 +1197,7 @@ e = [
   {
     date: [2025, 5, 18],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>.<p>Because this is Elixir's final dance before retirement we expect to hit capacity, and we're selling <u style='color: rgb(165, 11, 32)'><a style='color: rgb(165, 11, 32)' href='https://www.brownpapertickets.com/event/6630893'>tickets in advance</a></u>.<p>" +
-      "6:00-7:00: couples dancing<br>" + 
+      "6:00-7:00: couples dancing<br>" +
       "7:00-7:30: beginner's lesson<br>" +
       "7:30-10:30: dance",
     caller: "Nils Fredland",
@@ -1208,7 +1208,7 @@ e = [
   },
   {
     date: [2025, 5, 25],
-    title: "No Dance",  
+    title: "No Dance",
     lesson_start: [4, 0, "pm"],
   },
   {
@@ -1297,7 +1297,7 @@ e = [
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>" +
       "<p><table><tr><td>3:30-6:30<td>Ogres, Onions, and Flourishes" +
       "       <tr><td>7:00-7:30<td>Contra Lesson" +
-      "       <tr><td>7:30-10:30<td>Contra Dance" + 
+      "       <tr><td>7:30-10:30<td>Contra Dance" +
       "      </table>" +
       "<p>Before our regularly scheduled contra dance, with Annie Kidwell " +
       "calling to Good Company (Rohan Wheeden, Helen Kuhar, and Cecily Mills), " +
@@ -1382,7 +1382,13 @@ e = [
   },
   {
     date: [2026, 1, 18],
-    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    html:
+      "This dance is <a href=/accessibility><strong>mask-required</strong></a>" +
+      "<p>We will have a short meeting to ask the membership to approve our " +
+      "<a style='color: rgb(165, 11, 32)' " +
+      "href='https://blog.bidadance.org/2025/11/" +
+      "proposing-elections-restructure-for-bida.html'><u>" +
+      "elections restructure proposal</u></a>.",
     band: "Joy Factor"
   },
   {
@@ -1519,17 +1525,17 @@ function gen_events() {
         date_div.classList.add("afternoon");
         default_title = "Afternoon Contra Dance";
       }
-      
+
       lesson_text = "Lesson: " + format_time(lesson_start);
       const dance_start = event.dance_start || add_time(lesson_start, 0, 30);
       const dance_end = event.dance_end || add_time(dance_start, 3, 0);
       time_text = "Dance: " + format_time(dance_start) + "-" + format_time(dance_end);
     }
-    
+
     var lesson_div = document.createElement("div");
     lesson_div.className = "lesson";
     lesson_div.textContent = lesson_text;
-    
+
     var time_div = document.createElement("div");
     time_div.className = "time";
     time_div.textContent = time_text;
@@ -1621,7 +1627,7 @@ function gen_events() {
       events.appendChild(event_to_append);
     }
   }
-  
+
 }
 gen_events();
 
