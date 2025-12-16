@@ -1348,11 +1348,11 @@ e = [
   },
   {
     date: [2025, 12, 21],
-    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
     band: "BIDA Open Band led by Rosemary Powell",
     caller: "Steve Zakon-Anderson",
     html:
-      "<table><tr><td>5:30-6:30<td>Family dance (<strong>mask-optional</strong>)" +
+      "This dance is <a href=/accessibility><strong>mask-required</strong></a>" +
+      "<p><table><tr><td>5:30-6:30<td>Family dance (<strong>mask-optional</strong>)" +
       "             <tr><td>6:30-7:30<td>Potluck (<strong>mask-optional</strong>)" +
       "             <tr><td>7:00-7:30<td>Beginner's Lesson (<a href=/accessibility><strong>mask-required</strong></a>)" +
       "             <tr><td>7:30-10:30<td>Evening dance (<a href=/accessibility><strong>mask-required</strong></a>)" +
@@ -1363,11 +1363,11 @@ e = [
   },
   {
     date: [2025, 12, 28],
-    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
     lesson_start: [4, 0, "pm"],
     caller: "Hannah Chamberlain",
     html:
-      "<table><tr><td>2:30-3:30<td>Open Tunes Jam with Sophie and Ben!" +
+      "This dance is <a href=/accessibility><strong>mask-required</strong></a>" +
+      "<p><table><tr><td>2:30-3:30<td>Open Tunes Jam with Sophie and Ben!" +
       "             <tr><td>4:00-4:30<td>Lesson" +
       "             <tr><td>4:30-7:30<td>Afternoon dance" +
       "      </table>",
