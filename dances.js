@@ -1376,7 +1376,19 @@ e = [
   },
   {
     date: [2026, 1, 4],
-    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    title: "Double Dance: Contra + Experienced Dance",
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a><br /><br />" +
+      "<table><tr><td>4:00-6:30<td>Experienced Dance" +
+      "             <tr><td>6:30-7:30<td>Potluck" +
+      "             <tr><td>7:00-7:30<td>Beginner's Lesson" +
+      "             <tr><td>7:30-10:30<td>Evening contra dance" +
+      "      </table>",
+      // Language pending approval from Maia
+      // "<p><dl><dt><i>What do you mean <em>experienced</em>? Should I come??</i>" +
+      // "<dd><p>For the afternoon advanced session, Maia will call" +
+      // " trickier material with less teaching than usual. If you are" +
+      // " comfortable doing a no-walkthrough, you should be good!</dl>",
+    html_includes_timing: true,
     caller: "Maia McCormick",
     band: "Red Case Band"
   },
