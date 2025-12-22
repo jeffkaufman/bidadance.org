@@ -1367,9 +1367,9 @@ e = [
     caller: "Hannah Chamberlain",
     html:
       "This dance is <a href=/accessibility><strong>mask-required</strong></a>" +
-      "<p><table><tr><td>2:30-3:30<td>Open Tunes Jam with Sophie and Ben!" +
-      "             <tr><td>4:00-4:30<td>Lesson" +
-      "             <tr><td>4:30-7:30<td>Afternoon dance" +
+      "<p><table><tr><td>2:30-3:30<td>Open Tunes Jam with Sophie and Ben! (mask-optional)" +
+      "             <tr><td>4:00-4:30<td>Lesson (mask-required)" +
+      "             <tr><td>4:30-7:30<td>Afternoon dance (mask-required)" +
       "      </table>",
     band: "Sophie Wellington & Benjamin Foss",
     html_includes_timing: true
