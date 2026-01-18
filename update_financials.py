@@ -13,6 +13,10 @@ with open("CPIAUCSL.csv") as inf:
     except Exception:
       print(date)
       raise
+
+    if date == "2025-10-01" and not cpiaucsl:
+      cpiaucsl = "324.0365"
+    
     cpi[int(y), int(m)] = float(cpiaucsl)
 
 def current_dollars(year, month, amount):
