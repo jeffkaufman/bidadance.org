@@ -1415,34 +1415,40 @@ e = [
   {
     date: [2026, 2, 1],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
-    band: "Whirlwind"
+    band: "Whirlwind",
+    caller: "Tommy Linden"
   },
   {
     date: [2026, 2, 15],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
-    band: "BIDA Open Band"
+    band: "BIDA Open Band",
+    caller: "Alice Slater"
   },
   {
     date: [2026, 2, 22],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
     lesson_start: [4, 0, "pm"],
-    band: "Gaslight Tinkers"
+    band: "Gaslight Tinkers",
+    caller: "Yaron Shragai"
   },
   {
     date: [2026, 3, 1],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
-    band: "Nobody's Business"
+    band: "Nobody's Business",
+    caller: "Angela DeCarlis"
   },
   {
     date: [2026, 3, 15],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
-    band: "Beantown Stomp Talent Megaband"
+    band: "Beantown Stomp Talent Megaband",
+    caller: "Annie Kidwell"
   },
   {
     date: [2026, 3, 22],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     lesson_start: [4, 0, "pm"],
-    band: "Cojiro & Grace Hendrickson‑Jones"
+    band: "Cojiro & Grace Hendrickson‑Jones",
+    caller: "Evan DeSmitt"
   },
 ];
 
