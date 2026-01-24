@@ -1406,9 +1406,11 @@ e = [
   },
   {
     date: [2026, 1, 25],
-    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    title: "Dance cancelled",
+    html: "No dance, due to winter storm. Stay safe!",
+    html_includes_timing: true,
     lesson_start: [4, 0, "pm"],
-    band: "Springtide"
+    // band: "Springtide"
   },
   {
     date: [2026, 2, 1],
