@@ -1448,7 +1448,7 @@ e = [
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     lesson_start: [4, 0, "pm"],
     band: "Cojiro & Grace Hendrickson‑Jones",
-    caller: "Evan DeSmitt"
+    caller: "Qwill Duvall"
   },
 ];
 
