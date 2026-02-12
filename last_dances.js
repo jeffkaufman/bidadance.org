@@ -1438,6 +1438,21 @@ e = [
     caller: "Angela DeCarlis"
   },
   {
+    date: [2026, 3, 13],
+    end_date: [2026, 3, 15],
+    title: "Contra Dance Weekend: Beantown Stomp",
+    link: "https://www.beantownstomp.com",
+    html: "<i>sold out</i>",
+    html_includes_timing: true,
+  },
+  {
+    date: [2026, 3, 14],
+    title: "Family Dance",
+    html: "While most of Beantown Stomp requires pre-registration, the Saturday morning family dance (9:15-10:30am) does not.  Molly Tucker will be leading an open Band, with Mary Wesley calling.<p>While this is included in a weekend registration you can also pay at the door with cash or Venmo ($3 for kids, and $5-$20 for everyone else). As always, the open band is free for musicians, though we're happy to take donations!<p>People attending the family dance are also invited to stay until noon to dance the first set of contras.<p>If you would like to play in the open band, just bring your instrument. It will be very relaxed - no microphones, no arranging, just playing tunes acoustically.",
+    html_includes_timing: true,
+    lesson_start: [9, 15, "am"],
+  },
+  {
     date: [2026, 3, 15],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
     band: "Beantown Stomp Talent Megaband",
