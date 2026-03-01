@@ -1465,6 +1465,43 @@ e = [
     band: "Cojiro & Grace Hendrickson‑Jones",
     caller: "Qwill Duvall"
   },
+  {
+    date: [2026, 4, 5],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    caller: "Hannah Chamberlain",
+    band: "Sycamore: Cedar Stanistreet, Samuel Foucher, Max Newman"
+  },
+  {
+    date: [2026, 4, 19],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    band: "Kingfisher: Jeff Kaufman, Cecilia Vacanti"
+  },
+  {
+    date: [2026, 4, 26],
+    title: "No Dance"
+  },
+  {
+    date: [2026, 5, 3],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    caller: "Evan DeSmitt",
+    band: "Topspin: Anna Patton, Stefan Amidon, Emily Troll, Owen Morrison"
+  },
+  {
+    date: [2026, 5, 17],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    band: "Helen Kuhar, Guillaume Sparrow-Pepin, Rose Jackson",
+    caller: "Andrew Stout"
+  },
+  {
+    date: [2026, 5, 24],
+    title: "No Dance"
+  },
+  {
+    date: [2026, 6, 7],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    caller: "Harris Lapiroff",
+    band: "The Turn Signals: Cecily Mills, Aaron Marcus, Grace Hendrickson-Jones, Molly Tucker"
+  }
 ];
 
 next_event = document.getElementById("next-event");
