@@ -1474,6 +1474,7 @@ e = [
   {
     date: [2026, 4, 19],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    caller: "Lisa Greenleaf",
     band: "Kingfisher: Jeff Kaufman, Cecilia Vacanti"
   },
   {
