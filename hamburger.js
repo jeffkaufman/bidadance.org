@@ -30,6 +30,7 @@ hamburger_container.innerHTML =
   '<a href="https://www.beantownstomp.com">Beantown Stomp</a>' +
   '<a href="http://blog.bidadance.org/">Blog</a>' +
   '<a href="https://www.bidadance.org/join">Mailing Lists</a>' +
+  '<a href="https://www.bidadance.org/feedback">Share Feedback</a>' +
   '<a href="https://www.bidadance.org/safety">Safety</a>' +
 
   '</dl>' +
