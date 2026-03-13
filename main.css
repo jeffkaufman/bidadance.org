@@ -8,12 +8,12 @@ a {
   color: rgb(165, 11, 32);
 }
 
-#events a, #past-events a {
+#events a, #past-events a, #next-event a {
   color: black;
   text-decoration: none;
 }
 
-#events a.marklink, #past-events a.marklink {
+#events a.marklink, #past-events a.marklink, #next-event a.marklink {
   color: rgb(165, 11, 32);
   text-decoration: underline;
 }
