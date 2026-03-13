@@ -1449,6 +1449,7 @@ e = [
     date: [2026, 3, 14],
     title: "Family Dance",
     html: "While most of Beantown Stomp requires pre-registration, the Saturday morning family dance (9:15-10:30am) does not.  Molly Tucker will be leading an open Band, with Mary Wesley calling.<p>While this is included in a weekend registration you can also pay at the door with cash or Venmo ($3 for kids, and $5-$20 for everyone else). As always, the open band is free for musicians, though we're happy to take donations!<p>People attending the family dance are also invited to stay until noon to dance the first set of contras.<p>If you would like to play in the open band, just bring your instrument. It will be very relaxed - no microphones, no arranging, just playing tunes acoustically.",
+    link: "https://www.beantownstomp.com",
     html_includes_timing: true,
     lesson_start: [9, 15, "am"],
   },
@@ -1663,7 +1664,7 @@ function gen_events() {
         const link_a = document.createElement("a");
         link_a.textContent = getHostname(link);
         link_a.href = link;
-        link_a.className = "link";
+        link_a.className = "marklink";
         links_div.appendChild(link_a);
         is_first = false;
       })
@@ -1694,7 +1695,8 @@ function gen_events() {
           event_to_append, past_events.firstChild);
       }
     } else {
-      if (next_event.children.length == 0) {
+      if (next_event.children.length == 0 &&
+          !event_to_append.innerHTML.toLowerCase().includes("sold out")) {
         next_event.appendChild(
             event_to_append.cloneNode(/*deep=*/true));
       }
