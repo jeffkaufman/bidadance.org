@@ -1694,7 +1694,8 @@ function gen_events() {
           event_to_append, past_events.firstChild);
       }
     } else {
-      if (next_event.children.length == 0) {
+      if (next_event.children.length == 0 &&
+          !event_to_append.innerHTML.toLowerCase().includes("sold out")) {
         next_event.appendChild(
             event_to_append.cloneNode(/*deep=*/true));
       }
