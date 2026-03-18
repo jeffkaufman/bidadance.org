@@ -1460,6 +1460,13 @@ e = [
     caller: "Annie Kidwell"
   },
   {
+    date: [2026, 3, 19],
+    title: "Introductory Sound Workshop",
+    html: "RSVP to jeff@jefftk.com for address.  Doors open 7:10pm, nominal start time is 7:30, arrive by 7:35 if you don't want to miss anything.",
+    "link": "https://groups.google.com/g/bida-musician-announcements/c/CqxkZRnfbmE",
+    html_includes_timing: true,
+  },
+  {
     date: [2026, 3, 22],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     lesson_start: [4, 0, "pm"],
@@ -1467,10 +1474,24 @@ e = [
     caller: "Qwill Duvall"
   },
   {
+    date: [2026, 3, 23],
+    title: "Introductory Sound Workshop",
+    html: "RSVP to jeff@jefftk.com for address.  Doors open 7:10pm, nominal start time is 7:30, arrive by 7:35 if you don't want to miss anything.",
+    "link": "https://groups.google.com/g/bida-musician-announcements/c/CqxkZRnfbmE",
+    html_includes_timing: true,
+  },
+  {
     date: [2026, 4, 5],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     caller: "Hannah Chamberlain",
     band: "Sycamore: Cedar Stanistreet, Samuel Foucher, Max Newman"
+  },
+  {
+    date: [2026, 4, 10],
+    title: "Introductory Sound Workshop",
+    html: "RSVP to jeff@jefftk.com for address.  Doors open 7:10pm, nominal start time is 7:30, arrive by 7:35 if you don't want to miss anything.",
+    "link": "https://groups.google.com/g/bida-musician-announcements/c/CqxkZRnfbmE",
+    html_includes_timing: true,
   },
   {
     date: [2026, 4, 19],
