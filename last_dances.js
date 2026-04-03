@@ -1482,7 +1482,7 @@ e = [
   },
   {
     date: [2026, 4, 5],
-    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a><p>This dance will include elections for our board, which runs these events.  See <u style='color: rgb(165, 11, 32)'><a style='color: rgb(165, 11, 32)' href='https://docs.google.com/document/d/1ke_Z6r2mSf4CnkwcuF4OmTnKBtUDQlqv057WFHk_BXg/edit'>this doc</a></u> for the list of candidates and their bios.",
     caller: "Hannah Chamberlain",
     band: "Sycamore: Cedar Stanistreet, Samuel Foucher, Max Newman"
   },
