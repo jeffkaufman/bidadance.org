@@ -1500,6 +1500,13 @@ e = [
     band: "Kingfisher: Jeff Kaufman, Cecilia Vacanti"
   },
   {
+    date: [2026, 4, 20],
+    title: "Introductory Sound Workshop",
+    html: "RSVP to jeff@jefftk.com for address.  Doors open 7:10pm, nominal start time is 7:30, arrive by 7:35 if you don't want to miss anything.",
+    "link": "https://groups.google.com/g/bida-musician-announcements/c/CqxkZRnfbmE",
+    html_includes_timing: true,
+  },
+  {
     date: [2026, 4, 26],
     title: "No Dance"
   },
