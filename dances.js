@@ -1528,7 +1528,19 @@ e = [
   },
   {
     date: [2026, 6, 7],
-    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    title: "Afternoon English Country Dance and Evening Contra Dance",
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a><br /><br />" +
+      "<table><tr><td>4:00-6:30<td>English Country Dance" +
+      "             <tr><td>6:30-7:30<td>Potluck" +
+      "             <tr><td>7:00-7:30<td>Beginner's Lesson" +
+      "             <tr><td>7:30-10:30<td>Evening contra dance" +
+      "      </table>" +
+      "<p>" + 
+      "The afternoon will be <em>primarily</em> ECD and the evening <em>primarily</em> contra, though there may be some intermingling. " +
+      "This dance is cosponsored by " +
+      "<a class=marklink href='https://www.cds-boston.org'>CDS-Boston Centre</a>." +
+      "</p>",
+    html_includes_timing: true,
     caller: "Harris Lapiroff",
     band: "The Turn Signals: Cecily Mills, Aaron Marcus, Grace Hendrickson-Jones, Molly Tucker"
   }
