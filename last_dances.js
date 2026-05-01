@@ -1517,6 +1517,16 @@ e = [
     band: "Topspin: Anna Patton, Stefan Amidon, Emily Troll, Owen Morrison"
   },
   {
+    date: [2026, 5, 9],
+    title: "Outdoor contra at Morrison Ave and Highand Rd",
+    html: "We'll be dancing in the street 2-4pm on Highland Rd (not Ave!) " +
+      "during Somerville Porchfest, on the dead-end section between Morrison " +
+      "Ave and the community path.",
+    band: "Kingfisher: Jeff Kaufman, Cecilia Vacanti",
+    caller: "Harris Lapiroff",
+    html_includes_timing: true,
+  },
+  {
     date: [2026, 5, 17],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
     band: "Helen Kuhar, Guillaume Sparrow-Pepin, Rose Jackson",
