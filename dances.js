@@ -1525,6 +1525,8 @@ e = [
     band: "Kingfisher: Jeff Kaufman, Cecilia Vacanti",
     caller: "Harris Lapiroff",
     html_includes_timing: true,
+    dance_start: [2, 0, "pm"],
+    dance_end: [4, 0, "pm"],
     link: "https://www.facebook.com/events/823717030345945/",
   },
   {

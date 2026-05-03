@@ -102,13 +102,20 @@ def to_ical(events):
           # Set start time (default 7pm unless specified)
           if 'lesson_start' in event:
             start_hour, start_minute = parse_time(event['lesson_start'])
+          elif 'dance_start' in event:
+            start_hour, start_minute = parse_time(event['dance_start'])
           else:
             start_hour, start_minute = 19, 0  # 7pm
 
           # Create datetime objects
           start_dt = eastern.localize(
             datetime(*event["date"], start_hour, start_minute))
-          end_dt = start_dt + timedelta(hours=3, minutes=30)  # 3.5 hours duration
+          if 'dance_end' in event:
+            end_hour, end_minute = parse_time(event['dance_end'])
+            end_dt = eastern.localize(
+              datetime(*event["date"], end_hour, end_minute))
+          else:
+            end_dt = start_dt + timedelta(hours=3, minutes=30)  # 3.5 hours
         else:
           start_dt = eastern.localize(datetime(*event["date"], 0, 0))
           end_dt = eastern.localize(datetime(*event["end_date"], 23, 59))
