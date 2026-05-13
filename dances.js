@@ -1531,9 +1531,18 @@ e = [
   },
   {
     date: [2026, 5, 17],
-    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
     band: "Helen Kuhar, Guillaume Sparrow-Pepin, Rose Jackson",
-    caller: "Andrew Stout"
+    caller: "Andrew Stout",
+    title: "Afternoon Balfolk and Evening Contra Dance",
+    html: "<table><tr><td>5:00-6:30<td>Balfolk" +
+      "             <tr><td>6:30-7:30<td>Potluck" +
+      "             <tr><td>7:00-7:30<td>Beginner's Lesson" +
+      "             <tr><td>7:30-10:30<td>Evening contra dance" +
+      "      </table>" +
+      "<p>This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    html_includes_timing: true,
+    dance_start: [5, 0, "pm"],
+    dance_end: [10, 30, "pm"],
   },
   {
     date: [2026, 5, 24],
