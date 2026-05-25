@@ -1563,9 +1563,28 @@ e = [
       "<a class=marklink href='https://www.cds-boston.org'>CDS-Boston Centre</a>." +
       "</p>",
     html_includes_timing: true,
+    dance_start: [4, 0, "pm"],
+    dance_end: [10, 30, "pm"],
     caller: "Harris Lapiroff",
     band: "The Turn Signals: Cecily Mills, Aaron Marcus, Grace Hendrickson-Jones, Molly Tucker"
-  }
+  },
+  {
+    date: [2026, 6, 21],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    caller: "Hannah Johlas",
+    band: "Mary Lauren Fraser and Peter Siegel"
+  },
+  {
+    date: [2026, 6, 28],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    caller: "Ben Sachs-Hamilton",
+    lesson_start: [4, 0, "pm"],
+  },
+  {
+    date: [2026, 7, 5],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    caller: "Chloe Levine",
+  },
 ];
 
 next_event = document.getElementById("next-event");
