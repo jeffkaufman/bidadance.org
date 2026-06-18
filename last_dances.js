@@ -1570,7 +1570,7 @@ e = [
   },
   {
     date: [2026, 6, 21],
-    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
     caller: "Hannah Johlas",
     band: "Mary Lauren Fraser and Peter Siegel"
   },
@@ -1582,7 +1582,7 @@ e = [
   },
   {
     date: [2026, 7, 5],
-    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     caller: "Chloe Levine",
   },
 ];
