@@ -1585,7 +1585,7 @@ e = [
     date: [2026, 7, 5],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     caller: "Chloe Levine",
-    band: "BIDA Open Band led by Helen Kuhar"
+    band: "BIDA Open Band led by Helen Kuhar with Elias Cardoso"
   },
 ];
 
