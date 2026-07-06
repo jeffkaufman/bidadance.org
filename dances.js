@@ -1594,6 +1594,8 @@ e = [
       "Lapiroff</a> will be calling a set with <a href='https://www.kingfisherband.com/'>Kingfisher</a> on the " +
       "Elm St Stage (corner of Elm and Chester) from 3pm to 3:50pm.<p>Rain date 2025-07-19.",
     link: "https://somervilleartscouncil.org/events/artbeat-2026-revolution/",
+    dance_start: [3, 0, "pm"],
+    dance_end: [4, 0, "pm"],
     html_includes_timing: true,
   },
   {
@@ -1603,6 +1605,8 @@ e = [
       "Lapiroff</a> will be calling a set with <a href='https://www.kingfisherband.com/'>Kingfisher</a> on the " +
       "Elm St Stage (corner of Elm and Chester) from 3pm to 3:50pm.<p>Main date 2025-07-18.",
     link: "https://somervilleartscouncil.org/events/artbeat-2026-revolution/",
+    dance_start: [3, 0, "pm"],
+    dance_end: [4, 0, "pm"],
     html_includes_timing: true,
   },
 ];
