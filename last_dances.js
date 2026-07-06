@@ -1587,6 +1587,24 @@ e = [
     caller: "Chloe Levine",
     band: "BIDA Open Band led by Helen Kuhar with Elias Cardoso"
   },
+  {
+    date: [2026, 7, 18],
+    title: "Outdoor Dance at Somerville ArtBeat",
+    html: "Somerville ArtBeat is a free festival in Davis Square, and <a href='https://chromamine.com/dance/'>Harris " +
+      "Lapiroff</a> will be calling a set with <a href='https://www.kingfisherband.com/'>Kingfisher</a> on the " +
+      "Elm St Stage (corner of Elm and Chester) from 3pm to 3:50pm.<p>Rain date 2025-07-19.",
+    link: "https://somervilleartscouncil.org/events/artbeat-2026-revolution/",
+    html_includes_timing: true,
+  },
+  {
+    date: [2026, 7, 19],
+    title: "Rain Date for Outdoor Dance at Somerville ArtBeat",
+    html: "[rain date] Somerville ArtBeat is a free festival in Davis Square, and <a href='https://chromamine.com/dance/'>Harris " +
+      "Lapiroff</a> will be calling a set with <a href='https://www.kingfisherband.com/'>Kingfisher</a> on the " +
+      "Elm St Stage (corner of Elm and Chester) from 3pm to 3:50pm.<p>Main date 2025-07-18.",
+    link: "https://somervilleartscouncil.org/events/artbeat-2026-revolution/",
+    html_includes_timing: true,
+  },
 ];
 
 next_event = document.getElementById("next-event");
