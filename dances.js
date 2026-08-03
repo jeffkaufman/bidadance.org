@@ -1624,7 +1624,7 @@ e = [
     title: "Afternoon Klezmer Contra Dance",
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     lesson_start: [4, 0, "pm"],
-    band: "eden macadam-somer & co.",
+    band: "Eden Macadam-Somer & Co.",
   },
   {
     date: [2026, 10, 4],
