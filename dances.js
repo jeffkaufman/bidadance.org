@@ -1609,6 +1609,40 @@ e = [
     dance_end: [4, 0, "pm"],
     html_includes_timing: true,
   },
+  {
+    date: [2026, 9, 6],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    caller: "Eric Boodman + TBD",
+  },
+  {
+    date: [2026, 9, 20],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    caller: "Sarah Kaiser",
+  },
+  {
+    date: [2026, 9, 27],
+    title: "Afternoon Klezmer Contra Dance",
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    lesson_start: [4, 0, "pm"],
+    band: "eden macadam-somer & co.",
+  },
+  {
+    date: [2026, 10, 4],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    band: "Thunderwing: Cedar Stanistreet, Benjamin Foss, Amy Englesberg",
+  },
+  {
+    date: [2026, 10, 18],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    band: "Ravenswing: Abi Sandy and Crystal Zhu",
+  },
+  {
+    date: [2026, 10, 25],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    lesson_start: [4, 0, "pm"],
+    caller: "Liz Nelson",
+    band: "Open Band",
+  },
 ];
 
 next_event = document.getElementById("next-event");
