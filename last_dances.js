@@ -1557,7 +1557,7 @@ e = [
       "             <tr><td>7:00-7:30<td>Beginner's Lesson" +
       "             <tr><td>7:30-10:30<td>Evening contra dance" +
       "      </table>" +
-      "<p>" + 
+      "<p>" +
       "The afternoon will be <em>primarily</em> ECD and the evening <em>primarily</em> contra, though there may be some intermingling. " +
       "This dance is cosponsored by " +
       "<a class=marklink href='https://www.cds-boston.org'>CDS-Boston Centre</a>." +
@@ -1608,6 +1608,40 @@ e = [
     dance_start: [3, 0, "pm"],
     dance_end: [4, 0, "pm"],
     html_includes_timing: true,
+  },
+  {
+    date: [2026, 9, 6],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    caller: "Eric Boodman + TBD",
+  },
+  {
+    date: [2026, 9, 20],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    caller: "Sarah Kaiser",
+  },
+  {
+    date: [2026, 9, 27],
+    title: "Afternoon Klezmer Contra Dance",
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    lesson_start: [4, 0, "pm"],
+    band: "Eden Macadam-Somer & Co.",
+  },
+  {
+    date: [2026, 10, 4],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    band: "Thunderwing: Cedar Stanistreet, Benjamin Foss, Amy Englesberg",
+  },
+  {
+    date: [2026, 10, 18],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    band: "Ravenswing: Abi Sandy and Crystal Zhu",
+  },
+  {
+    date: [2026, 10, 25],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    lesson_start: [4, 0, "pm"],
+    caller: "Liz Nelson",
+    // band: "Open Band",
   },
 ];
 
