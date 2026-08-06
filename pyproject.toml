@@ -1,0 +1,21 @@
+[project]
+name = "bidadance-org"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Harris Bard Lapiroff",email = "harris@chromamine.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pytz (>=2025.2,<2026.0)",
+    "icalendar (>=6.3.2,<7.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "bidadance"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
