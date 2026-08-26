@@ -1624,7 +1624,7 @@ e = [
   {
     date: [2026, 9, 27],
     title: "Afternoon Klezmer Contra Dance",
-    html: "Klezmer tune workshop at 3pm! This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     lesson_start: [4, 0, "pm"],
     caller: "Will Mentor",
     band: "Eden MacAdam-Somer, Hankus Netsky, and the NEC Jewish Music Ensemble",
