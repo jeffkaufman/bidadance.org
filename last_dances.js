@@ -1612,12 +1612,14 @@ e = [
   {
     date: [2026, 9, 6],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
-    caller: "Eric Boodman + TBD",
+    band: "Eric Boodman, Max Newman, + TBD",
+    caller: "Harris Lapiroff"
   },
   {
     date: [2026, 9, 20],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
     caller: "Sarah Kaiser",
+    band: "Northwoods (Casey Murray, Molly Tucker, Sam Zakon-Anderson)"
   },
   {
     date: [2026, 9, 27],
@@ -1625,12 +1627,13 @@ e = [
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     lesson_start: [4, 0, "pm"],
     caller: "Will Mentor",
-    band: "Eden Macadam-Somer & Co.",
+    band: "Eden MacAdam-Somer, Hankus Netsky, and the NEC Jewish Music Ensemble",
   },
   {
     date: [2026, 10, 4],
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     band: "Thunderwing: Cedar Stanistreet, Benjamin Foss, Amy Englesberg",
+    caller: "Don Veino"
   },
   {
     date: [2026, 10, 18],
@@ -1642,7 +1645,26 @@ e = [
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
     lesson_start: [4, 0, "pm"],
     caller: "Liz Nelson",
-    // band: "Open Band",
+    band: "BIDA Open Band",
+  },
+  {
+    date: [2026, 11, 1],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    band: "Sophie Wellington & Max Newman"
+  },
+  {
+    date: [2026, 11, 15],
+    html: "Afternoon Contra 201 workshop led by Tommy Linden. Exact timing details tba. This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    band: "Tory & Rose",
+    caller: "Tommy Linden",
+    title: "Contra 201 Workshop & Contra Dance"
+  },
+  {
+    date: [2026, 11, 22],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    lesson_start: [4, 0, "pm"],
+    caller: "Qwill Duvall",
+    band: "Supertrad (Sam Bartlett, Eric Schedler, Owen Morrison, Dave Langford)",
   },
 ];
 
