@@ -1615,10 +1615,10 @@ e = [
     caller: "Harris Lapiroff",
     html:
       "This dance is <a href=/accessibility><strong>mask-optional</strong></a>" +
-      "<p><table><tr><td>5:30-6:30<td>Family dance (<strong>mask-optional</strong>)" +
-      "             <tr><td>6:30-7:30<td>Potluck (<strong>mask-optional</strong>)" +
-      "             <tr><td>7:00-7:30<td>Beginner's Lesson (<a href=/accessibility><strong>mask-required</strong></a>)" +
-      "             <tr><td>7:30-10:30<td>Evening dance (<a href=/accessibility><strong>mask-required</strong></a>)" +
+      "<p><table><tr><td>5:30-6:30<td>Family dance" +
+      "             <tr><td>6:30-7:30<td>Potluck" +
+      "             <tr><td>7:00-7:30<td>Beginner's Lesson" +
+      "             <tr><td>7:30-10:30<td>Evening dance" +
       "      </table>",
     title: "Contra + Family Dance",
   },
