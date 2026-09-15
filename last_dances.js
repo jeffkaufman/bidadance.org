@@ -1624,9 +1624,10 @@ e = [
   },
   {
     date: [2026, 9, 20],
-    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    html: "Join us before the dance for a tunes jam with Casey and Molly 5:30-6:30pm. The jam is masks optional. The dance is <a href=/accessibility><strong>mask-required</strong></a>",
     caller: "Sarah Kaiser",
-    band: "Northwoods (Casey Murray, Molly Tucker, Sam Zakon-Anderson)"
+    band: "Northwoods (Casey Murray, Molly Tucker, Sam Zakon-Anderson)", 
+    title: "Contra Dance and Tunes Jam" 
   },
   {
     date: [2026, 9, 27],
