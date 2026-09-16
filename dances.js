@@ -1635,7 +1635,7 @@ e = [
     html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
     lesson_start: [4, 0, "pm"],
     caller: "Will Mentor",
-    band: "Eden MacAdam-Somer, Hankus Netsky, and the NEC Jewish Music Ensemble",
+    band: "Eden MacAdam-Somer, Hankus Netsky, Itay Dayan, and Grant Smith",
   },
   {
     date: [2026, 10, 4],
