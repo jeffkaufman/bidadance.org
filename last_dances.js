@@ -1650,6 +1650,14 @@ e = [
     date: [2026, 10, 18],
     html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
     band: "Ravenswing: Abi Sandy and Crystal Zhu",
+    html:
+      "<p><table><tr><td>5:15<td>Doors open" +
+      "             <tr><td>5:30-6:30<td>Family dance (mask-optional)" +
+      "             <tr><td>6:30-7:30<td>Potluck (mask-optional)" +
+      "             <tr><td>7:00-7:30<td>Beginner's Lesson (<a href=/accessibility><strong>mask-required</strong></a>)" +
+      "             <tr><td>7:30-10:30<td>Evening dance (<a href=/accessibility><strong>mask-required</strong></a>)" +
+      "      </table>",
+    title: "Contra + Family Dance",
   },
   {
     date: [2026, 10, 25],
@@ -1676,6 +1684,25 @@ e = [
     lesson_start: [4, 0, "pm"],
     caller: "Qwill Duvall",
     band: "Supertrad (Sam Bartlett, Eric Schedler, Owen Morrison, Dave Langford)",
+  },
+  {
+    date: [2026, 12, 6],
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    caller: "Andrew Stout",
+    band: "Bubblegum Society (Cecily Mills, Molly Tucker, Sam Zakon-Anderson, Abe Joyner-Meyers, Silas Hamilton, Matt Kenney)",
+  },
+  {
+    date: [2026, 12, 20],
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
+    band: "Black River Ironworks (Jonah Sidman, Corey Walters, Michael Freeman)",
+    html:
+      "<p><table><tr><td>5:15<td>Doors open" +
+      "             <tr> <td>5:30-6:30<td>Family dance (mask-optional)" +
+      "             <tr><td>6:30-7:30<td>Potluck (mask-optional)" +
+      "             <tr><td>7:00-7:30<td>Beginner's Lesson (<a href=/accessibility><strong>mask-required</strong></a>)" +
+      "             <tr><td>7:30-10:30<td>Evening dance (<a href=/accessibility><strong>mask-required</strong></a>)" +
+      "      </table>",
+    title: "Contra + Family Dance",
   },
 ];
 
