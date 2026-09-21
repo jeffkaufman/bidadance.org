@@ -1626,16 +1626,19 @@ e = [
     date: [2026, 9, 20],
     html: "Join us before the dance for a tunes jam with Casey and Molly 5:30-6:30pm. The jam is masks optional. The dance is <a href=/accessibility><strong>mask-required</strong></a>",
     caller: "Sarah Kaiser",
-    band: "Northwoods (Casey Murray, Molly Tucker, Sam Zakon-Anderson)", 
-    title: "Contra Dance and Tunes Jam" 
+    band: "Northwoods (Casey Murray, Molly Tucker, Sam Zakon-Anderson)",
+    title: "Contra Dance and Tunes Jam"
   },
   {
     date: [2026, 9, 27],
-    title: "Afternoon Klezmer Contra Dance",
-    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    title: "Afternoon Contra Dance",
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a><br /><br />" +
+      "Dancers brought to our attention that the Klezmer Contra Dance we had previously scheduled on this date " +
+      "overlapped the Jewish holiday Sukkot, preventing many observant Jews from attending our celebration of Jewish culture. " +
+      "We're working on rescheduling that special event for the spring instead.",
     lesson_start: [4, 0, "pm"],
     caller: "Will Mentor",
-    band: "Eden MacAdam-Somer, Hankus Netsky, Itay Dayan, and Grant Smith",
+    band: "Kaleidescope",
   },
   {
     date: [2026, 10, 4],
