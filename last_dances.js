@@ -1648,9 +1648,9 @@ e = [
   },
   {
     date: [2026, 10, 18],
-    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a>",
     band: "Ravenswing: Abi Sandy and Crystal Zhu",
     html:
+      "This dance is <a href=/accessibility><strong>mask-required</strong></a>" +
       "<p><table><tr><td>5:15<td>Doors open" +
       "             <tr><td>5:30-6:30<td>Family dance (mask-optional)" +
       "             <tr><td>6:30-7:30<td>Potluck (mask-optional)" +
@@ -1668,7 +1668,9 @@ e = [
   },
   {
     date: [2026, 11, 1],
-    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    title: "Halloween Contra Dance",
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>" +
+      "<p>Wear a costume, or something that'll glow in blacklights!</p>",
     band: "Sophie Wellington & Max Newman"
   },
   {
@@ -1680,7 +1682,13 @@ e = [
   },
   {
     date: [2026, 11, 22],
-    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>",
+    title: "Afternoon Family Dance + Contra Dance",
+    html: "This dance is <a href=/accessibility><strong>mask-optional</strong></a>" +
+          "<p><table><tr><td>2:15<td>Doors open" +
+          "             <tr><td>2:30-3:30<td>Family dance" +
+          "             <tr><td>4:00-4:30<td>Beginner's Lesson" +
+          "             <tr><td>4:30-7:30<td>Evening dance" +
+          "      </table>",
     lesson_start: [4, 0, "pm"],
     caller: "Qwill Duvall",
     band: "Supertrad (Sam Bartlett, Eric Schedler, Owen Morrison, Dave Langford)",
