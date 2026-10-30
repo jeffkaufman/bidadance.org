@@ -18,6 +18,11 @@ a {
   text-decoration: underline;
 }
 
+#events .notes a, #past-events .notes a, #next-event .notes a {
+  color: rgb(165, 11, 32);
+  text-decoration: underline;
+}
+
 #past-events {
   display: none;
   margin-top: 1em;
@@ -97,8 +102,35 @@ a {
   padding-bottom: 1em;  
 }
 
+.event .masks {
+  margin-top: 0;
+  padding-bottom: 1em;
+}
+
 .event p {
   margin: 0;
+  margin-top: 1em;
+}
+
+.event table {
+  margin-top: 1em;
+}
+
+.event td:first-child {
+  padding-right: 0.5em;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.event .custom {
+  margin-bottom: 1em;
+}
+
+.event .custom > :first-child, .event .notes > :first-child {
+  margin-top: 0;
+}
+
+.event .custom > .notes:not(:first-child) > :first-child {
   margin-top: 1em;
 }
 

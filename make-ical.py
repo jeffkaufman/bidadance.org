@@ -8,12 +8,13 @@
 
 import os
 import re
-import ast
-import json
+import html
+import sys
 import pytz
 import uuid
 import shutil
 import filecmp
+import textwrap
 from datetime import datetime, timedelta
 from icalendar import Calendar, Event
 
@@ -23,58 +24,126 @@ if os.path.exists(last_dances_fname):
   if filecmp.cmp(last_dances_fname, dances_fname):
     exit(0) # no changes since last run
 
-dances_json = []
-with open("dances.js") as inf:
-  in_json = False
-  for line in inf:
-    line = line.strip()
-    if line.startswith("//"):
-      continue
+class DancesParser:
+  """Reads the list of dances out of dances.js.
 
-    if not in_json and line == "e = [":
-      in_json = True
-      dances_json.append("[")
-    elif line.strip() == "];":
-      dances_json.append("]")
-      break
-    elif in_json:
-      dances_json.append(line)
+  Handles the subset of JavaScript that dances.js uses: objects, arrays,
+  strings of all three kinds, true/false, and // comments.
+  """
 
-def parse_js_like_object(text):
-  text = re.sub(r'(\n\s*|\{\s*)(\w+):', r'\1"\2":', text)
-  text = re.sub(r'\s*\+\s*', '', text)  # Remove string concatenation
+  def __init__(self, text):
+    self.text = text
+    self.pos = text.index("e = [") + len("e = ")
 
-  text = text.replace(' true,', ' True,').replace(' false,', ' False,')
+  def error(self, message):
+    line = self.text.count("\n", 0, self.pos) + 1
+    return ValueError(f"dances.js line {line}: {message}")
 
-  try:
-    return ast.literal_eval(text)
-  except ValueError as e:
-    lines = text.split('\n')
-    line_num = int(str(e).split('line')[1].split(':')[0])
-    print(f"\nProblematic line {line_num}:")
-    print(lines[line_num-1])
-    raise
+  def skip_space(self):
+    while True:
+      match = re.compile(r"\s+|//[^\n]*").match(self.text, self.pos)
+      if not match:
+        return
+      self.pos = match.end()
 
-def parse_time(time_array):
-    """Convert time array [hour, minute, period] to 24hr tuple"""
-    hour, minute, period = time_array
-    if period.lower() == 'pm' and hour != 12:
+  def peek(self):
+    self.skip_space()
+    return self.text[self.pos]
+
+  def parse_value(self):
+    char = self.peek()
+    if char == "{":
+      return self.parse_object()
+    if char == "[":
+      return self.parse_array()
+    if char in "\"'`":
+      return self.parse_string()
+    for word, value in (("true", True), ("false", False)):
+      if self.text.startswith(word, self.pos):
+        self.pos += len(word)
+        return value
+    raise self.error(f"unexpected {char!r}")
+
+  def parse_string(self):
+    quote = self.text[self.pos]
+    self.pos += 1
+    chars = []
+    while self.text[self.pos] != quote:
+      if self.text[self.pos] == "\\":
+        self.pos += 1
+        chars.append({"n": "\n"}.get(self.text[self.pos], self.text[self.pos]))
+      else:
+        chars.append(self.text[self.pos])
+      self.pos += 1
+    self.pos += 1
+    return "".join(chars)
+
+  def parse_array(self):
+    self.pos += 1
+    values = []
+    while self.peek() != "]":
+      values.append(self.parse_value())
+      if self.peek() == ",":
+        self.pos += 1
+      elif self.peek() != "]":
+        raise self.error("expected , or ]")
+    self.pos += 1
+    return values
+
+  def parse_object(self):
+    self.pos += 1
+    values = {}
+    while self.peek() != "}":
+      match = re.compile(r"\w+").match(self.text, self.pos)
+      if not match:
+        raise self.error("expected a field name")
+      self.pos = match.end()
+      if self.peek() != ":":
+        raise self.error("expected :")
+      self.pos += 1
+      if match.group() in values:
+        print(self.error(f"{match.group()} is set twice"), file=sys.stderr)
+      values[match.group()] = self.parse_value()
+      if self.peek() == ",":
+        self.pos += 1
+      elif self.peek() != "}":
+        raise self.error("expected , or }")
+    self.pos += 1
+    return values
+
+
+def parse_date(date):
+    return [int(part) for part in date.split("-")]
+
+def parse_time(time):
+    """Convert a time like "4pm" or "7:30pm" to a 24hr tuple"""
+    hour, minute, period = re.fullmatch(
+      r"(\d+)(?::(\d+))?\s*(am|pm)", time.strip().lower()).groups()
+    hour, minute = int(hour), int(minute or 0)
+    if period == 'pm' and hour != 12:
         hour += 12
-    elif period.lower() == 'am' and hour == 12:
+    elif period == 'am' and hour == 12:
         hour = 0
     return (hour, minute)
 
-
-dances = parse_js_like_object("\n".join(dances_json))
+def notes_to_text(notes):
+    """Convert Markdown notes to plain text for the calendar"""
+    text = textwrap.dedent(notes).strip()
+    text = re.sub(r'\[([^\]]*)\]\([^)]*\)', r'\1', text)  # links
+    text = re.sub(r'\*+', '', text)  # bold and italics
+    text = re.sub(r'<[^>]+>', ' ', text)  # raw HTML
+    text = text.replace('\\\n', ' ')  # line breaks
+    return re.sub(r'\s+', ' ', html.unescape(text)).strip()
 
 def get_description(event):
     """Generate description from event details"""
     parts = []
 
-    # Include HTML with paragraph tag if present
-    if 'html' in event:
-        parts.append(re.sub(r'<[^>]+>', '', event['html'].replace(
-          "<p>", " ").replace("<br>", " ")))
+    if 'schedule' in event:
+        parts.append('; '.join(event['schedule']))
+
+    if 'notes' in event:
+        parts.append(notes_to_text(event['notes']))
 
     # Add performers info matching JS logic
     if event.get('caller') or event.get('band'):
@@ -85,7 +154,11 @@ def get_description(event):
         else:
             parts.append(f"{event['caller']} calling to {event['band']}.")
 
-    return '. '.join(parts)
+    if 'masks' in event:
+        parts.append(f"This dance is mask-{event['masks']}")
+
+    return ' '.join(
+        part if part[-1] in '.!?' else part + '.' for part in parts)
 
 def to_ical(events):
     # Create calendar
@@ -96,6 +169,7 @@ def to_ical(events):
 
     for event in events:
         title = "BIDA " + event.get("title", "Contra Dance")
+        date = parse_date(event["date"])
         e = Event()
 
         if "end_date" not in event:
@@ -109,16 +183,17 @@ def to_ical(events):
 
           # Create datetime objects
           start_dt = eastern.localize(
-            datetime(*event["date"], start_hour, start_minute))
+            datetime(*date, start_hour, start_minute))
           if 'dance_end' in event:
             end_hour, end_minute = parse_time(event['dance_end'])
             end_dt = eastern.localize(
-              datetime(*event["date"], end_hour, end_minute))
+              datetime(*date, end_hour, end_minute))
           else:
             end_dt = start_dt + timedelta(hours=3, minutes=30)  # 3.5 hours
         else:
-          start_dt = eastern.localize(datetime(*event["date"], 0, 0))
-          end_dt = eastern.localize(datetime(*event["end_date"], 23, 59))
+          start_dt = eastern.localize(datetime(*date, 0, 0))
+          end_dt = eastern.localize(
+            datetime(*parse_date(event["end_date"]), 23, 59))
 
         # Add event details
         e.add('summary', title)
@@ -129,7 +204,7 @@ def to_ical(events):
         if description:
             e.add('description', description)
 
-        unique_string = f"{title}-{'-'.join(str(x) for x in event['date'])}"
+        unique_string = f"{title}-{'-'.join(str(x) for x in date)}"
         e.add('uid', str(uuid.uuid5(uuid.NAMESPACE_DNS, unique_string)))
 
         if 'link' in event:
@@ -140,7 +215,10 @@ def to_ical(events):
 
     return cal.to_ical()
 
-ical = to_ical(parse_js_like_object("\n".join(dances_json)))
+with open(dances_fname) as inf:
+  dances = DancesParser(inf.read()).parse_value()
+
+ical = to_ical(dances)
 with open("events.ics", "wb") as outf:
   outf.write(ical)
 
