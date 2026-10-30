@@ -8,20 +8,12 @@ function getHostname(url) {
     hostname = hostname.slice(4);
   }
 
-  if (hostname == "facebook.com") {
-    return "facebook";
-  } else if (hostname == "meetup.com") {
-    return "meetup";
-  } else if (hostname == "instagram.com") {
-    return "instagram";
-  } else {
-    return hostname;
-  }
-}
-
-function parse_date(s) {
-  const [year, month, day] = s.split("-").map(Number);
-  return new Date(year, month - 1, day);
+  const short_names = {
+    "facebook.com": "facebook",
+    "meetup.com": "meetup",
+    "instagram.com": "instagram",
+  };
+  return short_names[hostname] || hostname;
 }
 
 // Turns "4pm" or "7:30pm" into [4, 0, "pm"] or [7, 30, "pm"].
@@ -33,7 +25,6 @@ function parse_time(s) {
 
 function format_time(t) {
   const [hour, minute, amPm] = t;
-  console.log("format_time", hour, minute, amPm, (hour.toString() + (minute ? (":" + minute) : "") + amPm));
   return hour.toString() + (minute ? (":" + minute) : "") + amPm;
 }
 
@@ -64,13 +55,16 @@ function dedent(text) {
   return lines.map(line => line.slice(indent)).join("\n");
 }
 
+function mask_link(text) {
+  return "[**" + text + "**](/accessibility)";
+}
+
 function render_masks(masks) {
-  var masks_p = document.createElement("p");
-  masks_p.className = "masks";
-  masks_p.innerHTML =
-    "This dance is <a href=/accessibility><strong>mask-" + masks +
-    "</strong></a>";
-  return masks_p;
+  var masks_div = document.createElement("div");
+  masks_div.className = "masks";
+  masks_div.innerHTML =
+    marked.parseInline("This dance is " + mask_link("mask-" + masks));
+  return masks_div;
 }
 
 function render_schedule(schedule) {
@@ -79,9 +73,8 @@ function render_schedule(schedule) {
     const [, time, activity] = line.match(/^(\S+)\s+(.*)$/);
     var row = table.insertRow();
     row.insertCell().textContent = time;
-    row.insertCell().innerHTML = marked.parseInline(activity).replace(
-      /mask-(required|optional)/g,
-      "<a href=/accessibility><strong>$&</strong></a>");
+    row.insertCell().innerHTML = marked.parseInline(
+      activity.replace(/mask-(required|optional)/g, mask_link));
   });
   return table;
 }
@@ -100,15 +93,9 @@ function gen_events() {
   for (var i = 0; i < e.length; i++) {
     var event = e[i];
 
-    event.date = parse_date(event.date);
-    let links = null;
-    if (event.link) {
-      if (Array.isArray(event.link)) {
-        links = event.link;
-      } else {
-        links = [event.link];
-      }
-    }
+    // At midnight local time; a bare date would be midnight UTC.
+    event.date = new Date(event.date + "T00:00");
+    const links = event.link ? [].concat(event.link) : null;
     if (links) {
       var event_a = document.createElement("a");
       event_a.href = links[0];
@@ -125,44 +112,16 @@ function gen_events() {
     }
     date_div.textContent = date_text;
 
-    var time_text = "";
-    var lesson_text = "";
-
     var default_title = "Contra Dance";
-    if (event.time) {
-      time_text = event.time;
+    const lesson_start = event.lesson_start ?
+      parse_time(event.lesson_start) : [7, 0, "pm"];
 
-    } else {
-      const lesson_start = event.lesson_start ?
-        parse_time(event.lesson_start) : [7, 0, "pm"];
-
-      if (lesson_start[0] <= 6) {
-        date_div.classList.add("afternoon");
-        default_title = "Afternoon Contra Dance";
-      }
-
-      lesson_text = "Lesson: " + format_time(lesson_start);
-      const dance_start = event.dance_start ?
-        parse_time(event.dance_start) : add_time(lesson_start, 0, 30);
-      const dance_end = event.dance_end ?
-        parse_time(event.dance_end) : add_time(dance_start, 3, 0);
-      time_text = "Dance: " + format_time(dance_start) + "-" + format_time(dance_end);
+    if (lesson_start[0] <= 6) {
+      date_div.classList.add("afternoon");
+      default_title = "Afternoon Contra Dance";
     }
-
-    var lesson_div = document.createElement("div");
-    lesson_div.className = "lesson";
-    lesson_div.textContent = lesson_text;
-
-    var time_div = document.createElement("div");
-    time_div.className = "time";
-    time_div.textContent = time_text;
 
     event_div.appendChild(date_div);
-
-    var danceIsHappening = true;
-    if (event.title && event.title.toLowerCase().startsWith("no dance")) {
-      danceIsHappening = false;
-    }
 
     var details_div = document.createElement("div");
     details_div.className = "details";
@@ -172,8 +131,22 @@ function gen_events() {
     title_div.textContent = event.title;
     event_div.appendChild(title_div);
 
-    if (danceIsHappening && !event.hide_times && !event.schedule) {
+    const cancelled = event.title.toLowerCase().startsWith("no dance");
+    if (!cancelled && !event.hide_times && !event.schedule) {
+      const dance_start = event.dance_start ?
+        parse_time(event.dance_start) : add_time(lesson_start, 0, 30);
+      const dance_end = event.dance_end ?
+        parse_time(event.dance_end) : add_time(dance_start, 3, 0);
+
+      var lesson_div = document.createElement("div");
+      lesson_div.className = "lesson";
+      lesson_div.textContent = "Lesson: " + format_time(lesson_start);
       event_div.appendChild(lesson_div);
+
+      var time_div = document.createElement("div");
+      time_div.className = "time";
+      time_div.textContent =
+        "Dance: " + format_time(dance_start) + "-" + format_time(dance_end);
       event_div.appendChild(time_div);
     }
 
@@ -206,9 +179,8 @@ function gen_events() {
     var links_div = document.createElement("div");
     if (links) {
       links_div.appendChild(document.createTextNode(" details on "));
-      let is_first = true;
-      links.forEach(link => {
-        if (!is_first) {
+      links.forEach((link, index) => {
+        if (index > 0) {
           links_div.appendChild(document.createTextNode(", "));
         }
         const link_a = document.createElement("a");
@@ -216,9 +188,8 @@ function gen_events() {
         link_a.href = link;
         link_a.className = "marklink";
         links_div.appendChild(link_a);
-        is_first = false;
       })
-    } else if (event.title.toLowerCase().startsWith("no dance")) {
+    } else if (cancelled) {
       links_div.textContent ="Dance cancelled.";
     } else if (!event.caller && !event.band && !event.masks &&
                !event.schedule && !event.notes) {
@@ -239,12 +210,7 @@ function gen_events() {
     }
 
     if (event.date < yesterday) {
-      if (past_events.children.length == 0) {
-        past_events.appendChild(event_to_append);
-      } else {
-        past_events.insertBefore(
-          event_to_append, past_events.firstChild);
-      }
+      past_events.insertBefore(event_to_append, past_events.firstChild);
     } else {
       if (next_event.children.length == 0 &&
           !event_to_append.innerHTML.toLowerCase().includes("sold out")) {
@@ -259,8 +225,8 @@ function gen_events() {
 
 if (typeof e === "undefined") {
   // dances.js didn't run, almost always because of a typo.
-  events.textContent = "Sorry, we couldn't load the list of dances.";
-  events.textContent += " If you just edited dances.js, look for a typo";
+  events.textContent = "Sorry, we couldn't load the list of dances. " +
+    "If you just edited dances.js, look for a typo";
   if (window.dances_error && window.dances_error.lineno) {
     events.textContent += " near line " + window.dances_error.lineno + ": " +
       window.dances_error.message;
@@ -274,11 +240,7 @@ show_past = false;
 toggle_past = document.getElementById("toggle-past");
 
 function update_toggle_past() {
-  if (show_past) {
-    toggle_past.textContent = "Hide Past Events";
-  } else {
-    toggle_past.textContent = "Show Past Events";
-  }
+  toggle_past.textContent = (show_past ? "Hide" : "Show") + " Past Events";
 }
 
 toggle_past.onclick = function() {

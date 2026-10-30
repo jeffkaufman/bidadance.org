@@ -31,6 +31,10 @@ class DancesParser:
   strings of all three kinds, true/false, and // comments.
   """
 
+  SPACE = re.compile(r"(?:\s+|//[^\n]*)*")
+  STRING = re.compile(r"""(["'`])((?:\\.|(?!\1).)*)\1""", re.DOTALL)
+  FIELD_NAME = re.compile(r"(\w+)\s*:")
+
   def __init__(self, text):
     self.text = text
     self.pos = text.index("e = [") + len("e = ")
@@ -39,77 +43,47 @@ class DancesParser:
     line = self.text.count("\n", 0, self.pos) + 1
     return ValueError(f"dances.js line {line}: {message}")
 
-  def skip_space(self):
-    while True:
-      match = re.compile(r"\s+|//[^\n]*").match(self.text, self.pos)
-      if not match:
-        return
-      self.pos = match.end()
-
   def peek(self):
-    self.skip_space()
+    self.pos = self.SPACE.match(self.text, self.pos).end()
     return self.text[self.pos]
 
   def parse_value(self):
     char = self.peek()
     if char == "{":
-      return self.parse_object()
+      fields = self.parse_items("}", self.parse_field)
+      if len(dict(fields)) < len(fields):
+        print(self.error("a field is set twice"), file=sys.stderr)
+      return dict(fields)
     if char == "[":
-      return self.parse_array()
-    if char in "\"'`":
-      return self.parse_string()
+      return self.parse_items("]", self.parse_value)
     for word, value in (("true", True), ("false", False)):
       if self.text.startswith(word, self.pos):
         self.pos += len(word)
         return value
-    raise self.error(f"unexpected {char!r}")
+    match = self.STRING.match(self.text, self.pos)
+    if not match:
+      raise self.error(f"unexpected {char!r}")
+    self.pos = match.end()
+    return re.sub(r"\\(.)", r"\1", match.group(2), flags=re.DOTALL)
 
-  def parse_string(self):
-    quote = self.text[self.pos]
-    self.pos += 1
-    chars = []
-    while self.text[self.pos] != quote:
-      if self.text[self.pos] == "\\":
-        self.pos += 1
-        chars.append({"n": "\n"}.get(self.text[self.pos], self.text[self.pos]))
-      else:
-        chars.append(self.text[self.pos])
-      self.pos += 1
-    self.pos += 1
-    return "".join(chars)
+  def parse_field(self):
+    match = self.FIELD_NAME.match(self.text, self.pos)
+    if not match:
+      raise self.error("expected a field name")
+    self.pos = match.end()
+    return match.group(1), self.parse_value()
 
-  def parse_array(self):
+  def parse_items(self, close, parse_item):
     self.pos += 1
-    values = []
-    while self.peek() != "]":
-      values.append(self.parse_value())
+    items = []
+    while self.peek() != close:
+      items.append(parse_item())
       if self.peek() == ",":
         self.pos += 1
-      elif self.peek() != "]":
-        raise self.error("expected , or ]")
+      elif self.peek() != close:
+        raise self.error(f"expected , or {close}")
     self.pos += 1
-    return values
-
-  def parse_object(self):
-    self.pos += 1
-    values = {}
-    while self.peek() != "}":
-      match = re.compile(r"\w+").match(self.text, self.pos)
-      if not match:
-        raise self.error("expected a field name")
-      self.pos = match.end()
-      if self.peek() != ":":
-        raise self.error("expected :")
-      self.pos += 1
-      if match.group() in values:
-        print(self.error(f"{match.group()} is set twice"), file=sys.stderr)
-      values[match.group()] = self.parse_value()
-      if self.peek() == ",":
-        self.pos += 1
-      elif self.peek() != "}":
-        raise self.error("expected , or }")
-    self.pos += 1
-    return values
+    return items
 
 
 def parse_date(date):

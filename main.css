@@ -13,11 +13,7 @@ a {
   text-decoration: none;
 }
 
-#events a.marklink, #past-events a.marklink, #next-event a.marklink {
-  color: rgb(165, 11, 32);
-  text-decoration: underline;
-}
-
+#events a.marklink, #past-events a.marklink, #next-event a.marklink,
 #events .notes a, #past-events .notes a, #next-event .notes a {
   color: rgb(165, 11, 32);
   text-decoration: underline;
@@ -98,13 +94,8 @@ a {
   padding-left: 1em;
 }
 
-.event .performers {
+.event .performers, .event .masks {
   padding-bottom: 1em;  
-}
-
-.event .masks {
-  margin-top: 0;
-  padding-bottom: 1em;
 }
 
 .event p {
@@ -130,7 +121,7 @@ a {
   margin-top: 0;
 }
 
-.event .custom > .notes:not(:first-child) > :first-child {
+.event table + .notes {
   margin-top: 1em;
 }
 

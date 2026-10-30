@@ -24,8 +24,8 @@ To preview a change, open `index.html` in your browser.
 
 ## Editing dances
 
-Each dance in dances.js looks like this.  Copying a nearby dance is a
-good way to start, and every field except `date` is optional:
+Each dance in dances.js looks like this, and every field except `date`
+is optional:
 
 ```js
 {
