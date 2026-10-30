@@ -90,11 +90,17 @@ Have feedback on a recent dance? Use our <a href="/feedback">feedback form</a>.
 <div id=past-events>
 </div>
 
+<script src=marked.js></script>
 <script>
-var dancesScript = document.createElement("script");
-dancesScript.async = true;
-dancesScript.src = "dances.js?cb=" + Math.random();
-document.head.appendChild(dancesScript);
+window.addEventListener("error", function(error) {
+  window.dances_error = error;
+});
+["dances.js", "render-dances.js"].forEach(function(src) {
+  var script = document.createElement("script");
+  script.async = false;  // Run in order.
+  script.src = src + "?cb=" + Math.random();
+  document.head.appendChild(script);
+});
 </script>
 
 <p>
