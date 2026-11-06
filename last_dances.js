@@ -1675,10 +1675,17 @@ e = [
   },
   {
     date: [2026, 11, 15],
-    html: "Afternoon Contra 201 workshop led by Tommy Linden. Exact timing details tba. This dance is <a href=/accessibility><strong>mask-required</strong></a>",
     band: "Tory & Rose",
     caller: "Tommy Linden",
-    title: "Contra 201 Workshop & Contra Dance"
+    title: "Contra 201 Workshop & Contra Dance",
+    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a><br /><br />" +
+      "<strong>Contra 201 Workshop:</strong> Level up your contra dancing! Deepen your connections, improve your musicality, learn new figures, and grow your community.<br /><br />" +
+      "<table><tr><td>3 &ndash; 6PM<td>Contra 201 Workshop" +
+      "             <tr><td>6 &ndash; 7:30PM<td>Potluck" +
+      "             <tr><td>7:00 &ndash; 7:30PM<td>Beginner's Lesson" +
+      "             <tr><td>7:30 &ndash; 10:30PM<td>Evening dance" +
+      "      </table>",
+    html_includes_timing: true,
   },
   {
     date: [2026, 11, 22],
