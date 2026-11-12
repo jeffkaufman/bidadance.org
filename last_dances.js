@@ -1678,12 +1678,11 @@ e = [
     band: "Tory & Rose",
     caller: "Tommy Linden",
     title: "Contra 201 Workshop & Contra Dance",
-    html: "This dance is <a href=/accessibility><strong>mask-required</strong></a><br /><br />" +
-      "<strong>Contra 201 Workshop:</strong> Level up your contra dancing! Deepen your connections, improve your musicality, learn new figures, and grow your community.<br /><br />" +
-      "<table><tr><td>3 &ndash; 6PM<td>Contra 201 Workshop" +
-      "             <tr><td>6 &ndash; 7:30PM<td>Potluck" +
-      "             <tr><td>7:00 &ndash; 7:30PM<td>Beginner's Lesson" +
-      "             <tr><td>7:30 &ndash; 10:30PM<td>Evening dance" +
+    html: "<strong>Contra 201 Workshop:</strong> Level up your contra dancing! Deepen your connections, improve your musicality, learn new figures, and grow your community.<br /><br />" +
+      "<table><tr><td>3 &ndash; 6PM<td>Contra 201 Workshop  (<a href=/accessibility><strong>mask-optional</strong></a>)" +
+      "             <tr><td>6 &ndash; 7:30PM<td>Potluck  (<a href=/accessibility><strong>mask-optional</strong></a>)" +
+      "             <tr><td>7:00 &ndash; 7:30PM<td>Beginner's Lesson (<a href=/accessibility><strong>mask-required</strong></a>)" +
+      "             <tr><td>7:30 &ndash; 10:30PM<td>Evening dance (<a href=/accessibility><strong>mask-required</strong></a>)" +
       "      </table>",
     html_includes_timing: true,
   },
