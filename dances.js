@@ -1973,7 +1973,7 @@ e = [
     start: "3pm",
     end: "6pm",
     notes: `
-      **Contra 201 Workshop:** Level up your contra dancing! Deepen your connections, improve your musicality, learn new figures, and grow your community.
+      Level up your contra dancing! Deepen your connections, improve your musicality, learn new figures, and grow your community.
     `,
   },
   {
