@@ -93,12 +93,44 @@ def parse_time(time):
     """Convert a time like "4pm" or "7:30pm" to a 24hr tuple"""
     hour, minute, period = re.fullmatch(
       r"(\d+)(?::(\d+))?\s*(am|pm)", time.strip().lower()).groups()
-    hour, minute = int(hour), int(minute or 0)
+    return to_24hr(int(hour), int(minute or 0), period)
+
+def to_24hr(hour, minute, period):
     if period == 'pm' and hour != 12:
         hour += 12
     elif period == 'am' and hour == 12:
         hour = 0
     return (hour, minute)
+
+SCHEDULE_TIME = re.compile(r"(\d+)(?::(\d+))?(am|pm)?")
+
+def parse_schedule_line(line):
+    """Split a schedule line like "3-6pm Contra 201 Workshop" into
+    (start, end, activity), with times as 24hr tuples.  end is None for
+    lines like "5:15 Doors open".
+
+    Schedules usually leave off am/pm; our events are in the afternoon and
+    evening, so a bare time is pm.  A start time without am/pm takes the
+    end time's.
+    """
+    time, activity = line.split(None, 1)
+    times = re.split(r"[-–]", time.lower().rstrip(":"))
+    parsed = []
+    for t in times:
+        hour, minute, period = SCHEDULE_TIME.fullmatch(t).groups()
+        parsed.append([int(hour), int(minute or 0), period])
+    if len(parsed) == 2 and not parsed[0][2]:
+        parsed[0][2] = parsed[1][2]
+    result = [to_24hr(hour, minute, period or 'pm')
+              for hour, minute, period in parsed]
+    if len(result) == 2 and result[0] > result[1] and not parsed[0][2]:
+        result[0] = to_24hr(parsed[0][0], parsed[0][1], 'am')
+    start, end = result[0], (result[1] if len(result) == 2 else None)
+    return start, end, activity.strip()
+
+def is_cancelled(event):
+    title = event.get("title", "").lower()
+    return title.startswith("no dance") or "cancel" in title
 
 def notes_to_text(notes):
     """Convert Markdown notes to plain text for the calendar"""
@@ -134,6 +166,32 @@ def get_description(event):
     return ' '.join(
         part if part[-1] in '.!?' else part + '.' for part in parts)
 
+def make_uid(title, date):
+    unique_string = f"{title}-{'-'.join(str(x) for x in date)}"
+    return str(uuid.uuid5(uuid.NAMESPACE_DNS, unique_string))
+
+def split_schedule(event, lesson):
+    """Split an event's schedule into programming before the dance, which
+    gets its own calendar entries, and the end of the dance.
+
+    Anything with an end time that starts before the lesson, other than the
+    potluck, is its own entry: workshops, family dances, jams, other dance
+    styles.  The dance runs from the lesson to the latest end time of
+    anything starting at or after the lesson.
+    """
+    before = []
+    dance_end = None
+    for line in event.get("schedule", []):
+        start, end, activity = parse_schedule_line(line)
+        if end is None:
+            continue  # "Doors open" and the like
+        if start < lesson:
+            if not re.search(r"potluck", activity, re.IGNORECASE):
+                before.append((start, end, activity))
+        elif dance_end is None or end > dance_end:
+            dance_end = end
+    return before, dance_end
+
 def to_ical(events):
     # Create calendar
     cal = Calendar()
@@ -141,51 +199,79 @@ def to_ical(events):
     cal.add('version', '2.0')
     eastern = pytz.timezone('America/New_York')
 
-    for event in events:
-        title = "BIDA " + event.get("title", "Contra Dance")
-        date = parse_date(event["date"])
+    def at(date, time):
+        return eastern.localize(datetime(*date, *time))
+
+    def add(title, start, end, event, uid):
         e = Event()
-
-        if "end_date" not in event:
-          # Set start time (default 7pm unless specified)
-          if 'lesson_start' in event:
-            start_hour, start_minute = parse_time(event['lesson_start'])
-          elif 'dance_start' in event:
-            start_hour, start_minute = parse_time(event['dance_start'])
-          else:
-            start_hour, start_minute = 19, 0  # 7pm
-
-          # Create datetime objects
-          start_dt = eastern.localize(
-            datetime(*date, start_hour, start_minute))
-          if 'dance_end' in event:
-            end_hour, end_minute = parse_time(event['dance_end'])
-            end_dt = eastern.localize(
-              datetime(*date, end_hour, end_minute))
-          else:
-            end_dt = start_dt + timedelta(hours=3, minutes=30)  # 3.5 hours
-        else:
-          start_dt = eastern.localize(datetime(*date, 0, 0))
-          end_dt = eastern.localize(
-            datetime(*parse_date(event["end_date"]), 23, 59))
-
-        # Add event details
         e.add('summary', title)
-        e.add('dtstart', start_dt)
-        e.add('dtend', end_dt)
+        e.add('dtstart', start)
+        e.add('dtend', end)
         e.add('dtstamp', datetime.now())
         description = get_description(event)
         if description:
             e.add('description', description)
-
-        unique_string = f"{title}-{'-'.join(str(x) for x in date)}"
-        e.add('uid', str(uuid.uuid5(uuid.NAMESPACE_DNS, unique_string)))
-
+        e.add('uid', uid)
         if 'link' in event:
-            e.add('url', event['link'])
-
-        # Add event to calendar
+            link = event['link']
+            e.add('url', link if isinstance(link, str) else link[0])
         cal.add_component(e)
+
+    for event in events:
+        if is_cancelled(event):
+            continue
+
+        date = parse_date(event["date"])
+        lesson = parse_time(event.get("lesson_start", "7pm"))
+        default_title = ("Afternoon Contra Dance" if lesson <= (18, 59)
+                         else "Contra Dance")
+        title = "BIDA " + event.get("title", default_title)
+        # Keep the UID from when the feed had one entry per dance and
+        # always defaulted to "Contra Dance", so calendars update the
+        # existing entry instead of adding a new one.
+        uid = make_uid("BIDA " + event.get("title", "Contra Dance"), date)
+
+        if "end_date" in event:
+            add(title, at(date, (0, 0)),
+                at(parse_date(event["end_date"]), (23, 59)), event, uid=uid)
+            continue
+
+        if event.get("hide_times") and "schedule" not in event:
+            # Not a regular dance: use the times only if both are given.
+            start = event.get("dance_start") or event.get("lesson_start")
+            if start and "dance_end" in event:
+                add(title, at(date, parse_time(start)),
+                    at(date, parse_time(event["dance_end"])), event, uid=uid)
+            else:
+                day = datetime(*date).date()
+                add(title, day, day + timedelta(days=1), event, uid=uid)
+            continue
+
+        before, schedule_end = split_schedule(event, lesson)
+        for start, end, activity in before:
+            activity = re.sub(r"\s*\(mask-\w+\)", "", activity)
+            activity = activity[0].upper() + activity[1:]
+            add("BIDA " + activity, at(date, start), at(date, end), event,
+                make_uid("BIDA " + activity, date))
+        if before:
+            # The other parts have their own entries, so this one is just
+            # the dance.
+            title = "BIDA " + default_title
+
+        if schedule_end:
+            start_dt, end_dt = at(date, lesson), at(date, schedule_end)
+        elif "lesson_start" in event or "dance_start" not in event:
+            start_dt = at(date, lesson)
+            end_dt = (at(date, parse_time(event["dance_end"]))
+                      if "dance_end" in event
+                      else start_dt + timedelta(hours=3, minutes=30))
+        else:
+            start_dt = at(date, parse_time(event["dance_start"]))
+            end_dt = (at(date, parse_time(event["dance_end"]))
+                      if "dance_end" in event
+                      else start_dt + timedelta(hours=3))
+
+        add(title, start_dt, end_dt, event, uid=uid)
 
     return cal.to_ical()
 

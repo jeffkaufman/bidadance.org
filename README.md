@@ -65,7 +65,16 @@ is optional:
   lesson and dance times, and "mask-optional" and "mask-required" turn
   into links.
 * `hide_times: true`: hides the usual lesson and dance times without a
-  schedule, for events like workshops.
+  schedule, for events like workshops.  The calendar feed shows these as
+  all-day unless you also set `dance_start` (or `lesson_start`) and
+  `dance_end`.
+* In the calendar feed, anything in the `schedule` with a start and end
+  time that starts before the lesson (a workshop, family dance, jam, or
+  other dance style) gets its own entry, titled with what's happening;
+  the potluck doesn't.  The dance itself runs from the lesson to the end
+  of the last thing in the schedule.  Schedule times without am/pm are
+  read as pm.  Dances whose title starts with "No dance" or mentions
+  "cancel" are left out of the feed.
 * `notes`: anything else, written in Markdown between backticks.  Use
   `**bold**`, `*italics*`, `[link text](https://example.com)`, and a
   blank line between paragraphs.  HTML works here too if you need it.
