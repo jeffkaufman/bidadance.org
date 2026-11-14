@@ -60,12 +60,48 @@ is optional:
 * `lesson_start`, `dance_start`, `dance_end`: times like `"4pm"` or
   `"7:30pm"`.  The defaults are a 7pm lesson, then a dance from 30
   minutes after the lesson starts until three hours later.
+* `start`, `end`: for something that isn't a contra dance, like a
+  workshop or family dance, times like `"2:30pm"`.  The page shows just
+  these times under the title, with no lesson or dance times.
 * `schedule`: a list of lines, each a time with no spaces in it and
   then what's happening.  It shows as a table, in place of the usual
   lesson and dance times, and "mask-optional" and "mask-required" turn
   into links.
 * `hide_times: true`: hides the usual lesson and dance times without a
-  schedule, for events like workshops.
+  schedule, for events like workshops.  The calendar feed shows these as
+  all-day unless you also set `dance_start` (or `lesson_start`) and
+  `dance_end`.
+* Each dance is one entry in the calendar feed, timed from
+  `lesson_start`, `dance_start`, and `dance_end` (or `start` and `end`).
+  The feed doesn't read the `schedule`.  Dances whose title starts with
+  "No dance" or mentions "cancel" are left out of the feed.
+* Something else on the same day, like a workshop, family dance, or
+  other dance style before the contra dance, gets its own entry in
+  dances.js, just before the dance, with its own title, `start`, and
+  `end`.  The page shows a day's entries together.  Each entry has only
+  its own details: the other event's caller, band, and notes go on its
+  entry, and so does a "Doors open" time before it, as a one-line
+  `schedule`.  The dance's title is just the dance (here the default,
+  "Contra Dance"):
+
+  ```js
+  {
+    date: "2026-12-20",
+    title: "Family Dance",
+    masks: "optional",
+    start: "5:30pm",
+    end: "6:30pm",
+    schedule: ["5:15 Doors open"],
+  },
+  {
+    date: "2026-12-20",
+    schedule: [
+      "6:30-7:30 Potluck (mask-optional)",
+      "7:00-7:30 Beginner's Lesson (mask-required)",
+      "7:30-10:30 Evening dance (mask-required)",
+    ],
+  },
+  ```
 * `notes`: anything else, written in Markdown between backticks.  Use
   `**bold**`, `*italics*`, `[link text](https://example.com)`, and a
   blank line between paragraphs.  HTML works here too if you need it.

@@ -90,8 +90,22 @@ function gen_events() {
   var yesterday = new Date(); yesterday.setDate(yesterday.getDate() - 1);
   var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday",
               "Friday", "Saturday"];
+  var previous_date = null;
+  var day_div = null;
+  var next_day = null;
   for (var i = 0; i < e.length; i++) {
     var event = e[i];
+
+    // Something before the dance on the same day, like a workshop, is
+    // listed just before it, and they're shown together as one day.  The
+    // dance is the day's last entry, and it sets the date's color.
+    const preceded_same_day = event.date == previous_date;
+    previous_date = event.date;
+    var last_of_day = event;
+    for (var j = i + 1; j < e.length && e[j].date == event.date; j++) {
+      last_of_day = e[j];
+    }
+    const followed_same_day = last_of_day !== event;
 
     // At midnight local time; a bare date would be midnight UTC.
     event.date = new Date(event.date + "T00:00");
@@ -102,6 +116,12 @@ function gen_events() {
     }
     var event_div = document.createElement("div");
     event_div.className = "event";
+    if (followed_same_day) {
+      event_div.classList.add("followed-same-day");
+    }
+    if (preceded_same_day) {
+      event_div.classList.add("preceded-same-day");
+    }
     var date_div = document.createElement("div");
     date_div.className = "date";
     var date_text = days[event.date.getDay()] + " " +
@@ -117,8 +137,12 @@ function gen_events() {
       parse_time(event.lesson_start) : [7, 0, "pm"];
 
     if (lesson_start[0] <= 6) {
-      date_div.classList.add("afternoon");
       default_title = "Afternoon Contra Dance";
+    }
+    const day_lesson = last_of_day.lesson_start ?
+      parse_time(last_of_day.lesson_start) : [7, 0, "pm"];
+    if (day_lesson[0] <= 6) {
+      date_div.classList.add("afternoon");
     }
 
     event_div.appendChild(date_div);
@@ -132,7 +156,14 @@ function gen_events() {
     event_div.appendChild(title_div);
 
     const cancelled = event.title.toLowerCase().startsWith("no dance");
-    if (!cancelled && !event.hide_times && !event.schedule) {
+    if (event.start) {
+      // Something other than a contra dance, like a workshop.
+      var time_div = document.createElement("div");
+      time_div.className = "time";
+      time_div.textContent = format_time(parse_time(event.start)) +
+        (event.end ? "-" + format_time(parse_time(event.end)) : "");
+      event_div.appendChild(time_div);
+    } else if (!cancelled && !event.hide_times && !event.schedule) {
       const dance_start = event.dance_start ?
         parse_time(event.dance_start) : add_time(lesson_start, 0, 30);
       const dance_end = event.dance_end ?
@@ -209,18 +240,28 @@ function gen_events() {
       event_to_append = event_a;
     }
 
-    if (event.date < yesterday) {
-      past_events.insertBefore(event_to_append, past_events.firstChild);
-    } else {
-      if (next_event.children.length == 0 &&
-          !event_to_append.innerHTML.toLowerCase().includes("sold out")) {
-        next_event.appendChild(
-            event_to_append.cloneNode(/*deep=*/true));
+    // Each day's entries go together, in order, even though past days are
+    // listed newest first.
+    if (!preceded_same_day) {
+      day_div = document.createElement("div");
+      day_div.className = "day";
+      if (event.date < yesterday) {
+        past_events.insertBefore(day_div, past_events.firstChild);
+      } else {
+        events.appendChild(day_div);
       }
-      events.appendChild(event_to_append);
+    }
+    day_div.appendChild(event_to_append);
+    if (event.date >= yesterday && !next_day && !followed_same_day &&
+        !day_div.innerHTML.toLowerCase().includes("sold out")) {
+      next_day = day_div;
     }
   }
 
+  // The next event is the whole day, like a workshop and then the dance.
+  if (next_day) {
+    next_event.appendChild(next_day.cloneNode(/*deep=*/true));
+  }
 }
 
 if (typeof e === "undefined") {
