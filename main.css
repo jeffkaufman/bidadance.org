@@ -13,7 +13,8 @@ a {
   text-decoration: none;
 }
 
-#events a.marklink, #past-events a.marklink, #next-event a.marklink {
+#events a.marklink, #past-events a.marklink, #next-event a.marklink,
+#events .notes a, #past-events .notes a, #next-event .notes a {
   color: rgb(165, 11, 32);
   text-decoration: underline;
 }
@@ -93,12 +94,34 @@ a {
   padding-left: 1em;
 }
 
-.event .performers {
+.event .performers, .event .masks {
   padding-bottom: 1em;  
 }
 
 .event p {
   margin: 0;
+  margin-top: 1em;
+}
+
+.event table {
+  margin-top: 1em;
+}
+
+.event td:first-child {
+  padding-right: 0.5em;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.event .custom {
+  margin-bottom: 1em;
+}
+
+.event .custom > :first-child, .event .notes > :first-child {
+  margin-top: 0;
+}
+
+.event table + .notes {
   margin-top: 1em;
 }
 
