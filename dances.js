@@ -801,7 +801,6 @@ e = [
   },
   {
     date: "2023-05-21",
-    lesson_start: "7pm",
     caller: "Steve Zakon-Anderson",
     band: "Calluna: Eileen O'Grady, Gus Cantieni, & Jesse Ball",
     schedule: [
@@ -829,7 +828,6 @@ e = [
   },
   {
     date: "2023-06-04",
-    lesson_start: "7pm",
     caller: "Chloe Levine",
     band: "Rose Jackson, Rebecca Weiss, & Amy Englesberg",
     schedule: [
@@ -1075,7 +1073,6 @@ e = [
   {
     date: "2024-05-12",
     title: "Bonus Contra Dance with Nova!",
-    lesson_start: "7pm",
     caller: "Steve Zakon-Anderson",
     band: "Nova",
     masks: "optional",
@@ -1111,7 +1108,6 @@ e = [
   {
     date: "2024-06-16",
     title: "Open Band Night",
-    lesson_start: "7pm",
     caller: "Sue Rosen",
     band: "Open Band led by Casey Murray and Molly Tucker",
     schedule: [
@@ -1187,7 +1183,6 @@ e = [
   },
   {
     date: "2024-09-22",
-    lesson_start: "7pm",
     caller: "Liz Nelson",
     band: "Gaslight Tinkers",
     masks: "optional",
@@ -1240,7 +1235,6 @@ e = [
     date: "2024-12-01",
     caller: "Lisa Greenleaf",
     band: "Ice Cream Truckers",
-    lesson_start: "7pm",
     masks: "optional",
     schedule: [
       "6:30-7:30 Potluck",
@@ -1532,7 +1526,6 @@ e = [
   },
   {
     date: "2025-11-16",
-    lesson_start: "7pm",
     caller: "Annie Kidwell",
     band: "Good Company (Rohan Wheeden, Helen Kuhar, and Cecily Mills)",
     masks: "required",
@@ -1558,7 +1551,6 @@ e = [
   {
     date: "2025-11-30",
     title: "Bonus 5th Sunday Contra Dance",
-    lesson_start: "7pm",
     caller: "Will Mentor",
     band: "Noah VanNorstrand and Amy Englesberg",
     masks: "optional",
@@ -1582,7 +1574,6 @@ e = [
   },
   {
     date: "2025-12-21",
-    lesson_start: "7pm",
     caller: "Steve Zakon-Anderson",
     band: "BIDA Open Band led by Rosemary Powell",
     masks: "required",
@@ -1623,7 +1614,6 @@ e = [
   },
   {
     date: "2026-01-04",
-    lesson_start: "7pm",
     caller: "Maia McCormick",
     band: "Red Case Band",
     masks: "optional",
@@ -1798,12 +1788,9 @@ e = [
   },
   {
     date: "2026-05-17",
-    lesson_start: "7pm",
     caller: "Andrew Stout",
     band: "Helen Kuhar, Guillaume Sparrow-Pepin, Rose Jackson",
     masks: "required",
-    dance_start: "5pm",
-    dance_end: "10:30pm",
     schedule: [
       "6:30-7:30 Potluck",
       "7:00-7:30 Beginner's Lesson",
@@ -1826,7 +1813,6 @@ e = [
   },
   {
     date: "2026-06-07",
-    lesson_start: "7pm",
     caller: "Harris Lapiroff",
     band: "The Turn Signals: Cecily Mills, Aaron Marcus, Grace Hendrickson-Jones, Molly Tucker",
     masks: "optional",
@@ -1893,7 +1879,6 @@ e = [
   },
   {
     date: "2026-09-06",
-    lesson_start: "7pm",
     caller: "Harris Lapiroff",
     band: "Eric Boodman, Max Newman, + TBD",
     masks: "optional",
@@ -1941,7 +1926,6 @@ e = [
   },
   {
     date: "2026-10-18",
-    lesson_start: "7pm",
     band: "Ravenswing: Abi Sandy and Crystal Zhu",
     masks: "required",
     schedule: [
@@ -1978,7 +1962,6 @@ e = [
   },
   {
     date: "2026-11-15",
-    lesson_start: "7pm",
     caller: "Tommy Linden",
     band: "Tory & Rose",
     schedule: [
@@ -2026,7 +2009,6 @@ e = [
   },
   {
     date: "2026-12-20",
-    lesson_start: "7pm",
     band: "Black River Ironworks (Jonah Sidman, Corey Walters, Michael Freeman)",
     masks: "required",
     schedule: [

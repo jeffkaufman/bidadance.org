@@ -71,12 +71,10 @@ is optional:
   schedule, for events like workshops.  The calendar feed shows these as
   all-day unless you also set `dance_start` (or `lesson_start`) and
   `dance_end`.
-* Each dance is one entry in the calendar feed.  With a `schedule`, the
-  entry runs from the start of the first thing in it to the end of the
-  last, skipping lines without an end time like "Doors open", or from
-  `lesson_start` (or `dance_start`) if you set one.  Schedule times
-  without am/pm are read as pm.  Dances whose title starts with "No
-  dance" or mentions "cancel" are left out of the feed.
+* Each dance is one entry in the calendar feed, timed from
+  `lesson_start`, `dance_start`, and `dance_end` (or `start` and `end`).
+  The feed doesn't read the `schedule`.  Dances whose title starts with
+  "No dance" or mentions "cancel" are left out of the feed.
 * Something else on the same day, like a workshop, family dance, or
   other dance style before the contra dance, gets its own entry in
   dances.js, just before the dance, with its own title, `start`, and
@@ -84,8 +82,7 @@ is optional:
   its own details: the other event's caller, band, and notes go on its
   entry, and so does a "Doors open" time before it, as a one-line
   `schedule`.  The dance's title is just the dance (here the default,
-  "Contra Dance"), and it sets `lesson_start` so its calendar entry
-  starts with the lesson, not the potluck:
+  "Contra Dance"):
 
   ```js
   {
@@ -98,7 +95,6 @@ is optional:
   },
   {
     date: "2026-12-20",
-    lesson_start: "7pm",
     schedule: [
       "6:30-7:30 Potluck (mask-optional)",
       "7:00-7:30 Beginner's Lesson (mask-required)",

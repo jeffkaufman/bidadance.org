@@ -99,13 +99,13 @@ function gen_events() {
     // Something before the dance on the same day, like a workshop, is
     // listed just before it, and they're shown together as one day.  The
     // dance is the day's last entry, and it sets the date's color.
-    const followed_same_day = i + 1 < e.length && e[i + 1].date == event.date;
     const preceded_same_day = event.date == previous_date;
     previous_date = event.date;
     var last_of_day = event;
     for (var j = i + 1; j < e.length && e[j].date == event.date; j++) {
       last_of_day = e[j];
     }
+    const followed_same_day = last_of_day !== event;
 
     // At midnight local time; a bare date would be midnight UTC.
     event.date = new Date(event.date + "T00:00");

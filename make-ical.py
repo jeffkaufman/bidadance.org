@@ -93,40 +93,12 @@ def parse_time(time):
     """Convert a time like "4pm" or "7:30pm" to a 24hr tuple"""
     hour, minute, period = re.fullmatch(
       r"(\d+)(?::(\d+))?\s*(am|pm)", time.strip().lower()).groups()
-    return to_24hr(int(hour), int(minute or 0), period)
-
-def to_24hr(hour, minute, period):
+    hour, minute = int(hour), int(minute or 0)
     if period == 'pm' and hour != 12:
         hour += 12
     elif period == 'am' and hour == 12:
         hour = 0
     return (hour, minute)
-
-SCHEDULE_TIME = re.compile(r"(\d+)(?::(\d+))?(am|pm)?")
-
-def parse_schedule_line(line):
-    """Split a schedule line like "3-6pm Contra 201 Workshop" into
-    (start, end, activity), with times as 24hr tuples.  end is None for
-    lines like "5:15 Doors open".
-
-    Schedules usually leave off am/pm; our events are in the afternoon and
-    evening, so a bare time is pm.  A start time without am/pm takes the
-    end time's.
-    """
-    time, activity = line.split(None, 1)
-    times = re.split(r"[-–]", time.lower().rstrip(":"))
-    parsed = []
-    for t in times:
-        hour, minute, period = SCHEDULE_TIME.fullmatch(t).groups()
-        parsed.append([int(hour), int(minute or 0), period])
-    if len(parsed) == 2 and not parsed[0][2]:
-        parsed[0][2] = parsed[1][2]
-    result = [to_24hr(hour, minute, period or 'pm')
-              for hour, minute, period in parsed]
-    if len(result) == 2 and result[0] > result[1] and not parsed[0][2]:
-        result[0] = to_24hr(parsed[0][0], parsed[0][1], 'am')
-    start, end = result[0], (result[1] if len(result) == 2 else None)
-    return start, end, activity.strip()
 
 def is_cancelled(event):
     title = event.get("title", "").lower()
@@ -170,18 +142,6 @@ def make_uid(title, date):
     unique_string = f"{title}-{'-'.join(str(x) for x in date)}"
     return str(uuid.uuid5(uuid.NAMESPACE_DNS, unique_string))
 
-def schedule_span(event):
-    """The (start, end) of an event's schedule: from the earliest start to
-    the latest end of the lines with an end time, skipping lines like
-    "5:15 Doors open".  None if no line has an end time.
-    """
-    spans = [(start, end) for start, end, _ in
-             map(parse_schedule_line, event.get("schedule", []))
-             if end is not None]
-    if not spans:
-        return None
-    return min(start for start, _ in spans), max(end for _, end in spans)
-
 def to_ical(events):
     # Create calendar
     cal = Calendar()
@@ -216,9 +176,10 @@ def to_ical(events):
         default_title = ("Afternoon Contra Dance" if lesson <= (18, 59)
                          else "Contra Dance")
         title = "BIDA " + event.get("title", default_title)
-        # Keep the UID from when the feed had one entry per dance and
-        # always defaulted to "Contra Dance", so calendars update the
-        # existing entry instead of adding a new one.
+        # The UID comes from the title as the feed has always made it,
+        # defaulting to "Contra Dance", so calendars update an existing
+        # entry instead of adding a new one.  Changing a dance's title
+        # gives it a new UID.
         uid = make_uid("BIDA " + event.get("title", "Contra Dance"), date)
 
         if "end_date" in event:
@@ -246,15 +207,8 @@ def to_ical(events):
             continue
 
         # One calendar entry per dance: anything that should be its own
-        # entry, like a workshop, is its own dance in dances.js.  When the
-        # schedule also lists those, lesson_start (or dance_start) says
-        # where this dance's entry starts.
-        span = schedule_span(event)
-        if span:
-            start = event.get("lesson_start") or event.get("dance_start")
-            start = parse_time(start) if start else span[0]
-            start_dt, end_dt = at(date, start), at(date, span[1])
-        elif "lesson_start" in event or "dance_start" not in event:
+        # entry, like a workshop, is its own dance in dances.js.
+        if "lesson_start" in event or "dance_start" not in event:
             start_dt = at(date, lesson)
             end_dt = (at(date, parse_time(event["dance_end"]))
                       if "dance_end" in event
