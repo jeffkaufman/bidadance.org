@@ -7,9 +7,8 @@ e = [
   {
     date: "2016-10-16",
     title: "Family Dance + Open Band",
-    schedule: [
-      "5:30-6:30: family dance + open band",
-    ],
+    start: "5:30pm",
+    end: "6:30pm",
     link: "https://www.facebook.com/events/1798408000395535/",
   },
   {
@@ -50,9 +49,8 @@ e = [
   {
     date: "2016-12-18",
     title: "Family Dance + Open Band",
-    schedule: [
-      "5:30-6:30: family dance + open band",
-    ],
+    start: "5:30pm",
+    end: "6:30pm",
     link: "https://www.facebook.com/events/1740016379583446/",
   },
   {
@@ -83,9 +81,8 @@ e = [
   {
     date: "2017-01-15",
     title: "Family Dance + Open Band",
-    schedule: [
-      "5:30-6:30: family dance + open band",
-    ],
+    start: "5:30pm",
+    end: "6:30pm",
     link: "https://www.facebook.com/events/148208402326176/",
   },
   {
@@ -254,9 +251,8 @@ e = [
   {
     date: "2018-01-21",
     title: "Family Dance + Open Band",
-    schedule: [
-      "5:30-6:30: family dance + open band",
-    ],
+    start: "5:30pm",
+    end: "6:30pm",
     link: "https://www.facebook.com/events/181576835764899/",
   },
   {
@@ -796,9 +792,8 @@ e = [
   {
     date: "2023-05-21",
     title: "Advanced Dance",
-    schedule: [
-      "4:00-6:30 Advanced dance",
-    ],
+    start: "4pm",
+    end: "6:30pm",
     link: [
       "https://www.facebook.com/events/787404699486706/",
       "https://www.meetup.com/bida-contra-dance/events/293428934/",
@@ -826,9 +821,8 @@ e = [
   {
     date: "2023-06-04",
     title: "Family Dance",
-    schedule: [
-      "5:30-6:30 Family dance",
-    ],
+    start: "5:30pm",
+    end: "6:30pm",
     link: [
       "https://www.meetup.com/bida-contra-dance/events/293723280/",
       "https://www.facebook.com/events/1388514941881652",
@@ -932,9 +926,8 @@ e = [
     date: "2023-12-03",
     title: "Family Dance + Open Band",
     masks: "optional",
-    schedule: [
-      "5:30-6:30: family dance + open band",
-    ],
+    start: "5:30pm",
+    end: "6:30pm",
     link: [
       "https://www.facebook.com/events/892181802348103",
       "https://www.meetup.com/bida-contra-dance/events/297530550",
@@ -1080,9 +1073,8 @@ e = [
     date: "2024-05-12",
     title: "Family Dance",
     masks: "optional",
-    schedule: [
-      "5:30-6:30 Family dance",
-    ],
+    start: "5:30pm",
+    end: "6:30pm",
     link: "https://www.facebook.com/events/808954817811612",
   },
   {
@@ -1119,9 +1111,8 @@ e = [
     date: "2024-06-16",
     title: "Family Dance",
     masks: "optional",
-    schedule: [
-      "5:30-6:30 Family dance",
-    ],
+    start: "5:30pm",
+    end: "6:30pm",
     link: "https://www.facebook.com/events/443304658639233",
   },
   {
@@ -1199,9 +1190,8 @@ e = [
     date: "2024-09-22",
     title: "Family Dance",
     masks: "optional",
-    schedule: [
-      "5:30-6:30 Family dance",
-    ],
+    start: "5:30pm",
+    end: "6:30pm",
   },
   {
     date: "2024-09-22",
@@ -1253,9 +1243,8 @@ e = [
     date: "2024-12-01",
     title: "Family Dance",
     masks: "optional",
-    schedule: [
-      "5:30-6:30 Family dance",
-    ],
+    start: "5:30pm",
+    end: "6:30pm",
   },
   {
     date: "2024-12-01",
@@ -1367,9 +1356,8 @@ e = [
     date: "2025-03-23",
     title: "Afternoon Family Dance",
     masks: "optional",
-    schedule: [
-      "2:30-3:30 Family dance",
-    ],
+    start: "2:30pm",
+    end: "3:30pm",
     link: "https://www.facebook.com/events/497923263369411/",
   },
   {
@@ -1546,9 +1534,8 @@ e = [
     date: "2025-11-16",
     title: "Workshop: Ogres, Onions, and Flourishes",
     masks: "required",
-    schedule: [
-      "3:30-6:30 Ogres, Onions, and Flourishes",
-    ],
+    start: "3:30pm",
+    end: "6:30pm",
     notes: `
       Before our regularly scheduled contra dance, with Annie Kidwell calling to Good Company (Rohan Wheeden, Helen Kuhar, and Cecily Mills), Bret Casey will lead a workshop:
 
@@ -1581,9 +1568,8 @@ e = [
     date: "2025-11-30",
     title: "Square Dance",
     masks: "optional",
-    schedule: [
-      "4:00-6:30 Square dance",
-    ],
+    start: "4pm",
+    end: "6:30pm",
   },
   {
     date: "2025-11-30",
@@ -1607,9 +1593,8 @@ e = [
     date: "2025-12-21",
     title: "Family Dance",
     masks: "optional",
-    schedule: [
-      "5:30-6:30 Family dance",
-    ],
+    start: "5:30pm",
+    end: "6:30pm",
   },
   {
     date: "2025-12-21",
@@ -1631,9 +1616,8 @@ e = [
     date: "2025-12-28",
     title: "Open Tunes Jam with Sophie and Ben!",
     masks: "optional",
-    schedule: [
-      "2:30-3:30 Open Tunes Jam with Sophie and Ben!",
-    ],
+    start: "2:30pm",
+    end: "3:30pm",
   },
   {
     date: "2025-12-28",
@@ -1651,9 +1635,8 @@ e = [
     date: "2026-01-04",
     title: "Experienced Dance",
     masks: "optional",
-    schedule: [
-      "4:00-6:30 Experienced Dance",
-    ],
+    start: "4pm",
+    end: "6:30pm",
   },
   {
     date: "2026-01-04",
@@ -1831,9 +1814,8 @@ e = [
     date: "2026-05-17",
     title: "Balfolk",
     masks: "required",
-    schedule: [
-      "5:00-6:30 Balfolk",
-    ],
+    start: "5pm",
+    end: "6:30pm",
   },
   {
     date: "2026-05-17",
@@ -1858,9 +1840,8 @@ e = [
     date: "2026-06-07",
     title: "English Country Dance",
     masks: "optional",
-    schedule: [
-      "4:00-6:30 English Country Dance",
-    ],
+    start: "4pm",
+    end: "6:30pm",
   },
   {
     date: "2026-06-07",
@@ -1929,9 +1910,8 @@ e = [
     date: "2026-09-06",
     title: "Family Dance",
     masks: "optional",
-    schedule: [
-      "5:30-6:30 Family dance",
-    ],
+    start: "5:30pm",
+    end: "6:30pm",
   },
   {
     date: "2026-09-06",
@@ -1976,9 +1956,8 @@ e = [
     date: "2026-10-18",
     title: "Family Dance",
     masks: "optional",
-    schedule: [
-      "5:30-6:30 Family dance",
-    ],
+    start: "5:30pm",
+    end: "6:30pm",
   },
   {
     date: "2026-10-18",
@@ -2013,9 +1992,8 @@ e = [
     date: "2026-11-15",
     title: "Contra 201 Workshop",
     masks: "optional",
-    schedule: [
-      "3–6PM Contra 201 Workshop",
-    ],
+    start: "3pm",
+    end: "6pm",
     notes: `
       **Contra 201 Workshop:** Level up your contra dancing! Deepen your connections, improve your musicality, learn new figures, and grow your community.
     `,
@@ -2039,9 +2017,8 @@ e = [
     date: "2026-11-22",
     title: "Afternoon Family Dance",
     masks: "optional",
-    schedule: [
-      "2:30-3:30 Family dance",
-    ],
+    start: "2:30pm",
+    end: "3:30pm",
   },
   {
     date: "2026-11-22",
@@ -2066,9 +2043,8 @@ e = [
     date: "2026-12-20",
     title: "Family Dance",
     masks: "optional",
-    schedule: [
-      "5:30-6:30 Family dance",
-    ],
+    start: "5:30pm",
+    end: "6:30pm",
   },
   {
     date: "2026-12-20",

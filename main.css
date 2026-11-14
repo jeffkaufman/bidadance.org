@@ -81,6 +81,29 @@ a {
   float: right;
 }
 
+/* Entries on the same day, like a workshop and then the dance, are one
+   card with the date once and a dashed line between them. */
+.day {
+  margin-bottom: 1em;
+}
+
+.day .event {
+  margin-bottom: 0;
+}
+
+.day .event.followed-same-day {
+  border-bottom-left-radius: 0;
+}
+
+.day .event.preceded-same-day {
+  border-top-right-radius: 0;
+  border-top: 1px dashed rgba(165, 11, 32, .35);
+}
+
+.day .event.preceded-same-day .date {
+  display: none;
+}
+
 .event .afternoon {
   background-color: rgb(165, 95, 11);
 }

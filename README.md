@@ -60,6 +60,9 @@ is optional:
 * `lesson_start`, `dance_start`, `dance_end`: times like `"4pm"` or
   `"7:30pm"`.  The defaults are a 7pm lesson, then a dance from 30
   minutes after the lesson starts until three hours later.
+* `start`, `end`: for something that isn't a contra dance, like a
+  workshop or family dance, times like `"2:30pm"`.  The page shows just
+  these times under the title, with no lesson or dance times.
 * `schedule`: a list of lines, each a time with no spaces in it and
   then what's happening.  It shows as a table, in place of the usual
   lesson and dance times, and "mask-optional" and "mask-required" turn
@@ -76,18 +79,19 @@ is optional:
   dance" or mentions "cancel" are left out of the feed.
 * Something else on the same day, like a workshop, family dance, or
   other dance style before the contra dance, gets its own entry in
-  dances.js, just before the dance, with its own title and a one-line
-  `schedule` so the page shows its time.  The dance keeps the full
-  schedule, but its title is just the dance (here the default, "Contra
-  Dance"), and it sets `lesson_start` so its calendar entry starts with
-  the lesson:
+  dances.js, just before the dance, with its own title, `start`, and
+  `end`.  The page shows a day's entries together.  The dance keeps the
+  full schedule, but its title is just the dance (here the default,
+  "Contra Dance"), and it sets `lesson_start` so its calendar entry
+  starts with the lesson:
 
   ```js
   {
     date: "2026-12-20",
     title: "Family Dance",
     masks: "optional",
-    schedule: ["5:30-6:30 Family dance"],
+    start: "5:30pm",
+    end: "6:30pm",
   },
   {
     date: "2026-12-20",

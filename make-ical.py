@@ -226,6 +226,14 @@ def to_ical(events):
                 at(parse_date(event["end_date"]), (23, 59)), event, uid=uid)
             continue
 
+        if "start" in event:
+            # Something other than a contra dance, like a workshop.
+            start_dt = at(date, parse_time(event["start"]))
+            end_dt = (at(date, parse_time(event["end"])) if "end" in event
+                      else start_dt + timedelta(hours=1))
+            add(title, start_dt, end_dt, event, uid=uid)
+            continue
+
         if event.get("hide_times") and "schedule" not in event:
             # Not a regular dance: use the times only if both are given.
             start = event.get("dance_start") or event.get("lesson_start")
