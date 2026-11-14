@@ -170,27 +170,17 @@ def make_uid(title, date):
     unique_string = f"{title}-{'-'.join(str(x) for x in date)}"
     return str(uuid.uuid5(uuid.NAMESPACE_DNS, unique_string))
 
-def split_schedule(event, lesson):
-    """Split an event's schedule into programming before the dance, which
-    gets its own calendar entries, and the end of the dance.
-
-    Anything with an end time that starts before the lesson, other than the
-    potluck, is its own entry: workshops, family dances, jams, other dance
-    styles.  The dance runs from the lesson to the latest end time of
-    anything starting at or after the lesson.
+def schedule_span(event):
+    """The (start, end) of an event's schedule: from the earliest start to
+    the latest end of the lines with an end time, skipping lines like
+    "5:15 Doors open".  None if no line has an end time.
     """
-    before = []
-    dance_end = None
-    for line in event.get("schedule", []):
-        start, end, activity = parse_schedule_line(line)
-        if end is None:
-            continue  # "Doors open" and the like
-        if start < lesson:
-            if not re.search(r"potluck", activity, re.IGNORECASE):
-                before.append((start, end, activity))
-        elif dance_end is None or end > dance_end:
-            dance_end = end
-    return before, dance_end
+    spans = [(start, end) for start, end, _ in
+             map(parse_schedule_line, event.get("schedule", []))
+             if end is not None]
+    if not spans:
+        return None
+    return min(start for start, _ in spans), max(end for _, end in spans)
 
 def to_ical(events):
     # Create calendar
@@ -247,19 +237,11 @@ def to_ical(events):
                 add(title, day, day + timedelta(days=1), event, uid=uid)
             continue
 
-        before, schedule_end = split_schedule(event, lesson)
-        for start, end, activity in before:
-            activity = re.sub(r"\s*\(mask-\w+\)", "", activity)
-            activity = activity[0].upper() + activity[1:]
-            add("BIDA " + activity, at(date, start), at(date, end), event,
-                make_uid("BIDA " + activity, date))
-        if before:
-            # The other parts have their own entries, so this one is just
-            # the dance.
-            title = "BIDA " + default_title
-
-        if schedule_end:
-            start_dt, end_dt = at(date, lesson), at(date, schedule_end)
+        # One calendar entry per dance: anything that should be its own
+        # entry, like a workshop, is its own dance in dances.js.
+        span = schedule_span(event)
+        if span:
+            start_dt, end_dt = at(date, span[0]), at(date, span[1])
         elif "lesson_start" in event or "dance_start" not in event:
             start_dt = at(date, lesson)
             end_dt = (at(date, parse_time(event["dance_end"]))

@@ -68,13 +68,15 @@ is optional:
   schedule, for events like workshops.  The calendar feed shows these as
   all-day unless you also set `dance_start` (or `lesson_start`) and
   `dance_end`.
-* In the calendar feed, anything in the `schedule` with a start and end
-  time that starts before the lesson (a workshop, family dance, jam, or
-  other dance style) gets its own entry, titled with what's happening;
-  the potluck doesn't.  The dance itself runs from the lesson to the end
-  of the last thing in the schedule.  Schedule times without am/pm are
-  read as pm.  Dances whose title starts with "No dance" or mentions
-  "cancel" are left out of the feed.
+* Each dance is one entry in the calendar feed.  With a `schedule`, the
+  entry runs from the start of the first thing in it to the end of the
+  last, skipping lines without an end time like "Doors open".  Schedule
+  times without am/pm are read as pm.  If something on the same day
+  should be its own calendar entry, like a workshop with its own
+  registration, give it its own dance in dances.js with its own title,
+  and a one-line `schedule` so the page shows its time.  Dances whose
+  title starts with "No dance" or mentions "cancel" are left out of the
+  feed.
 * `notes`: anything else, written in Markdown between backticks.  Use
   `**bold**`, `*italics*`, `[link text](https://example.com)`, and a
   blank line between paragraphs.  HTML works here too if you need it.
