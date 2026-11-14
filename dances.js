@@ -6,7 +6,15 @@
 e = [
   {
     date: "2016-10-16",
-    title: "Contra + Family Dance",
+    title: "Family Dance + Open Band",
+    schedule: [
+      "5:30-6:30: family dance + open band",
+    ],
+    link: "https://www.facebook.com/events/1798408000395535/",
+  },
+  {
+    date: "2016-10-16",
+    dance_start: "7:30pm",
     schedule: [
       "5:30-6:30: family dance + open band",
       "6:30-7:30: potluck dinner",
@@ -41,7 +49,15 @@ e = [
   },
   {
     date: "2016-12-18",
-    title: "Contra + Family Dance",
+    title: "Family Dance + Open Band",
+    schedule: [
+      "5:30-6:30: family dance + open band",
+    ],
+    link: "https://www.facebook.com/events/1740016379583446/",
+  },
+  {
+    date: "2016-12-18",
+    dance_start: "7:30pm",
     schedule: [
       "5:30-6:30: family dance + open band",
       "6:30-7:30: potluck dinner",
@@ -66,7 +82,15 @@ e = [
   },
   {
     date: "2017-01-15",
-    title: "Contra + Family Dance",
+    title: "Family Dance + Open Band",
+    schedule: [
+      "5:30-6:30: family dance + open band",
+    ],
+    link: "https://www.facebook.com/events/148208402326176/",
+  },
+  {
+    date: "2017-01-15",
+    dance_start: "7:30pm",
     schedule: [
       "5:30-6:30: family dance + open band",
       "6:30-7:30: potluck dinner",
@@ -229,7 +253,15 @@ e = [
   },
   {
     date: "2018-01-21",
-    title: "Contra + Family Dance",
+    title: "Family Dance + Open Band",
+    schedule: [
+      "5:30-6:30: family dance + open band",
+    ],
+    link: "https://www.facebook.com/events/181576835764899/",
+  },
+  {
+    date: "2018-01-21",
+    dance_start: "7:30pm",
     schedule: [
       "5:30-6:30: family dance + open band",
       "6:30-7:30: potluck dinner",
@@ -763,7 +795,18 @@ e = [
   },
   {
     date: "2023-05-21",
-    title: "Double Dance! Afternoon Advanced Dance, Potluck, & All-levels Evening Dance",
+    title: "Advanced Dance",
+    schedule: [
+      "4:00-6:30 Advanced dance",
+    ],
+    link: [
+      "https://www.facebook.com/events/787404699486706/",
+      "https://www.meetup.com/bida-contra-dance/events/293428934/",
+    ],
+  },
+  {
+    date: "2023-05-21",
+    lesson_start: "7pm",
     caller: "Steve Zakon-Anderson",
     band: "Calluna: Eileen O'Grady, Gus Cantieni, & Jesse Ball",
     schedule: [
@@ -782,7 +825,19 @@ e = [
   },
   {
     date: "2023-06-04",
-    title: "Contra Dance + Family Dance",
+    title: "Family Dance",
+    schedule: [
+      "5:30-6:30 Family dance",
+    ],
+    link: [
+      "https://www.meetup.com/bida-contra-dance/events/293723280/",
+      "https://www.facebook.com/events/1388514941881652",
+      "https://www.instagram.com/p/CsmfFUarFm_/",
+    ],
+  },
+  {
+    date: "2023-06-04",
+    lesson_start: "7pm",
     schedule: [
       "5:30-6:30 Family dance",
       "6:30-7:30 Potluck",
@@ -875,7 +930,20 @@ e = [
   },
   {
     date: "2023-12-03",
-    title: "Contra Dance & Family Dance with Open Band",
+    title: "Family Dance + Open Band",
+    masks: "optional",
+    schedule: [
+      "5:30-6:30: family dance + open band",
+    ],
+    link: [
+      "https://www.facebook.com/events/892181802348103",
+      "https://www.meetup.com/bida-contra-dance/events/297530550",
+    ],
+  },
+  {
+    date: "2023-12-03",
+    title: "Contra Dance with Open Band",
+    dance_start: "7:30pm",
     caller: "Sue Rosen",
     band: "Open Band",
     masks: "optional",
@@ -1010,7 +1078,17 @@ e = [
   },
   {
     date: "2024-05-12",
-    title: "Bonus Contra & Family Dance with Nova!",
+    title: "Family Dance",
+    masks: "optional",
+    schedule: [
+      "5:30-6:30 Family dance",
+    ],
+    link: "https://www.facebook.com/events/808954817811612",
+  },
+  {
+    date: "2024-05-12",
+    title: "Bonus Contra Dance with Nova!",
+    lesson_start: "7pm",
     caller: "Steve Zakon-Anderson",
     band: "Nova",
     masks: "optional",
@@ -1039,7 +1117,17 @@ e = [
   },
   {
     date: "2024-06-16",
-    title: "Open Band Night & Family Dance",
+    title: "Family Dance",
+    masks: "optional",
+    schedule: [
+      "5:30-6:30 Family dance",
+    ],
+    link: "https://www.facebook.com/events/443304658639233",
+  },
+  {
+    date: "2024-06-16",
+    title: "Open Band Night",
+    lesson_start: "7pm",
     caller: "Sue Rosen",
     band: "Open Band led by Casey Murray and Molly Tucker",
     schedule: [
@@ -1109,6 +1197,15 @@ e = [
   },
   {
     date: "2024-09-22",
+    title: "Family Dance",
+    masks: "optional",
+    schedule: [
+      "5:30-6:30 Family dance",
+    ],
+  },
+  {
+    date: "2024-09-22",
+    lesson_start: "7pm",
     caller: "Liz Nelson",
     band: "Gaslight Tinkers",
     masks: "optional",
@@ -1154,6 +1251,15 @@ e = [
   },
   {
     date: "2024-12-01",
+    title: "Family Dance",
+    masks: "optional",
+    schedule: [
+      "5:30-6:30 Family dance",
+    ],
+  },
+  {
+    date: "2024-12-01",
+    lesson_start: "7pm",
     masks: "optional",
     schedule: [
       "5:30-6:30 Family dance",
@@ -1256,6 +1362,15 @@ e = [
     band: "Max Newman, Larry Ungar, & Julie Metcalf",
     masks: "required",
     link: "https://www.facebook.com/events/670201915407915/",
+  },
+  {
+    date: "2025-03-23",
+    title: "Afternoon Family Dance",
+    masks: "optional",
+    schedule: [
+      "2:30-3:30 Family dance",
+    ],
+    link: "https://www.facebook.com/events/497923263369411/",
   },
   {
     date: "2025-03-23",
@@ -1429,7 +1544,20 @@ e = [
   },
   {
     date: "2025-11-16",
-    title: "Afternoon Workshop and Evening Contra Dance",
+    title: "Workshop: Ogres, Onions, and Flourishes",
+    masks: "required",
+    schedule: [
+      "3:30-6:30 Ogres, Onions, and Flourishes",
+    ],
+    notes: `
+      Before our regularly scheduled contra dance, with Annie Kidwell calling to Good Company (Rohan Wheeden, Helen Kuhar, and Cecily Mills), Bret Casey will lead a workshop:
+
+      <blockquote>Join us as we explore a versatile technique for flourishes from foundational elements to a wide array of variations. Instructor Bret Casey brings 16 years of contra dance experience and 15 years of partner dance experience together to offer a unique perspective on the ways that we can layer improvisational moments on top of the contra choreography.<p>The workshop will be split into three blocks of roughly 50 minutes each, with two short breaks. Each section of the workshop will build on the techniques learned previously, so we encourage you to arrive on time. Familiarity with typical contra dance figures will be helpful. Admission will be on a sliding scale from $5 - $20.</p><p>We will have musical accompaniment by Helen Kuhar on guitar and Rohan Weeden on fiddle.</p></blockquote>
+    `,
+  },
+  {
+    date: "2025-11-16",
+    lesson_start: "7pm",
     masks: "required",
     schedule: [
       "3:30-6:30 Ogres, Onions, and Flourishes",
@@ -1451,7 +1579,16 @@ e = [
   },
   {
     date: "2025-11-30",
-    title: "Bonus 5th Sunday Double Dance with Squares",
+    title: "Square Dance",
+    masks: "optional",
+    schedule: [
+      "4:00-6:30 Square dance",
+    ],
+  },
+  {
+    date: "2025-11-30",
+    title: "Bonus 5th Sunday Contra Dance",
+    lesson_start: "7pm",
     caller: "Will Mentor",
     band: "Noah VanNorstrand and Amy Englesberg",
     masks: "optional",
@@ -1468,7 +1605,15 @@ e = [
   },
   {
     date: "2025-12-21",
-    title: "Contra + Family Dance",
+    title: "Family Dance",
+    masks: "optional",
+    schedule: [
+      "5:30-6:30 Family dance",
+    ],
+  },
+  {
+    date: "2025-12-21",
+    lesson_start: "7pm",
     caller: "Steve Zakon-Anderson",
     band: "BIDA Open Band led by Rosemary Powell",
     masks: "required",
@@ -1484,6 +1629,14 @@ e = [
   },
   {
     date: "2025-12-28",
+    title: "Open Tunes Jam with Sophie and Ben!",
+    masks: "optional",
+    schedule: [
+      "2:30-3:30 Open Tunes Jam with Sophie and Ben!",
+    ],
+  },
+  {
+    date: "2025-12-28",
     caller: "Hannah Chamberlain",
     band: "Sophie Wellington & Benjamin Foss",
     masks: "required",
@@ -1496,7 +1649,15 @@ e = [
   },
   {
     date: "2026-01-04",
-    title: "Double Dance: Contra + Experienced Dance",
+    title: "Experienced Dance",
+    masks: "optional",
+    schedule: [
+      "4:00-6:30 Experienced Dance",
+    ],
+  },
+  {
+    date: "2026-01-04",
+    lesson_start: "7pm",
     caller: "Maia McCormick",
     band: "Red Case Band",
     masks: "optional",
@@ -1668,7 +1829,15 @@ e = [
   },
   {
     date: "2026-05-17",
-    title: "Afternoon Balfolk and Evening Contra Dance",
+    title: "Balfolk",
+    masks: "required",
+    schedule: [
+      "5:00-6:30 Balfolk",
+    ],
+  },
+  {
+    date: "2026-05-17",
+    lesson_start: "7pm",
     caller: "Andrew Stout",
     band: "Helen Kuhar, Guillaume Sparrow-Pepin, Rose Jackson",
     masks: "required",
@@ -1687,7 +1856,15 @@ e = [
   },
   {
     date: "2026-06-07",
-    title: "Afternoon English Country Dance and Evening Contra Dance",
+    title: "English Country Dance",
+    masks: "optional",
+    schedule: [
+      "4:00-6:30 English Country Dance",
+    ],
+  },
+  {
+    date: "2026-06-07",
+    lesson_start: "7pm",
     caller: "Harris Lapiroff",
     band: "The Turn Signals: Cecily Mills, Aaron Marcus, Grace Hendrickson-Jones, Molly Tucker",
     masks: "optional",
@@ -1750,7 +1927,15 @@ e = [
   },
   {
     date: "2026-09-06",
-    title: "Contra + Family Dance",
+    title: "Family Dance",
+    masks: "optional",
+    schedule: [
+      "5:30-6:30 Family dance",
+    ],
+  },
+  {
+    date: "2026-09-06",
+    lesson_start: "7pm",
     caller: "Harris Lapiroff",
     band: "Eric Boodman, Max Newman, + TBD",
     masks: "optional",
@@ -1789,7 +1974,15 @@ e = [
   },
   {
     date: "2026-10-18",
-    title: "Contra + Family Dance",
+    title: "Family Dance",
+    masks: "optional",
+    schedule: [
+      "5:30-6:30 Family dance",
+    ],
+  },
+  {
+    date: "2026-10-18",
+    lesson_start: "7pm",
     band: "Ravenswing: Abi Sandy and Crystal Zhu",
     masks: "required",
     schedule: [
@@ -1818,7 +2011,18 @@ e = [
   },
   {
     date: "2026-11-15",
-    title: "Contra 201 Workshop & Contra Dance",
+    title: "Contra 201 Workshop",
+    masks: "optional",
+    schedule: [
+      "3–6PM Contra 201 Workshop",
+    ],
+    notes: `
+      **Contra 201 Workshop:** Level up your contra dancing! Deepen your connections, improve your musicality, learn new figures, and grow your community.
+    `,
+  },
+  {
+    date: "2026-11-15",
+    lesson_start: "7pm",
     caller: "Tommy Linden",
     band: "Tory & Rose",
     schedule: [
@@ -1833,7 +2037,14 @@ e = [
   },
   {
     date: "2026-11-22",
-    title: "Afternoon Family Dance + Contra Dance",
+    title: "Afternoon Family Dance",
+    masks: "optional",
+    schedule: [
+      "2:30-3:30 Family dance",
+    ],
+  },
+  {
+    date: "2026-11-22",
     caller: "Qwill Duvall",
     band: "Supertrad (Sam Bartlett, Eric Schedler, Owen Morrison, Dave Langford)",
     masks: "optional",
@@ -1853,7 +2064,15 @@ e = [
   },
   {
     date: "2026-12-20",
-    title: "Contra + Family Dance",
+    title: "Family Dance",
+    masks: "optional",
+    schedule: [
+      "5:30-6:30 Family dance",
+    ],
+  },
+  {
+    date: "2026-12-20",
+    lesson_start: "7pm",
     band: "Black River Ironworks (Jonah Sidman, Corey Walters, Michael Freeman)",
     masks: "required",
     schedule: [

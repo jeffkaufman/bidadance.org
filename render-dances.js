@@ -93,6 +93,11 @@ function gen_events() {
   for (var i = 0; i < e.length; i++) {
     var event = e[i];
 
+    // Something before the dance on the same day, like a workshop, is
+    // listed just before it.  The dance's own entry has the full schedule,
+    // so it's the one to feature as the next event.
+    const followed_same_day = i + 1 < e.length && e[i + 1].date == event.date;
+
     // At midnight local time; a bare date would be midnight UTC.
     event.date = new Date(event.date + "T00:00");
     const links = event.link ? [].concat(event.link) : null;
@@ -212,7 +217,7 @@ function gen_events() {
     if (event.date < yesterday) {
       past_events.insertBefore(event_to_append, past_events.firstChild);
     } else {
-      if (next_event.children.length == 0 &&
+      if (next_event.children.length == 0 && !followed_same_day &&
           !event_to_append.innerHTML.toLowerCase().includes("sold out")) {
         next_event.appendChild(
             event_to_append.cloneNode(/*deep=*/true));

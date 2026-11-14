@@ -70,13 +70,36 @@ is optional:
   `dance_end`.
 * Each dance is one entry in the calendar feed.  With a `schedule`, the
   entry runs from the start of the first thing in it to the end of the
-  last, skipping lines without an end time like "Doors open".  Schedule
-  times without am/pm are read as pm.  If something on the same day
-  should be its own calendar entry, like a workshop with its own
-  registration, give it its own dance in dances.js with its own title,
-  and a one-line `schedule` so the page shows its time.  Dances whose
-  title starts with "No dance" or mentions "cancel" are left out of the
-  feed.
+  last, skipping lines without an end time like "Doors open", or from
+  `lesson_start` (or `dance_start`) if you set one.  Schedule times
+  without am/pm are read as pm.  Dances whose title starts with "No
+  dance" or mentions "cancel" are left out of the feed.
+* Something else on the same day, like a workshop, family dance, or
+  other dance style before the contra dance, gets its own entry in
+  dances.js, just before the dance, with its own title and a one-line
+  `schedule` so the page shows its time.  The dance keeps the full
+  schedule, but its title is just the dance (here the default, "Contra
+  Dance"), and it sets `lesson_start` so its calendar entry starts with
+  the lesson:
+
+  ```js
+  {
+    date: "2026-12-20",
+    title: "Family Dance",
+    masks: "optional",
+    schedule: ["5:30-6:30 Family dance"],
+  },
+  {
+    date: "2026-12-20",
+    lesson_start: "7pm",
+    schedule: [
+      "5:30-6:30 Family dance (mask-optional)",
+      "6:30-7:30 Potluck (mask-optional)",
+      "7:00-7:30 Beginner's Lesson (mask-required)",
+      "7:30-10:30 Evening dance (mask-required)",
+    ],
+  },
+  ```
 * `notes`: anything else, written in Markdown between backticks.  Use
   `**bold**`, `*italics*`, `[link text](https://example.com)`, and a
   blank line between paragraphs.  HTML works here too if you need it.

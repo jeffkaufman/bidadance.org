@@ -238,10 +238,14 @@ def to_ical(events):
             continue
 
         # One calendar entry per dance: anything that should be its own
-        # entry, like a workshop, is its own dance in dances.js.
+        # entry, like a workshop, is its own dance in dances.js.  When the
+        # schedule also lists those, lesson_start (or dance_start) says
+        # where this dance's entry starts.
         span = schedule_span(event)
         if span:
-            start_dt, end_dt = at(date, span[0]), at(date, span[1])
+            start = event.get("lesson_start") or event.get("dance_start")
+            start = parse_time(start) if start else span[0]
+            start_dt, end_dt = at(date, start), at(date, span[1])
         elif "lesson_start" in event or "dance_start" not in event:
             start_dt = at(date, lesson)
             end_dt = (at(date, parse_time(event["dance_end"]))
