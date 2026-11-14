@@ -1821,9 +1821,14 @@ e = [
     title: "Contra 201 Workshop & Contra Dance",
     caller: "Tommy Linden",
     band: "Tory & Rose",
-    masks: "required",
+    schedule: [
+      "3–6PM Contra 201 Workshop (mask-optional)",
+      "6–7:30PM Potluck (mask-optional)",
+      "7:00–7:30PM Beginner's Lesson (mask-required)",
+      "7:30–10:30PM Evening dance (mask-required)",
+    ],
     notes: `
-      Afternoon Contra 201 workshop led by Tommy Linden. Exact timing details tba.
+      **Contra 201 Workshop:** Level up your contra dancing! Deepen your connections, improve your musicality, learn new figures, and grow your community.
     `,
   },
   {
