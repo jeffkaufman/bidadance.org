@@ -92,13 +92,13 @@ function gen_events() {
               "Friday", "Saturday"];
   var previous_date = null;
   var day_div = null;
+  var next_day = null;
   for (var i = 0; i < e.length; i++) {
     var event = e[i];
 
     // Something before the dance on the same day, like a workshop, is
     // listed just before it, and they're shown together as one day.  The
-    // dance is the day's last entry: it has the full schedule, so it's the
-    // one to feature as the next event, and it sets the date's color.
+    // dance is the day's last entry, and it sets the date's color.
     const followed_same_day = i + 1 < e.length && e[i + 1].date == event.date;
     const preceded_same_day = event.date == previous_date;
     previous_date = event.date;
@@ -251,14 +251,17 @@ function gen_events() {
         events.appendChild(day_div);
       }
     }
-    if (event.date >= yesterday && next_event.children.length == 0 &&
-        !followed_same_day &&
-        !event_to_append.innerHTML.toLowerCase().includes("sold out")) {
-      next_event.appendChild(event_to_append.cloneNode(/*deep=*/true));
-    }
     day_div.appendChild(event_to_append);
+    if (event.date >= yesterday && !next_day && !followed_same_day &&
+        !day_div.innerHTML.toLowerCase().includes("sold out")) {
+      next_day = day_div;
+    }
   }
 
+  // The next event is the whole day, like a workshop and then the dance.
+  if (next_day) {
+    next_event.appendChild(next_day.cloneNode(/*deep=*/true));
+  }
 }
 
 if (typeof e === "undefined") {

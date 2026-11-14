@@ -80,10 +80,12 @@ is optional:
 * Something else on the same day, like a workshop, family dance, or
   other dance style before the contra dance, gets its own entry in
   dances.js, just before the dance, with its own title, `start`, and
-  `end`.  The page shows a day's entries together.  The dance keeps the
-  full schedule, but its title is just the dance (here the default,
+  `end`.  The page shows a day's entries together.  Each entry has only
+  its own details: the other event's caller, band, and notes go on its
+  entry, and so does a "Doors open" time before it, as a one-line
+  `schedule`.  The dance's title is just the dance (here the default,
   "Contra Dance"), and it sets `lesson_start` so its calendar entry
-  starts with the lesson:
+  starts with the lesson, not the potluck:
 
   ```js
   {
@@ -92,12 +94,12 @@ is optional:
     masks: "optional",
     start: "5:30pm",
     end: "6:30pm",
+    schedule: ["5:15 Doors open"],
   },
   {
     date: "2026-12-20",
     lesson_start: "7pm",
     schedule: [
-      "5:30-6:30 Family dance (mask-optional)",
       "6:30-7:30 Potluck (mask-optional)",
       "7:00-7:30 Beginner's Lesson (mask-required)",
       "7:30-10:30 Evening dance (mask-required)",
